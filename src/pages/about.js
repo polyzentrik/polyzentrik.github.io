@@ -72,7 +72,7 @@ const AboutPage = () => {
                             <Card.Text className="linky text-end">
                                 <ul>
                                     <li><a href="tel:+358449175354" target="_blank" rel="noreferrer" aria-label="Link to telephone number"><BsTelephoneFill /></a></li>
-                                    <li><a href="mailto:contact2023@polyzentrik.com?SUBJECT=First contact" target="_blank" rel="noreferrer" aria-label="Link to send email"><BsEnvelope /></a></li>
+                                    <li><a href="mailto: hello.polyzentrik@outlook.com?SUBJECT=First contact" target="_blank" rel="noreferrer" aria-label="Link to send email"><BsEnvelope /></a></li>
                                 </ul>
                             </Card.Text>
                         </Card.Body>

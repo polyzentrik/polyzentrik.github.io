@@ -395,7 +395,8 @@ details summary {
         width: 110px;
         border-bottom: 0;
         border-right: 1px solid #dee2e6;
-        writing-mode: sideways-lr;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
     }
 
     .lower-footer ul li,

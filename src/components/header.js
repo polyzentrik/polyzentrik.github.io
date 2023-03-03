@@ -37,7 +37,7 @@ const HeaderComponent = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href="https://github.com/jbolns" target="_blank" rel="noreferrer" className="hidey">
+                                <Nav.Link href="https://github.com/polyzentrik" target="_blank" rel="noreferrer" className="hidey">
                                     <BsGithub />
                                 </Nav.Link>
                             </Nav.Item>

@@ -227,6 +227,13 @@ footer p {
     border-radius: 5px 5px 0 0;
 }
 
+.blog .gatsby-resp-image-wrapper {
+    max-width: 80% !important;
+    margin: 21px auto 0;
+    border: 1px dotted;
+
+}
+
 .services-index .card {
     flex-direction: row;
 }
@@ -315,17 +322,6 @@ details summary {
     overflow: auto;
 }
 
-.article-image {
-    margin: 21px auto;
-    text-align: center;
-    border: 1px dotted;
-}
-
-.article-image img  {
-    max-width: 100%;
-    margin: auto;
-}
-
 .footnote {
     margin: 0 auto;
     font-size: smaller;
@@ -369,6 +365,10 @@ details summary {
         margin-top: 0;
     }
 
+    .blog .gatsby-resp-image-wrapper {
+        max-width: 60% !important;    
+    }
+
     .services-index .gatsby-image-wrapper {
         position: relative;
         float: left;
@@ -402,10 +402,6 @@ details summary {
     .lower-footer ul li,
     .linky ul li {
         display: inline;
-    }
-
-    .article-image {
-        width: 50%;
     }
 
     .blog h2.pzntrk, .services h2.pzntrk {
@@ -450,6 +446,15 @@ details summary {
 
     .top-sm {
         text-align: right;
+    }
+
+    .blog .gatsby-resp-image-wrapper {
+        max-width: 35% !important;
+        transition: 1s;   
+    }
+
+    .blog .gatsby-resp-image-wrapper:hover {
+        max-width: 60% !important;  
     }
 }
 

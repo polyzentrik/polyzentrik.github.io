@@ -54,7 +54,7 @@ const HomePage = ({ data }) => {
 
 export const Head = () => (
   <Seo title="Polyzentrik > Home"
-    description="Welcome! Polyzentrik offers digital solutions to help you become more profitable and sustainable." />
+    description="Welcome! Polyzentrik Polyzentrik aims to help businesses be sustainable in a way that is also profitable." />
 )
 
 export default HomePage

@@ -64,7 +64,7 @@ export const query = graphql`
 export const Head = ({data}) => (
   <Seo title={data.mdx.frontmatter.title}
     image={data.mdx.frontmatter.hero_image.publicURL}
-    description="Read this article in Polyzentrik's blog" />
+    description="Read more in our website." />
 )
 
 export default Post

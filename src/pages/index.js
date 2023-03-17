@@ -12,7 +12,7 @@ const HomePage = ({ data }) => {
     <Layout pageTitle="Welcome">
       <Row className="mb-2 hello">
         <Col lg={3} md={12} className="mb-2">
-          <p className="big-p">Polyzentrik aims to help businesses be sustainable in a way that is also profitable.</p>
+          <p className="big-p">Polyzentrik aims to help others be profitable and sustainable.</p>
         </Col>
         <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
           <Card>
@@ -54,7 +54,7 @@ const HomePage = ({ data }) => {
 
 export const Head = () => (
   <Seo title="Polyzentrik > Home"
-    description="Welcome! Polyzentrik Polyzentrik aims to help businesses be sustainable in a way that is also profitable." />
+    description="Welcome! Digital solutions to help analyse and communicate sustainability. Websites that are, all, fast, beautiful, and sustainable." />
 )
 
 export default HomePage

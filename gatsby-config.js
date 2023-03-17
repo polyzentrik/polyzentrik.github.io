@@ -12,11 +12,12 @@ module.exports = {
     image: "/logo-banner.png"
   },
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-sitemap",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-remove-fingerprints`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {

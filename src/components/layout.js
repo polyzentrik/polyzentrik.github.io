@@ -39,7 +39,7 @@ const Layout = ({ pageTitle, children }) => {
                                     <h2>{data.site.siteMetadata.description}</h2>
                                 </Col>
                                 <Col className="my-md-auto col-12 col-md-6">
-                                    <p className="big-p">Digital solutions to help <strong><em>analyse</em></strong> and <strong><em>communicate</em></strong> your sustainability. Websites that are, all, <strong><em>fast</em></strong>, <strong><em>beautiful</em></strong>, and <strong><em>sustainable</em></strong>.</p>
+                                    <p className="big-p">Digital solutions to help <strong><em>analyse</em></strong> and <strong><em>communicate</em></strong> sustainability. Websites that are, all, <strong><em>fast</em></strong>, <strong><em>beautiful</em></strong>, and <strong><em>sustainable</em></strong>.</p>
                                     <BenefitsComponent />
                                 </Col>
                             </Row>

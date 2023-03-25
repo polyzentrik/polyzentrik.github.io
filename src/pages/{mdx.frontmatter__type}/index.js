@@ -37,7 +37,7 @@ const ContentPage = ({ location, data }) => {
                         <p className="pb-sm-1 pb-md-auto">{node.excerpt}</p>
                       </Card.Text>
                       <Link to={`/services/${node.frontmatter.slug}`}>
-                        <Button variant="dark" className="float-end mb-3 border border-2">Details</Button>
+                        <Button variant="info" className="checkers float-end mb-3 border border-2">Learn more...</Button>
                       </Link>
                     </Card.Body>
                   </article>
@@ -72,7 +72,7 @@ const ContentPage = ({ location, data }) => {
                             <p>{node.excerpt}</p>
                           </Card.Text>
                           <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                            <Button variant="dark" className="float-end mb-3 border border-2">Read more...</Button>
+                            <Button variant="info" className="checkers float-end mb-3 border border-2">Read more...</Button>
                           </Link>
                         </Card.Body>
                       </Card>

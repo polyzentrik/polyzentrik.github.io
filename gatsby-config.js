@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-remove-fingerprints`,
+    `remark-grid-tables`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -76,6 +77,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`, options: {
         fonts: [`Unbounded\:300,600,900`], display: 'swap'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en-GB'
       }
     },
   ]

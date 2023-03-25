@@ -25,6 +25,13 @@ h1, h2, h3, h4, h5 {
     font-family: unbounded;
 }
 
+blockquote {
+    margin: 7px 5%;
+    font-style: italic;
+    border-left: 3px solid #bbb;
+    padding: 0 7px;
+}
+
 main {
     padding-bottom: 5rem;
     background: repeating-linear-gradient(75deg, #fff, #efefef 3px, rgb(8, 131, 45) 3px);
@@ -91,12 +98,14 @@ nav svg {
 }
 
 footer {
-    background: #222;
+    background: #111;
     color: #aaa;
 }
 
 footer a {
     text-decoration: none;
+    font-size: medium;
+    color:#0F9537;
 }
 
 footer ul {
@@ -190,6 +199,8 @@ footer p {
     background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
 }
 
+.checkers {background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);}
+
 .content h2 {
     letter-spacing: normal;
     margin-top: 28px;
@@ -219,7 +230,12 @@ footer p {
 }
 
 .blog h4, .services h4 {
-    font-size: large;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.blog h5, .services h5 {
+    font-size: medium;
     font-weight: 600;
 }
 
@@ -332,6 +348,10 @@ details summary {
     text-align: center;
     font-weight: 900;
     overflow: hidden;
+}
+
+.accessibility-hide {
+    display: none;
 }
 
 /**************************************/

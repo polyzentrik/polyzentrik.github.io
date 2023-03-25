@@ -26,7 +26,7 @@ const FooterComponent = () => {
                         <p className="my-auto small">&#169; {fecha().year}. All rights reserved.</p>
                     </Col>
                     <Col md={3} className='mt-3 mt-md-0'>
-                        <h3>Services</h3>
+                        <h2>Services</h2>
                         <ul className="mt-0">
                             <li className=""><Link to="/services/content">Content</Link></li>
                             <li className=""><Link to="/services/analytics">Analytics</Link></li>
@@ -34,7 +34,7 @@ const FooterComponent = () => {
                         </ul>
                     </Col>
                     <Col className='mt-3 mt-md-0'>
-                        <h3>Site</h3>
+                        <h2>Site</h2>
                         <ul className="mt-0">
                             <li className=""><Link to="/">Home</Link></li>
                             <li className=""><Link to="/services">Services</Link></li>
@@ -50,9 +50,7 @@ const FooterComponent = () => {
                     </Col>
                     <Col className="text-end my-auto">
                         <ul className="my-auto">
-                            <li className=""><Link to="/terms-conditions">Terms & Conditions</Link></li>
-                            <li className=""><Link to="/terms-conditions">Privacy & Cookies</Link></li>
-                            <li className=""><Link to="/terms-conditions">Disclaimer</Link></li>
+                            <li className=""><Link to="/terms-conditions">Terms & Conditions | Privacy & Cookies | Disclaimer</Link></li>
                         </ul>
                     </Col>
                 </Row>

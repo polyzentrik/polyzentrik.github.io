@@ -32,13 +32,13 @@ const HeaderComponent = () => {
                             <Nav.Item className="border border-end border-1 border-dark mx-2 hidey-lg">
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href="https://www.linkedin.com/company/polyzentrik/" target="_blank" rel="noreferrer" className="hidey">
-                                    <BsLinkedin />
+                                <Nav.Link href="https://www.linkedin.com/company/polyzentrik/" target="_blank" rel="noopener noreferrer" className="hidey">
+                                    <BsLinkedin /><span className="accessibility-hide">LinkedIn</span>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href="https://github.com/polyzentrik" target="_blank" rel="noreferrer" className="hidey">
-                                    <BsGithub />
+                                <Nav.Link href="https://github.com/polyzentrik" target="_blank" rel="noopener noreferrer" className="hidey">
+                                    <BsGithub /><span className="accessibility-hide">GitHub</span>
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>

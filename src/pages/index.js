@@ -16,7 +16,7 @@ const HomePage = ({ data }) => {
         </Col>
         <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
           <Card>
-            <StaticImage src={"../images/graphics/goal.jpg"} alt="A landscape"/>
+            <StaticImage src={"../images/graphics/goal.jpg"} alt="A picture of the sun behind a mountain/lake landscape"/>
             <Card.Body>
               <Card.Title>Clear philosophy</Card.Title>
               <Card.Text>
@@ -27,7 +27,7 @@ const HomePage = ({ data }) => {
         </Col>
         <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
           <Card>
-            <StaticImage src={"../images/graphics/philosophy.jpg"} alt="A landscape"/>
+            <StaticImage src={"../images/graphics/philosophy.jpg"} alt="A picture of a beach and mountains on the background"/>
             <Card.Body>
               <Card.Title>Paradigm agnostic</Card.Title>
               <Card.Text>
@@ -38,7 +38,7 @@ const HomePage = ({ data }) => {
         </Col>
         <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
           <Card>
-            <StaticImage src={"../images/graphics/flexibility.jpg"} alt="A landscape"/>
+            <StaticImage src={"../images/graphics/flexibility.jpg"} alt="A close-up picture of follage"/>
             <Card.Body>
               <Card.Title>Versatile</Card.Title>
               <Card.Text>

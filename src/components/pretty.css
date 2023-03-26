@@ -21,8 +21,19 @@ body {
     font-family: monospace, sans-serif, arial;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: unbounded;
+}
+
+blockquote {
+    margin: 7px 5%;
+    font-style: italic;
+    border-left: 3px solid #bbb;
+    padding: 0 7px;
 }
 
 main {
@@ -50,7 +61,8 @@ a:hover {
 /**************************************/
 /*********** NAVBARS **************/
 /************************************/
-header, header .navbar {
+header,
+header .navbar {
     height: 12rem;
 }
 
@@ -91,12 +103,14 @@ nav svg {
 }
 
 footer {
-    background: #222;
+    background: #111;
     color: #aaa;
 }
 
 footer a {
     text-decoration: none;
+    font-size: medium;
+    color: #0F9537;
 }
 
 footer ul {
@@ -190,36 +204,51 @@ footer p {
     background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
 }
 
+.checkers {
+    background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
+}
+
 .content h2 {
     letter-spacing: normal;
     margin-top: 28px;
     margin-bottom: 14px;
 }
 
-.blog h2.pzntrk, .services h2.pzntrk {
+.blog h2.pzntrk,
+.services h2.pzntrk {
     font-size: x-large;
     text-align: center;
 }
 
-.blog figcaption, .services figcaption {
+.blog figcaption,
+.services figcaption {
     text-align: center;
     font-size: smaller;
     font-style: italic;
     font-weight: 600;
 }
 
-.blog, .services {
+.blog,
+.services {
     letter-spacing: -0.04em;
 }
 
-.blog h3, .services h3 {
+.blog h3,
+.services h3 {
     font-size: x-large;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-.blog h4, .services h4 {
-    font-size: large;
+.blog h4,
+.services h4 {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.blog h5,
+.services h5 {
+    font-size: medium;
     font-weight: 600;
 }
 
@@ -280,6 +309,7 @@ footer p {
 .special-bg {
     background-color: rgb(219, 247, 241);
 }
+
 .small svg {
     font-size: 1.5rem;
 }
@@ -300,7 +330,8 @@ footer p {
     margin: 14px 7px auto 0;
 }
 
-.hidey, .hidey-lg {
+.hidey,
+.hidey-lg {
     display: none;
 }
 
@@ -313,7 +344,8 @@ details summary {
     padding: 10vh 7rem;
 }
 
-.about .card-title, .roadmap .card-title {
+.about .card-title,
+.roadmap .card-title {
     letter-spacing: 0.2vw;
 }
 
@@ -332,6 +364,49 @@ details summary {
     text-align: center;
     font-weight: 900;
     overflow: hidden;
+}
+
+.accessibility-hide {
+    display: none;
+}
+
+/**************************************/
+/************* ANIMATIONS ************/
+/************************************/
+
+header, main {
+    animation-name: fade-in;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+}
+
+.green-bg {
+    animation-name: branding-animation;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes branding-animation {
+    from {
+        opacity: 0;
+        background-color: #444;
+        transform: translate3d(-100%,0,0) scale3d(1, 1, 1) rotate(0deg);
+    }
+    50%{
+        background-color: rgb(179, 221, 201);
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /**************************************/
@@ -356,17 +431,17 @@ details summary {
     .big-p {
         font-size: xx-large;
     }
-    
+
     .content .big-p {
         font-size: x-large;
     }
-    
+
     .content h2 {
         margin-top: 0;
     }
 
     .blog .gatsby-resp-image-wrapper {
-        max-width: 60% !important;    
+        max-width: 60% !important;
     }
 
     .services-index .gatsby-image-wrapper {
@@ -404,7 +479,8 @@ details summary {
         display: inline;
     }
 
-    .blog h2.pzntrk, .services h2.pzntrk {
+    .blog h2.pzntrk,
+    .services h2.pzntrk {
         font-size: xx-large;
     }
 
@@ -419,7 +495,7 @@ details summary {
         padding: 0;
         border: 0;
     }
-    
+
     .branding {
         min-height: 60vh;
     }
@@ -436,7 +512,7 @@ details summary {
         border-left: 1px solid #dee2e6;
     }
 
-    .blog .post-title  {
+    .blog .post-title {
         min-width: 58%;
     }
 
@@ -450,11 +526,11 @@ details summary {
 
     .blog .gatsby-resp-image-wrapper {
         max-width: 35% !important;
-        transition: 1s;   
+        transition: 1s;
     }
 
     .blog .gatsby-resp-image-wrapper:hover {
-        max-width: 60% !important;  
+        max-width: 60% !important;
     }
 }
 

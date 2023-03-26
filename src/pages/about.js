@@ -72,7 +72,7 @@ const AboutPage = () => {
                             <Card.Text className="linky text-end">
                                 <ul>
                                     <li><a href="tel:+358449175354" target="_blank" rel="noreferrer" aria-label="Link to telephone number"><BsTelephoneFill /></a></li>
-                                    <li><a href="mailto: hello.polyzentrik@outlook.com?SUBJECT=First contact" target="_blank" rel="noreferrer" aria-label="Link to send email"><BsEnvelope /></a></li>
+                                    <li><a href="mailto: hello@polyzentrik.com?SUBJECT=Hi!" target="_blank" rel="noreferrer" aria-label="Link to send email"><BsEnvelope /></a></li>
                                 </ul>
                             </Card.Text>
                         </Card.Body>
@@ -83,8 +83,8 @@ const AboutPage = () => {
                             <Card.Subtitle className="mb-2 text-muted">Let's stay in touch via social media.</Card.Subtitle>
                             <Card.Text className="linky text-end">
                                 <ul>
-                                    <li><a href="https://www.linkedin.com/in/jbolns" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsLinkedin /></a></li>
-                                    <li><a href="https://www.linkedin.com/in/jbolns" target="_blank" rel="noreferrer" aria-label="Link to GitHub"><BsGithub /></a></li>
+                                    <li><a href="https://www.linkedin.com/company/polyzentrik/" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsLinkedin /></a></li>
+                                    <li><a href="https://github.com/polyzentrik" target="_blank" rel="noreferrer" aria-label="Link to GitHub"><BsGithub /></a></li>
                                 </ul>
                                 
                             </Card.Text>

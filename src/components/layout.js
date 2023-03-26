@@ -30,7 +30,6 @@ const Layout = ({ pageTitle, children }) => {
             <Container fluid className="px-0 mx-0">
                 <HeaderComponent />
                 <main className="page-content">
-                    
                         <section>
                             <Container fluid className="green-bg">
                             <Row className="branding border-bottom border-2">
@@ -52,8 +51,7 @@ const Layout = ({ pageTitle, children }) => {
                                 <div>{children}</div>
                             </Row>
                             </Container>
-                        </section>
-                    
+                        </section> 
                 </main>
                 <FooterComponent />
             </Container>

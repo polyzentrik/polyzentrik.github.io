@@ -63,7 +63,7 @@ a:hover {
 /************************************/
 header,
 header .navbar {
-    height: 12rem;
+    height: 11rem;
 }
 
 header #responsive-navbar-nav {
@@ -497,7 +497,7 @@ header, main {
     }
 
     .branding {
-        min-height: 60vh;
+        min-height: 55vh;
     }
 
     .benefits-carousel {

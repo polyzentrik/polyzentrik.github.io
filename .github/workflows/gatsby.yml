@@ -9,9 +9,6 @@ on:
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -62,7 +59,7 @@ jobs:
           # Automatically inject pathPrefix in your Gatsby configuration file.
           #
           # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: gatsby
+          #static_site_generator: gatsby
       - name: Restore cache
         uses: actions/cache@v3
         with:

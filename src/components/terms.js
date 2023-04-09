@@ -92,8 +92,11 @@ const TermsComponent = () => {
             <p>The Company reserves the right to revise its prices at any time prior to accepting an Order.</p>
             <p>The prices quoted may be revised by the Company subsequent to accepting an Order in the event of any occurrence affecting delivery caused by government action, variation in customs duties, increased shipping charges, higher foreign exchange costs and any other matter beyond the control of the Company. In that event, You will have the right to cancel Your Order.</p>
             <h5>Payments</h5>
-            <p>Payments are not currently available through the Service, but this may change in the future.</p>
+            <p>We offer an online payments gateway for <strong>existing</strong> customers and supporters. All our services must be pre-booked in advance of service and payment, for which You need to get in touch with us via the contact methods in the About section. Therefore, in no circumsntace will a payment constitute a guarantee of service or compromise us to deliver you a service.</p>
+            <p>Payments are handled via third-parties, which you accept by making a payment.</p>
             <p>Payments are subject to validation checks and authorization by Your card issuer or financial provider. If we do not receive the required authorization, We will not be liable for any delay or non-delivery of Your Order.</p>
+            <p>All payments are final and refunds are not possible unless specifically agreed by Us in exceptional circumstances.</p>
+            <p>All payments incurr fees, which are out of our control and non-refundable due to the use of third-party payment providers.</p>
             <h5>Promotions</h5>
             <p>Any Promotions made available through the Service may be governed by rules that are separate from these Terms.</p>
             <p>If You participate in any Promotions, please review the applicable rules as well as our Privacy policy. If the rules for a Promotion conflict with these Terms, the Promotion rules will apply.</p>

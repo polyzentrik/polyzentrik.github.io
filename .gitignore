@@ -3,3 +3,5 @@ node_modules/
 src/images/graphics/build
 public/
 .aws-functions
+.env*
+utils/

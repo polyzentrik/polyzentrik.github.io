@@ -1,6 +1,7 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   flags: {
     DEV_SSR: false
@@ -28,7 +29,7 @@ module.exports = {
             options: {
               target: `_blank`,
               rel: `noopener noreferrer nofollow`
-            },
+            }
           },
           {
             resolve: `gatsby-remark-images`,

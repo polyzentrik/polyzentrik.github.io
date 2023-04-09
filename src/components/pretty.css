@@ -256,6 +256,11 @@ footer p {
     border-radius: 5px 5px 0 0;
 }
 
+.shop .gatsby-image-wrapper {
+    width: 45% !important;
+    margin: auto;
+}
+
 .blog .gatsby-resp-image-wrapper {
     max-width: 80% !important;
     margin: 21px auto 0;
@@ -368,6 +373,10 @@ details summary {
 
 .accessibility-hide {
     display: none;
+}
+
+.capsies {
+    font-variant: small-caps;
 }
 
 /**************************************/

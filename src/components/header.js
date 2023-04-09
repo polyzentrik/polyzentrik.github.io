@@ -25,6 +25,11 @@ const HeaderComponent = () => {
                         </Nav>
                         <Nav>
                             <Nav.Item>
+                                <Nav.Link href="/gateway">
+                                    <Button variant="" className="special-bg border border-2 border-dark">Pay / Donate</Button>
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
                                 <Nav.Link href="/about">
                                     <Button variant="light" className="border border-2 border-dark">About & Contact</Button>
                                 </Nav.Link>

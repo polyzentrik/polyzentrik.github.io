@@ -10,45 +10,59 @@ import "../components/pretty.css"
 const HomePage = ({ data }) => {
   return (
     <Layout pageTitle="Welcome">
+      <p className="big-p">We offer tools and services that can help you at different stages of your digital sustainability journey.</p>
       <Row className="mb-2 hello">
-        <Col lg={3} md={12} className="mb-2">
-          <p className="big-p">Polyzentrik aims to help others be profitable and sustainable.</p>
-        </Col>
-        <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
+        <Col lg={3} className="d-flex">
           <Card>
-            <StaticImage src={"../images/graphics/goal.jpg"} alt="A picture of the sun behind a mountain/lake landscape"/>
-            <Card.Body>
-              <Card.Title>Clear philosophy</Card.Title>
-              <Card.Text>
-                <p>The relationship between sustainability and profitability is not a <em>win-win</em> but a <em>need-need</em>. Sustainability solutions must be profitable to withstand the test of time.</p>
-              </Card.Text>
-            </Card.Body>
+            <StaticImage src={"../images/graphics/flexibility.jpg"} alt="A close-up picture of follage" />
           </Card>
         </Col>
-        <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
-          <Card>
-            <StaticImage src={"../images/graphics/philosophy.jpg"} alt="A picture of a beach and mountains on the background"/>
-            <Card.Body>
-              <Card.Title>Paradigm agnostic</Card.Title>
-              <Card.Text>
-                <p>Many sustainability paradigms – SDGs, ESG, Supply Chain Governance, <em>etc.</em> – are good if well implemented and combined, bad otherwise. It's about doing it right.</p>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
-          <Card>
-            <StaticImage src={"../images/graphics/flexibility.jpg"} alt="A close-up picture of follage"/>
-            <Card.Body>
-              <Card.Title>Versatile</Card.Title>
-              <Card.Text>
-                <p>We adapt to you and the tools and systems you have in place, not the other way around. If we cannot do it in-house, we'll find someone who can.</p>
-              </Card.Text>
-            </Card.Body>
-          </Card>
+        <Col lg={9} className="d-flex">
+          <Row>
+            <Col lg={6} md={10} className="offset-md-1 offset-lg-0 d-flex">
+              <Card className="w-100 my-3">
+                <Card.Body className="p-0">
+                  <Card.Title className="checkers py-3 px-2 border-bottom border-1">Be more sustainable</Card.Title>
+                  <Card.Text className="mx-3">
+                    <p>We can help you lower the impact of your digital activities, which can also help you reduce digital infrastructure costs.</p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={6} md={10} className="offset-md-1 offset-lg-0 d-flex">
+              <Card className="w-100 my-3">
+                <Card.Body className="p-0">
+                  <Card.Title className="checkers py-3 px-2 border-bottom border-1">Research/assess sustainability</Card.Title>
+                  <Card.Text className="mx-3">
+                    <p>We can offer you digital resources to help you analyse sustainability more effectively.</p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={6} md={10} className="offset-md-1 offset-lg-0 d-flex">
+              <Card className="w-100 my-3">
+                <Card.Body className="p-0">
+                  <Card.Title className="checkers py-3 px-2 border-bottom border-1">Communicate sustainability</Card.Title>
+                  <Card.Text className="mx-3">
+                    <p>We can help you boost your online presence and online sustainability communications.</p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={6} md={10} className="offset-md-1 offset-lg-0 d-flex">
+              <Card className="w-100 my-3 checkers">
+                <Card.Body className="p-0">
+                  <Card.Title className="py-3 px-2 border-bottom border-1 border-white">Sustainability Reporting</Card.Title>
+                  <Card.Text className="mx-3">
+                    <p>Sustainability reporting involves a little of all previous challenges. We can help you across your sustainability reporting needs.</p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Col>
       </Row>
-    </Layout>
+    </Layout >
   )
 }
 

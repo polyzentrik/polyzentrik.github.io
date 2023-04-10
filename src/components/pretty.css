@@ -63,7 +63,7 @@ a:hover {
 /************************************/
 header,
 header .navbar {
-    height: 11rem;
+    height: 10rem;
 }
 
 header #responsive-navbar-nav {
@@ -151,22 +151,21 @@ footer p {
 }
 
 .branding {
-    padding-top: 2rem;
+    padding: 5vh 2%;
 }
 
 .branding h1 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .branding h2 {
     font-size: medium;
-    font-weight: 700;
-    letter-spacing: 0.4vw;
+    font-weight: 600;
+    letter-spacing: 0.3vw;
     text-transform: uppercase;
 }
 
 .benefits-carousel {
-    width: 80%;
     margin-bottom: 35px;
     font-family: unbounded;
     font-size: large;
@@ -424,13 +423,13 @@ header, main {
 
 @media screen and (min-width: 768px) {
     .branding {
-        min-height: 40vh;
+        min-height: 45vh;
         padding: 1rem 3% 0;
         margin-bottom: 50px;
     }
 
     .branding h1 {
-        font-size: 7rem;
+        font-size: 5rem;
     }
 
     .hidey {
@@ -506,11 +505,11 @@ header, main {
     }
 
     .branding {
-        min-height: 55vh;
+        min-height: 50vh;
     }
 
-    .benefits-carousel {
-        float: left;
+    .branding h1 {
+        font-size: 7rem;
     }
 
     .hidey-lg {

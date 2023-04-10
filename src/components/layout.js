@@ -35,10 +35,10 @@ const Layout = ({ pageTitle, children }) => {
                             <Row className="branding border-bottom border-2">
                                 <Col className="welcome my-md-auto col-12 col-md-6">
                                     <h1 className="pzntrk">{data.site.siteMetadata.title}</h1>
-                                    <h2>{data.site.siteMetadata.description}</h2>
+                                    <h2 className="hidey-lg mb-5">{data.site.siteMetadata.description}</h2>
                                 </Col>
                                 <Col className="my-md-auto col-12 col-md-6">
-                                    <p className="big-p">Digital solutions to help <strong><em>analyse</em></strong> and <strong><em>communicate</em></strong> sustainability. Websites that are, all, <strong><em>fast</em></strong>, <strong><em>beautiful</em></strong>, and <strong><em>sustainable</em></strong>.</p>
+                                    <p className="big-p">Digital solutions to help you <strong><em>be more sustainable</em></strong> and enable you to <strong><em>analyse</em></strong> and <strong><em>communicate</em></strong> your sustainability.</p> 
                                     <BenefitsComponent />
                                 </Col>
                             </Row>

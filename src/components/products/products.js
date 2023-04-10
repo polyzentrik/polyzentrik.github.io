@@ -12,11 +12,12 @@ const ProductsComponent = () => {
                 <div class="col-12 col-lg-4 d-flex">
                     <div class="card d-flex my-3">
                         <h5 class="px-2 py-3 checkers">Content Generation</h5>
-                        <StaticImage src={"../../images/graphics/content.png"} alt="A picture of the sun behind a mountain/lake landscape" />
+                        <StaticImage src={"../../images/graphics/content.png"} alt="A logo representing the idea of content generation" />
                         <p className="mx-5 my-4 text-center capsies">Pay for content generation services that were already delivered.</p>
                         <stripe-buy-button class="align-self-center"
-                            buy-button-id="buy_btn_1MutfoBAXajCpMnAPSTOiOIC"
-                            publishable-key="pk_test_51Mtw0fBAXajCpMnAnb0st1vYbOEx2gzIVLeeLCZwEvbYHm6CWu86darTp1p0xneyNotmDyxApFxxL7FOsM3jrCnR00QDq9QeKo">
+                            buy-button-id="buy_btn_1MvEyBBAXajCpMnAVNv4nejs"
+                            publishable-key="pk_test_51Mtw0fBAXajCpMnAnb0st1vYbOEx2gzIVLeeLCZwEvbYHm6CWu86darTp1p0xneyNotmDyxApFxxL7FOsM3jrCnR00QDq9QeKo"
+                        >
                         </stripe-buy-button>
                         <p class="small text-center capsies"><Link to="/terms-conditions">Terms & Conditions</Link></p>
                     </div>
@@ -25,11 +26,12 @@ const ProductsComponent = () => {
                 <div class="col-12 col-lg-4 d-flex">
                     <div class="card d-flex my-3">
                         <h5 class="px-2 py-3 checkers">AI Transcription</h5>
-                        <StaticImage src={"../../images/graphics/helix.png"} alt="A picture of the sun behind a mountain/lake landscape" />
+                        <StaticImage src={"../../images/graphics/helix.png"} alt="A logo representing the idea of sound waves" />
                         <p className="mx-5 my-4 text-center capsies">Pay for transcription services that were already delivered.</p>
                         <stripe-buy-button class="align-self-center"
-                            buy-button-id="buy_btn_1MutfoBAXajCpMnAPSTOiOIC"
-                            publishable-key="pk_test_51Mtw0fBAXajCpMnAnb0st1vYbOEx2gzIVLeeLCZwEvbYHm6CWu86darTp1p0xneyNotmDyxApFxxL7FOsM3jrCnR00QDq9QeKo">
+                            buy-button-id="buy_btn_1MvF24BAXajCpMnAsC1xVNf0"
+                            publishable-key="pk_test_51Mtw0fBAXajCpMnAnb0st1vYbOEx2gzIVLeeLCZwEvbYHm6CWu86darTp1p0xneyNotmDyxApFxxL7FOsM3jrCnR00QDq9QeKo"
+                        >
                         </stripe-buy-button>
                         <p class="small text-center capsies"><Link to="/terms-conditions">Terms & Conditions</Link></p>
                     </div>
@@ -38,11 +40,12 @@ const ProductsComponent = () => {
                 <div class="col-12 col-lg-4 d-flex">
                     <div class="card d-flex my-3">
                         <h5 class="px-2 py-3 checkers">Sustainability Reporting</h5>
-                        <StaticImage src={"../../images/graphics/stats.png"} alt="A picture of the sun behind a mountain/lake landscape" />
+                        <StaticImage src={"../../images/graphics/stats.png"} alt="A logo representing the idea of a graph" />
                         <p className="mx-5 my-4 text-center capsies">Pay for sustainability reporting services that were already delivered.</p>
                         <stripe-buy-button class="align-self-center"
-                            buy-button-id="buy_btn_1MutfoBAXajCpMnAPSTOiOIC"
-                            publishable-key="pk_test_51Mtw0fBAXajCpMnAnb0st1vYbOEx2gzIVLeeLCZwEvbYHm6CWu86darTp1p0xneyNotmDyxApFxxL7FOsM3jrCnR00QDq9QeKo">
+                            buy-button-id="buy_btn_1MvF2sBAXajCpMnAnxfuMQRe"
+                            publishable-key="pk_test_51Mtw0fBAXajCpMnAnb0st1vYbOEx2gzIVLeeLCZwEvbYHm6CWu86darTp1p0xneyNotmDyxApFxxL7FOsM3jrCnR00QDq9QeKo"
+                        >
                         </stripe-buy-button>
                         <p class="small text-center capsies"><Link to="/terms-conditions">Terms & Conditions</Link></p>
                     </div>
@@ -51,11 +54,12 @@ const ProductsComponent = () => {
                 <div class="col-12 col-lg-4 d-flex">
                     <div class="card d-flex my-3">
                         <h5 class="px-2 py-3 checkers">Pay it forward!</h5>
-                        <StaticImage src={"../../images/graphics/content-plus.png"} alt="A picture of the sun behind a mountain/lake landscape" />
+                        <StaticImage src={"../../images/graphics/content-plus.png"} alt="A logo representing the idea of an explosion of colour and creativity" />
                         <p className="mx-5 my-4 text-center capsies">(Donation) Help us produce public resources.</p>
                         <stripe-buy-button class="align-self-center"
-                            buy-button-id="buy_btn_1MutfoBAXajCpMnAPSTOiOIC"
-                            publishable-key="pk_test_51Mtw0fBAXajCpMnAnb0st1vYbOEx2gzIVLeeLCZwEvbYHm6CWu86darTp1p0xneyNotmDyxApFxxL7FOsM3jrCnR00QDq9QeKo">
+                            buy-button-id="buy_btn_1MvF3pBAXajCpMnALH0HtB4L"
+                            publishable-key="pk_test_51Mtw0fBAXajCpMnAnb0st1vYbOEx2gzIVLeeLCZwEvbYHm6CWu86darTp1p0xneyNotmDyxApFxxL7FOsM3jrCnR00QDq9QeKo"
+                        >
                         </stripe-buy-button>
                         <p class="small text-center capsies"><Link to="/terms-conditions">Terms & Conditions</Link></p>
                     </div>

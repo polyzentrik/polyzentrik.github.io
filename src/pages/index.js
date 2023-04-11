@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
@@ -6,65 +7,74 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import "../components/pretty.css"
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 
 const HomePage = ({ data }) => {
+  const posts = data.allMdx.nodes
+
   return (
-    <Layout pageTitle="Welcome">
-      <p className="big-p">We offer tools and services that can help you at different stages of your digital sustainability journey.</p>
+    <Layout pageTitle="Our services">
+      <p className="big-p"><p>We can help you <em>be more sustainable</em>. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p> </p>
       <Row className="mb-2 hello">
-        <Col lg={3} className="d-flex">
+        <Col lg={3} className="hidey-lg">
           <Card>
             <StaticImage src={"../images/graphics/flexibility.jpg"} alt="A close-up picture of follage" />
           </Card>
         </Col>
-        <Col lg={9} className="d-flex">
-          <Row>
-            <Col lg={6} md={10} className="offset-md-1 offset-lg-0 d-flex">
-              <Card className="w-100 my-3">
-                <Card.Body className="p-0">
-                  <Card.Title className="checkers py-3 px-2 border-bottom border-1">Be more sustainable</Card.Title>
-                  <Card.Text className="mx-3">
-                    <p>We can help you lower the impact of your digital activities, which can also help you reduce digital infrastructure costs.</p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col lg={6} md={10} className="offset-md-1 offset-lg-0 d-flex">
-              <Card className="w-100 my-3">
-                <Card.Body className="p-0">
-                  <Card.Title className="checkers py-3 px-2 border-bottom border-1">Research/assess sustainability</Card.Title>
-                  <Card.Text className="mx-3">
-                    <p>We can offer you digital resources to help you analyse sustainability more effectively.</p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col lg={6} md={10} className="offset-md-1 offset-lg-0 d-flex">
-              <Card className="w-100 my-3">
-                <Card.Body className="p-0">
-                  <Card.Title className="checkers py-3 px-2 border-bottom border-1">Communicate sustainability</Card.Title>
-                  <Card.Text className="mx-3">
-                    <p>We can help you boost your online presence and online sustainability communications.</p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col lg={6} md={10} className="offset-md-1 offset-lg-0 d-flex">
-              <Card className="w-100 my-3 checkers">
-                <Card.Body className="p-0">
-                  <Card.Title className="py-3 px-2 border-bottom border-1 border-white">Sustainability Reporting</Card.Title>
-                  <Card.Text className="mx-3">
-                    <p>Sustainability reporting involves a little of all previous challenges. We can help you across your sustainability reporting needs.</p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+        <Col lg={9} className="">
+          <Container>
+            <Row className="">
+              {
+                posts.map(node => (
+                  <Col className="col-12 col-md-6 d-flex services-index">
+                    <Card className="mb-2 px-0 mx-0 border-dark">
+                      <article key={node.id}>
+                        <Card.Title className="checkers pt-4 pb-2 border-bottom border-dark">
+                          <h5 className="px-3"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h5>
+                        </Card.Title>
+                        <Card.Body className="">
+                          <Card.Text>
+                            <p className="pb-sm-1 pb-md-auto">{node.frontmatter.intro}</p>
+                          </Card.Text>
+                          <Link to={`/services/${node.frontmatter.slug}`}>
+                            <Button variant="info" className="special-bg pink float-end mb-3 border border-1 border-dark">Learn more...</Button>
+                          </Link>
+                        </Card.Body>
+                      </article>
+                    </Card>
+                  </Col>
+                ))
+              }
+            </Row>
+          </Container>
         </Col>
       </Row>
     </Layout >
   )
 }
+
+export const query = graphql`
+  query {
+    allMdx(
+      sort: {frontmatter: {rank: ASC}}
+      filter: {frontmatter: {type: {eq: "services"}}}
+      ) {
+      nodes {
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+          type
+          slug
+          intro
+          rank
+        }
+        id
+      }
+    }
+  }
+`
+
 
 export const Head = () => (
   <Seo title="Polyzentrik > Home"

@@ -38,7 +38,7 @@ const Layout = ({ pageTitle, children }) => {
                                     <h2 className="hidey-lg mb-5">{data.site.siteMetadata.description}</h2>
                                 </Col>
                                 <Col className="my-md-auto col-12 col-md-6">
-                                    <p className="big-p">Digital solutions to help you <strong><em>be more sustainable</em></strong> and enable you to <strong><em>analyse</em></strong> and <strong><em>communicate</em></strong> your sustainability.</p> 
+                                    <p className="big-p">We offer digital tools and services that can help you at different stages of your sustainability journey.</p>
                                     <BenefitsComponent />
                                 </Col>
                             </Row>

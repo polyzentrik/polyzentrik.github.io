@@ -37,7 +37,7 @@ const ContentPage = ({ location, data }) => {
                         <p className="pb-sm-1 pb-md-auto">{node.excerpt}</p>
                       </Card.Text>
                       <Link to={`/services/${node.frontmatter.slug}`}>
-                        <Button variant="info" className="checkers float-end mb-3 border border-2">Learn more...</Button>
+                        <Button variant="info" className="pink checkers float-end mb-3 border border-2">Learn more...</Button>
                       </Link>
                     </Card.Body>
                   </article>
@@ -60,19 +60,19 @@ const ContentPage = ({ location, data }) => {
                 {
                   posts.map(node => (
                     <article key={node.id}>
-                      <Card className="m-1">
+                      <Card className="m-1 checkers border-dark">
                         <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                           <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                         </Link>
-                        <Card.Body>
-                          <Card.Title>
-                            <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link>
+                        <Card.Body className="px-0 pt-0">
+                          <Card.Title className="pt-2 pb-3 border-top border-bottom border-dark bg-white">
+                          <h5 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h5>
                           </Card.Title>
-                          <Card.Text>
+                          <Card.Text className="px-3">
                             <p>{node.excerpt}</p>
                           </Card.Text>
                           <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                            <Button variant="info" className="checkers float-end mb-3 border border-2">Read more...</Button>
+                            <Button variant="info" className="special-bg pink float-end mb-3 border border-dark mx-3">Read more...</Button>
                           </Link>
                         </Card.Body>
                       </Card>

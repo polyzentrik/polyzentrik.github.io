@@ -12,9 +12,9 @@ const RoadmapPage = () => {
             <Row className="roadmap">
                 <Col md={6} className="my-2">
                     <Card>
-                        <Card.Body>
-                            <Card.Title className="pzntrk my-3 border-bottom">ASCII Roadmap</Card.Title>
-                            <Card.Text className="ascii">
+                        <Card.Body className="px-0 py-0">
+                            <Card.Title className="pzntrk mt-0 py-3 px-2 mb-3 border-bottom border-dark checkers">ASCII Roadmap</Card.Title>
+                            <Card.Text className="ascii px-3">
                                 <pre>::::::::::::::::::::::::::::::::::::</pre>
                                 <pre>::   ___     ___    ___   ____    ::</pre>
                                 <pre>::  |__ \   / _ \  |__ \  |___ \  ::</pre>
@@ -83,9 +83,9 @@ const RoadmapPage = () => {
                 </Col>
                 <Col md={6} className="my-2">
                     <Card>
-                        <Card.Body>
-                            <Card.Title className="pzntrk my-3 border-bottom">Summary strategy</Card.Title>
-                            <Card.Text className="">
+                        <Card.Body className="px-0 py-0">
+                            <Card.Title className="pzntrk mt-0 py-3 px-2 mb-3 border-bottom border-dark checkers">Summary strategy</Card.Title>
+                            <Card.Text className="px-3">
                                 <p>Polyzentrik will follow Y Combinator's "plan for the worst" <a href="https://techcrunch.com/2022/05/19/yc-advises-founders-to-plan-for-the-worst/" target="_blank" rel="noreferrer">advice</a> and adhere to what is known as a <em>default alive</em> strategy. If possibilities allow, the plan can be accelerated. If needed, however, the company aims to be ready to survive the current crisis in development mode.</p>
                                 <p>Guidelines:</p>
                                 <ul>

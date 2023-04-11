@@ -10,7 +10,7 @@ import "../components/pretty.css"
 const HeaderComponent = () => {
     return (
         <header className="green">
-            <Navbar collapseOnSelect expand="lg" bg="white"  className="border-bottom border-2">
+            <Navbar collapseOnSelect expand="lg" bg="white" className="border-bottom border-2">
                 <Container fluid>
                     <Navbar.Brand href="/">
                         <StaticImage src="../images/graphics/icon.png" className="d-inline-block align-top" alt="Logo" width={70} aspectRatio={1 / 1} />
@@ -26,7 +26,7 @@ const HeaderComponent = () => {
                         <Nav>
                             <Nav.Item>
                                 <Nav.Link href="/gateway">
-                                    <Button variant="" className="special-bg border border-2 border-dark">Pay / Donate</Button>
+                                    <Button variant="" className="special-bg capsies px-5 pink border border-2 border-dark">Pay / Donate</Button>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item className="border border-end border-1 border-dark mx-2 hidey-lg">

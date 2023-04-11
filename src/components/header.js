@@ -10,7 +10,7 @@ import "../components/pretty.css"
 const HeaderComponent = () => {
     return (
         <header className="green">
-            <Navbar collapseOnSelect expand="lg" bg="white" className="border-bottom border-2">
+            <Navbar collapseOnSelect expand="lg" bg="white" className="border-bottom border-1 border-dark">
                 <Container fluid>
                     <Navbar.Brand href="/">
                         <StaticImage src="../images/graphics/icon.png" className="d-inline-block align-top" alt="Logo" width={70} aspectRatio={1 / 1} />

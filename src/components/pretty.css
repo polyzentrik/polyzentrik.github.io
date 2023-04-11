@@ -105,11 +105,16 @@ nav svg {
 footer {
     background: #111;
     color: #aaa;
+    border-top: 1px dotted #fff;
 }
 
 footer a {
     text-decoration: none;
-    color: #0F9537;
+    color: #38b87c;
+}
+
+footer a:hover {
+    color: #aaa !important;
 }
 
 footer ul {
@@ -132,8 +137,12 @@ footer ul li {
     font-size: 1.3rem;
 }
 
+.lower-footer {
+    border-top: 1px dotted #fff;
+}
+
 .lower-footer a {
-    color: aliceblue;
+    color: #fff;
 }
 
 footer p {
@@ -202,7 +211,7 @@ footer p {
 }
 
 .services .article-title {
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid #000;
     background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
 }
 
@@ -309,7 +318,7 @@ footer p {
 }
 
 .pink {
-    color: rgb(229, 20, 112);
+    color: rgb(201, 19, 98);
 }
 
 .special-bg {
@@ -463,26 +472,8 @@ main {
         max-width: 60% !important;
     }
 
-    /*.intercalao:nth-child(odd) .gatsby-image-wrapper {
-        float: left;
-        margin-right: 1em;
-        border-right: 1px dotted;
-        vertical-align: middle;
-    }
-
-    .intercalao:nth-child(even) .gatsby-image-wrapper {
-        float: right;
-        margin-left: 1em;
-        border-left: 1px dotted;
-    }*/
-
     .services .article-title {
-        /*float: left;*/
         width: 100%;
-        /*border-bottom: 0;
-        border-right: 1px solid #dee2e6;
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);*/
     }
 
     .lower-footer ul li {

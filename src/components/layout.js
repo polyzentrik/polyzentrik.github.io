@@ -32,7 +32,7 @@ const Layout = ({ pageTitle, children }) => {
                 <main className="page-content">
                         <section>
                             <Container fluid className="green-bg">
-                            <Row className="branding border-bottom border-2">
+                            <Row className="branding border-bottom border-1 border-dark">
                                 <Col className="welcome my-md-auto col-12 col-md-6">
                                     <h1 className="pzntrk">{data.site.siteMetadata.title}</h1>
                                     <h2 className="hidey-lg mb-5">{data.site.siteMetadata.description}</h2>

@@ -19,7 +19,7 @@ const FooterComponent = () => {
 
     return (
         <footer className="mb-0 pb-0">
-            <Container fluid className="border-5 border-top pt-1">
+            <Container fluid className="">
                 <Row className="pb-2">
                     <Col md={6}>
                         <h1 className="pzntrk">{data.site.siteMetadata.title}</h1>
@@ -45,7 +45,7 @@ const FooterComponent = () => {
                         </ul>
                     </Col>
                 </Row>
-                <Row className="lower-footer d-flex border-1 border-top py-2 small">
+                <Row className="lower-footer d-flex py-2 small">
                     <Col md={6} className="my-auto">
                     </Col>
                     <Col className="text-end my-auto small">

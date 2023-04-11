@@ -1,12 +1,11 @@
 import * as React from "react"
 import { Link, graphql } from 'gatsby'
-import { GatsbyImage, getImage} from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import Seo from '../../components/seo'
 import Layout from '../../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import "../../components/pretty.css"
@@ -18,35 +17,15 @@ const ContentPage = ({ location, data }) => {
   if (path === "services") {
     return (
       <Layout pageTitle={path} >
-        <p className="big-p">A range of services that make sense independently or combined.</p>
-      <Container>
-        <Row className="services-index">
-          {
-            posts.map(node => (
-              <Col md={12} lg={6} className="intercalao d-flex">
-                <Card className="mt-2 mb-2 flex-fill">
-                  <article key={node.id}>
-                    <Link to={`/services/${node.frontmatter.slug}`}>
-                      <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
-                    </Link>
-                    <Card.Body>
-                      <Card.Title>
-                        <Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link>
-                      </Card.Title>
-                      <Card.Text>
-                        <p className="pb-sm-1 pb-md-auto">{node.excerpt}</p>
-                      </Card.Text>
-                      <Link to={`/services/${node.frontmatter.slug}`}>
-                        <Button variant="info" className="pink checkers float-end mb-3 border border-2">Learn more...</Button>
-                      </Link>
-                    </Card.Body>
-                  </article>
-                </Card>
-              </Col>
-            ))
-          }
-        </Row>
-      </Container>
+        <p className="big-p">For consumption by search engines. If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a better description of our services.</p>
+        {
+          posts.map(node => (
+            <article key={node.id}>
+              <Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link>
+              <p>{node.excerpt}</p>
+            </article>
+          ))
+        }
       </Layout>
     )
   } else {
@@ -66,7 +45,7 @@ const ContentPage = ({ location, data }) => {
                         </Link>
                         <Card.Body className="px-0 pt-0">
                           <Card.Title className="pt-2 pb-3 border-top border-bottom border-dark bg-white">
-                          <h5 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h5>
+                            <h3 className="px-2 small"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                           </Card.Title>
                           <Card.Text className="px-3">
                             <p>{node.excerpt}</p>
@@ -112,7 +91,7 @@ export const query = graphql`
     }
   }
 `
-export const Head = ( {location} ) => (
+export const Head = ({ location }) => (
   <Seo title={"Polyzentrik > " + location.pathname.charAt(1).toUpperCase() + location.pathname.slice(2, -1)}
     description="Learn more about us and our services." />
 )

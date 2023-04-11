@@ -18,7 +18,7 @@ const HomePage = ({ data }) => {
       <p className="big-p"><p>We can help you <em>be more sustainable</em>. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p> </p>
       <Row className="mb-2 hello">
         <Col lg={3} className="hidey-lg">
-          <Card>
+          <Card className="border-2 border-dark">
             <StaticImage src={"../images/graphics/flexibility.jpg"} alt="A close-up picture of follage" />
           </Card>
         </Col>
@@ -31,7 +31,7 @@ const HomePage = ({ data }) => {
                     <Card className="mb-2 px-0 mx-0 border-dark">
                       <article key={node.id}>
                         <Card.Title className="checkers pt-4 pb-2 border-bottom border-dark">
-                          <h5 className="px-3"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h5>
+                          <h3 className="px-3 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
                         </Card.Title>
                         <Card.Body className="">
                           <Card.Text>

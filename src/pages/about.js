@@ -34,12 +34,12 @@ const AboutPage = () => {
                                     <p>As a result, he is now uniquely qualified to contribute to any project involving either or both sustainability and analytics.</p>
                                     <Tabs defaultActiveKey="education" id="left-tabs" className="mb-3 small">
                                         <Tab eventKey="education" title="Education">
-                                            <h5>Degree</h5>
+                                            <h3 className="small">Degree</h3>
                                             <p className="my-0"><strong>PhD Political Economy.</strong> 2020, King's College London (KCL)</p>
                                             <p className="my-0"><em> – with </em> <strong>Associateship of King’s College (AKC) (Ethics, Religion, Philosophy).</strong> 2021.</p>
                                             <p className="my-0"><strong>MA Environment Politics & Globalisation.</strong> 2012, KCL.</p>
                                             <p><strong>BA International Relations.</strong> 2010, Taltech.</p>
-                                            <h5>Selected specialisations</h5>
+                                            <h3 className="small">Selected specialisations</h3>
                                             <p className="my-0"><strong>Data Warehousing for Business Intelligence.</strong> Univ. of Colorado, Coursera. 2022.</p>
                                             <p className="my-0"><strong>AI Product Management.</strong> Duke, Coursera. 2022.</p>
                                             <p className="my-0"><strong>Data Analytics.</strong> Google, Coursera. 2022.</p>
@@ -51,9 +51,9 @@ const AboutPage = () => {
                                             <p><strong>Excel VBA [Automation].</strong> Univ. of Colorado Boulder, Coursera. 2021.</p>
                                         </Tab>
                                         <Tab eventKey="experience" title="Experience">
-                                            <h5>Present</h5>
+                                            <h3 className="small">Present</h3>
                                             <p><strong>Founder.</strong> Polyzentrik</p>
-                                            <h5>Past</h5>
+                                            <h3 className="small">Past</h3>
                                             <p className="mb-0"><strong>Post-Doctoral Research Fellow</strong>, <em>then</em> <strong>Research Associate.</strong> London School of Economics (LSE).</p>
                                             <p className="mb-0"><strong>Assistant Lecturer.</strong> TU Dresden.</p>
                                             <p className="mb-0"><strong>Research Assistant</strong>, <em>then</em> <strong>Teaching Assistant</strong>, <em>then</em> <strong>Research Fellow.</strong> King's College London (KCL).</p>
@@ -68,7 +68,7 @@ const AboutPage = () => {
                     <Card className="mb-2 mt-sm-2 mt-md-auto">
                         <Card.Body className="px-0 pt-0">
                             <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Contact</Card.Title>
-                            <Card.Subtitle className="px-3 mb-2">An initial conversation is always free of charge.</Card.Subtitle>
+                            <Card.Subtitle className="px-3 my-3">An initial conversation is always free of charge.</Card.Subtitle>
                             <Card.Text className="px-3 linky text-end">
                                 <ul>
                                     <li><a href="tel:+358449175354" target="_blank" rel="noreferrer" aria-label="Link to telephone number"><BsTelephoneFill /></a></li>
@@ -80,7 +80,7 @@ const AboutPage = () => {
                     <Card className="my-2">
                         <Card.Body className="px-0 pt-0">
                             <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Social media</Card.Title>
-                            <Card.Subtitle className="px-3 mb-2">Let's stay in touch via social media.</Card.Subtitle>
+                            <Card.Subtitle className="px-3 my-3">Let's stay in touch via social media.</Card.Subtitle>
                             <Card.Text className="px-3 linky text-end">
                                 <ul>
                                     <li><a href="https://www.linkedin.com/company/polyzentrik/" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsLinkedin /></a></li>
@@ -93,7 +93,7 @@ const AboutPage = () => {
                     <Card className="mb-2">
                         <Card.Body className="px-0 pt-0">
                             <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Company details</Card.Title>
-                            <Card.Subtitle className="px-3 mb-2">Polyzentrik is a company based in Finland.</Card.Subtitle>
+                            <Card.Subtitle className="px-3 my-3">Polyzentrik is a company based in Finland.</Card.Subtitle>
                             <Card.Text className="px-3 small">
                                 <p className="my-0"><strong>Company name.</strong> Polyzentrik Tmi.</p>
                                 <p className="my-0"><strong>Business ID.</strong> 3331963-2.</p>
@@ -106,23 +106,21 @@ const AboutPage = () => {
                     <Card className="mb-2 small">
                         <Card.Body className="px-0 pt-0">
                             <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Additional credits</Card.Title>
-                            <Card.Subtitle className="px-3 mb-2">Thanking external sources for making available resources that facilitated our work.</Card.Subtitle>
+                            <Card.Subtitle className="px-3 my-3">All resources in this website are proprietary, available in the public domain, or under licenses which allow commercial use
+                                    without attribution. That said, we are grateful to the persons/organisations whose work facilitated ours.</Card.Subtitle>
                             <Card.Text className="px-3">
-                                <p>All resources in this website are proprietary, available in the public domain, or under licenses which allow commercial use
-                                    without attribution. That said, we are grateful to the persons/organisations whose work facilitated ours.</p>
                                 <p className="mb-0"><strong>Software</strong></p>
                                 <ul>
                                     <li><a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">Gatsby</a>. This website is a Gatsby (React + GraphQL) implementation.</li>
                                 </ul>
                                 <p className="mb-0"><strong>Photography</strong></p>
                                 <ul>
-                                    <li><a href="https://evacristina.com/" target="_blank" rel="noreferrer">Eva Cristina</a>. The majority of photos on this website were kindly provided by Eva Cristina.</li>
-                                    <li><a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash</a>. Some photos on this website come from Unsplash (<a href="https://unsplash.com/photos/dI7vfR1Bqcg" target="_blank" rel="noreferrer">Luke Richardson</a>).</li>
+                                    <li><a href="https://evacristina.com/" target="_blank" rel="noreferrer">Eva Cristina</a>. Home page photo kindly provided by Eva Cristina.</li>
                                 </ul>
                                 <p className="mb-0"><strong>Graphics</strong></p>
                                 <ul>
-                                    <li><a href="https://freesvg.org/" target="_blank" rel="noreferrer">Free SVG</a>. The logos for non-AI services are based on SVGs graphics made freely available by FreeSVG.</li>
-                                    <li><a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noreferrer">Stable Diffusion</a>. The logos for AI services were generated with Stable Diffusion.</li>
+                                    <li><a href="https://freesvg.org/" target="_blank" rel="noreferrer">Free SVG</a>. Some of this website's logos are based on SVGs graphics made freely available by FreeSVG.</li>
+                                    <li><a href="https://huggingface.co/spaces/stabilityai/stable-diffusion" target="_blank" rel="noreferrer">Stable Diffusion</a>. Some of this website's logos were generated with Stable Diffusion.</li>
                                 </ul>
                             </Card.Text>
                         </Card.Body>

@@ -7,27 +7,22 @@ const BenefitsComponent = () => {
         <Carousel variant="dark" className="benefits-carousel shadow pink">
             <Carousel.Item interval={2000}>
                 <Card>
-                    <Card.Body>#Climate</Card.Body>
+                    <Card.Body>Sustainability reporting</Card.Body>
                 </Card>
             </Carousel.Item>
             <Carousel.Item interval={2000}>
                 <Card>
-                    <Card.Body>#TripleBottomLine</Card.Body>
+                    <Card.Body>Faster & more sustainable websites</Card.Body>
                 </Card>
             </Carousel.Item>
             <Carousel.Item interval={2000}>
                 <Card>
-                    <Card.Body>#NetZero</Card.Body>
+                    <Card.Body>Sustainability content generation</Card.Body>
                 </Card>
             </Carousel.Item>
             <Carousel.Item interval={2000}>
                 <Card>
-                    <Card.Body>#ESG</Card.Body>
-                </Card>
-            </Carousel.Item>
-            <Carousel.Item interval={2000}>
-                <Card>
-                    <Card.Body>#EarthSystems</Card.Body>
+                    <Card.Body>Sustainability transcriptions</Card.Body>
                 </Card>
             </Carousel.Item>
         </Carousel>

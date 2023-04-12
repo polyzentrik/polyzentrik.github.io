@@ -32,13 +32,13 @@ const Layout = ({ pageTitle, children }) => {
                 <main className="page-content">
                         <section>
                             <Container fluid className="green-bg">
-                            <Row className="branding border-bottom border-2">
+                            <Row className="branding border-bottom border-1 border-dark">
                                 <Col className="welcome my-md-auto col-12 col-md-6">
                                     <h1 className="pzntrk">{data.site.siteMetadata.title}</h1>
-                                    <h2>{data.site.siteMetadata.description}</h2>
+                                    <h2 className="hidey-lg mb-5">{data.site.siteMetadata.description}</h2>
                                 </Col>
                                 <Col className="my-md-auto col-12 col-md-6">
-                                    <p className="big-p">Digital solutions to help <strong><em>analyse</em></strong> and <strong><em>communicate</em></strong> sustainability. Websites that are, all, <strong><em>fast</em></strong>, <strong><em>beautiful</em></strong>, and <strong><em>sustainable</em></strong>.</p>
+                                    <p className="big-p">We offer digital tools and services that can help you at different stages of your sustainability journey.</p>
                                     <BenefitsComponent />
                                 </Col>
                             </Row>

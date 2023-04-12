@@ -55,7 +55,7 @@ a {
 }
 
 a:hover {
-    color: #000000 !important;
+    color: rgb(201, 19, 98) !important;
 }
 
 /**************************************/
@@ -63,7 +63,7 @@ a:hover {
 /************************************/
 header,
 header .navbar {
-    height: 11rem;
+    height: 10rem;
 }
 
 header #responsive-navbar-nav {
@@ -71,17 +71,13 @@ header #responsive-navbar-nav {
     padding: 1rem 1rem 3rem;
     border: 2px solid #ddd;
     border-top-width: 0;
-
+    z-index: 1;
 }
 
 header .nav-item {
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-variant: small-caps;
-}
-
-.hover-include .nav-item:hover {
-    border-bottom: 1px dotted #000000;
 }
 
 .green a {
@@ -105,12 +101,16 @@ nav svg {
 footer {
     background: #111;
     color: #aaa;
+    border-top: 1px dotted #fff;
 }
 
 footer a {
     text-decoration: none;
-    font-size: medium;
-    color: #0F9537;
+    color: #38b87c;
+}
+
+footer a:hover {
+    color: #aaa !important;
 }
 
 footer ul {
@@ -120,17 +120,25 @@ footer ul {
 
 footer ul li,
 .linky ul li {
-    display: block;
+    display: inline-block;
     list-style-type: none;
     margin-right: 7px;
+}
+
+footer ul li {
+    display: block;
 }
 
 .linky ul {
     font-size: 1.3rem;
 }
 
+.lower-footer {
+    border-top: 1px dotted #fff;
+}
+
 .lower-footer a {
-    color: aliceblue;
+    color: #fff;
 }
 
 footer p {
@@ -151,22 +159,21 @@ footer p {
 }
 
 .branding {
-    padding-top: 2rem;
+    padding: 5vh 2%;
 }
 
 .branding h1 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .branding h2 {
     font-size: medium;
-    font-weight: 700;
-    letter-spacing: 0.4vw;
+    font-weight: 600;
+    letter-spacing: 0.3vw;
     text-transform: uppercase;
 }
 
 .benefits-carousel {
-    width: 80%;
     margin-bottom: 35px;
     font-family: unbounded;
     font-size: large;
@@ -200,7 +207,7 @@ footer p {
 }
 
 .services .article-title {
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid #000;
     background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
 }
 
@@ -256,15 +263,15 @@ footer p {
     border-radius: 5px 5px 0 0;
 }
 
+.shop .gatsby-image-wrapper, .services-index img {
+    width: 45% !important;
+    margin: auto;
+}
+
 .blog .gatsby-resp-image-wrapper {
     max-width: 80% !important;
     margin: 21px auto 0;
     border: 1px dotted;
-
-}
-
-.services-index .card {
-    flex-direction: row;
 }
 
 .services-index .card:hover,
@@ -278,6 +285,10 @@ footer p {
     font-variant: small-caps;
     font-weight: 600;
     letter-spacing: -0.03em;
+}
+
+.blog-index a, .services-index a {
+    color: #000;
 }
 
 .post-title {
@@ -303,7 +314,7 @@ footer p {
 }
 
 .pink {
-    color: rgb(229, 20, 112);
+    color: rgb(201, 19, 98);
 }
 
 .special-bg {
@@ -352,6 +363,11 @@ details summary {
 .roadmap .card {
     max-height: 600px;
     overflow: auto;
+    border-color: #000;
+}
+
+.roadmap .card, .about .card {
+    border-color: #000;
 }
 
 .footnote {
@@ -370,11 +386,16 @@ details summary {
     display: none;
 }
 
+.capsies {
+    font-variant: small-caps;
+}
+
 /**************************************/
 /************* ANIMATIONS ************/
 /************************************/
 
-header, main {
+header,
+main {
     animation-name: fade-in;
     animation-duration: 0.8s;
     animation-timing-function: ease-in-out;
@@ -390,6 +411,7 @@ header, main {
     from {
         opacity: 0.1;
     }
+
     to {
         opacity: 1;
     }
@@ -399,11 +421,13 @@ header, main {
     from {
         opacity: 0;
         background-color: #444;
-        transform: translate3d(-100%,0,0) scale3d(1, 1, 1) rotate(0deg);
+        transform: translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotate(0deg);
     }
-    50%{
+
+    50% {
         background-color: rgb(179, 221, 201);
     }
+
     to {
         opacity: 1;
     }
@@ -415,13 +439,13 @@ header, main {
 
 @media screen and (min-width: 768px) {
     .branding {
-        min-height: 40vh;
+        min-height: 45vh;
         padding: 1rem 3% 0;
         margin-bottom: 50px;
     }
 
     .branding h1 {
-        font-size: 7rem;
+        font-size: 5rem;
     }
 
     .hidey {
@@ -444,39 +468,12 @@ header, main {
         max-width: 60% !important;
     }
 
-    .services-index .gatsby-image-wrapper {
-        position: relative;
-        float: left;
-        width: 45%;
-        height: 100%;
-        border-radius: 0;
-    }
-
-    .intercalao:nth-child(odd) .gatsby-image-wrapper {
-        float: left;
-        margin-right: 1em;
-        border-right: 1px dotted;
-        vertical-align: middle;
-    }
-
-    .intercalao:nth-child(even) .gatsby-image-wrapper {
-        float: right;
-        margin-left: 1em;
-        border-left: 1px dotted;
-    }
-
     .services .article-title {
-        float: left;
-        width: 110px;
-        border-bottom: 0;
-        border-right: 1px solid #dee2e6;
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
+        width: 100%;
     }
 
-    .lower-footer ul li,
-    .linky ul li {
-        display: inline;
+    .lower-footer ul li {
+        display: inline-block;
     }
 
     .blog h2.pzntrk,
@@ -485,7 +482,8 @@ header, main {
     }
 
     .services h2.pzntrk {
-        text-align: right;
+        text-align: left;
+        margin-left: 10px;
     }
 
 }
@@ -497,11 +495,11 @@ header, main {
     }
 
     .branding {
-        min-height: 55vh;
+        min-height: 50vh;
     }
 
-    .benefits-carousel {
-        float: left;
+    .branding h1 {
+        font-size: 7rem;
     }
 
     .hidey-lg {

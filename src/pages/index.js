@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
@@ -6,51 +7,74 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import "../components/pretty.css"
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 
 const HomePage = ({ data }) => {
+  const posts = data.allMdx.nodes
+
   return (
-    <Layout pageTitle="Welcome">
+    <Layout pageTitle="Our services">
+      <p className="big-p"><p>We can help you <em>be more sustainable</em>. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p> </p>
       <Row className="mb-2 hello">
-        <Col lg={3} md={12} className="mb-2">
-          <p className="big-p">Polyzentrik aims to help others be profitable and sustainable.</p>
-        </Col>
-        <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
-          <Card>
-            <StaticImage src={"../images/graphics/goal.jpg"} alt="A picture of the sun behind a mountain/lake landscape"/>
-            <Card.Body>
-              <Card.Title>Clear philosophy</Card.Title>
-              <Card.Text>
-                <p>The relationship between sustainability and profitability is not a <em>win-win</em> but a <em>need-need</em>. Sustainability solutions must be profitable to withstand the test of time.</p>
-              </Card.Text>
-            </Card.Body>
+        <Col lg={3} className="hidey-lg">
+          <Card className="border-2 border-dark">
+            <StaticImage src={"../images/graphics/flexibility.jpg"} alt="A close-up picture of follage" />
           </Card>
         </Col>
-        <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
-          <Card>
-            <StaticImage src={"../images/graphics/philosophy.jpg"} alt="A picture of a beach and mountains on the background"/>
-            <Card.Body>
-              <Card.Title>Paradigm agnostic</Card.Title>
-              <Card.Text>
-                <p>Many sustainability paradigms – SDGs, ESG, Supply Chain Governance, <em>etc.</em> – are good if well implemented and combined, bad otherwise. It's about doing it right.</p>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col lg={3} md={10} className="my-2 offset-md-1 offset-lg-0">
-          <Card>
-            <StaticImage src={"../images/graphics/flexibility.jpg"} alt="A close-up picture of follage"/>
-            <Card.Body>
-              <Card.Title>Versatile</Card.Title>
-              <Card.Text>
-                <p>We adapt to you and the tools and systems you have in place, not the other way around. If we cannot do it in-house, we'll find someone who can.</p>
-              </Card.Text>
-            </Card.Body>
-          </Card>
+        <Col lg={9} className="">
+          <Container>
+            <Row className="">
+              {
+                posts.map(node => (
+                  <Col className="col-12 col-md-6 d-flex services-index">
+                    <Card className="mb-2 px-0 mx-0 border-dark">
+                      <article key={node.id}>
+                        <Card.Title className="checkers pt-4 pb-2 border-bottom border-dark">
+                          <h3 className="px-3 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
+                        </Card.Title>
+                        <Card.Body className="">
+                          <Card.Text>
+                            <p className="pb-sm-1 pb-md-auto">{node.frontmatter.intro}</p>
+                          </Card.Text>
+                          <Link to={`/services/${node.frontmatter.slug}`}>
+                            <Button variant="info" className="special-bg pink float-end mb-3 border border-1 border-dark">Learn more...</Button>
+                          </Link>
+                        </Card.Body>
+                      </article>
+                    </Card>
+                  </Col>
+                ))
+              }
+            </Row>
+          </Container>
         </Col>
       </Row>
-    </Layout>
+    </Layout >
   )
 }
+
+export const query = graphql`
+  query {
+    allMdx(
+      sort: {frontmatter: {rank: DESC}}
+      filter: {frontmatter: {type: {eq: "services"}}}
+      ) {
+      nodes {
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+          type
+          slug
+          intro
+          rank
+        }
+        id
+      }
+    }
+  }
+`
+
 
 export const Head = () => (
   <Seo title="Polyzentrik > Home"

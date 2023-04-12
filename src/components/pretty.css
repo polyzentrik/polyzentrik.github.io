@@ -55,7 +55,7 @@ a {
 }
 
 a:hover {
-    color: #000000 !important;
+    color: rgb(201, 19, 98) !important;
 }
 
 /**************************************/
@@ -76,12 +76,8 @@ header #responsive-navbar-nav {
 
 header .nav-item {
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-variant: small-caps;
-}
-
-.hover-include .nav-item:hover {
-    border-bottom: 1px dotted #000000;
 }
 
 .green a {

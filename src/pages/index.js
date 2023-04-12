@@ -57,7 +57,7 @@ const HomePage = ({ data }) => {
 export const query = graphql`
   query {
     allMdx(
-      sort: {frontmatter: {rank: ASC}}
+      sort: {frontmatter: {rank: DESC}}
       filter: {frontmatter: {type: {eq: "services"}}}
       ) {
       nodes {

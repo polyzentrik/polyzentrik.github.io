@@ -8,7 +8,7 @@ const ProductsComponent = () => {
         <Container className="col-10">
             <div class="row shop">
                 <div class="col-12 col-lg-6 d-flex">
-                    <div class="card d-flex my-3 border-dark">
+                    <div class="card d-flex border-dark">
                         <h5 class="px-2 py-3 checkers border-bottom border-dark">Pay for services</h5>
                         <StaticImage src={"../../images/graphics/analytics-plus.png"} alt="A logo representing the idea of a neural network" />
                         <p className="mx-5 my-4 text-center capsies">Pay for services that were already delivered.</p>
@@ -18,7 +18,7 @@ const ProductsComponent = () => {
                 </div>
 
                 <div class="col-12 col-lg-6 d-flex">
-                    <div class="card d-flex my-3 border-dark">
+                    <div class="card d-flex border-dark">
                         <h5 class="px-2 py-3 checkers border-bottom border-dark">Pay it forward</h5>
                         <StaticImage src={"../../images/graphics/content-plus.png"} alt="A logo representing the idea of an explosion of colour and creativity" />
                         <p className="mx-5 my-4 text-center capsies">(Donation) Help us produce public resources.</p>

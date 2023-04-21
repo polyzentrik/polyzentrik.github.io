@@ -292,6 +292,26 @@ footer p {
     color: #000;
 }
 
+.blog details {
+    margin-bottom: 3px;
+    max-height: 250px;
+    overflow: auto;
+    border: 1px dotted #000;
+    background-color: #dffaed;
+    padding: 0 14px;
+}
+
+.blog details summary {
+    font-weight: 600;
+    font-variant: small-caps;
+}
+
+.blog details ol li {
+    margin: 0.5em 0;
+    line-height: 0.9em;
+    font-size: smaller;
+}
+
 .post-title {
     height: 100%;
 }
@@ -394,6 +414,11 @@ details summary {
 
 .capsies {
     font-variant: small-caps;
+}
+
+.yt-embed {
+    aspect-ratio: 16 /9;
+    width: 100%;
 }
 
 /**************************************/

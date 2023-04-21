@@ -75,10 +75,9 @@ export const query = graphql`
   }
 `
 
-
 export const Head = () => (
   <Seo title="Polyzentrik > Home"
-    description="Digital tools and services to help you at different stages of your sustainability journey." />
+    description="Digital solutions to help you at different stages of your sustainability journey." />
 )
 
 export default HomePage

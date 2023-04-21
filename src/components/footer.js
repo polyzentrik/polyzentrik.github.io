@@ -28,19 +28,18 @@ const FooterComponent = () => {
                     <Col md={3} className='mt-3 mt-md-0'>
                         <h2>Services</h2>
                         <ul className="mt-0">
-                            <li className=""><Link to="/services/content">Content</Link></li>
-                            <li className=""><Link to="/services/analytics">Analytics</Link></li>
-                            <li className=""><Link to="/services/development">Development</Link></li>
+                            <li className=""><Link to="/services/sustainability-reporting/">Sustainability reporting</Link></li>
+                            <li className=""><Link to="/services/web-development/">Website development</Link></li>
+                            <li className=""><Link to="/services/sustainability-transcriptions-ai/">Sustainability transcriptions</Link></li>
                         </ul>
                     </Col>
                     <Col className='mt-3 mt-md-0'>
                         <h2>Site</h2>
                         <ul className="mt-0">
                             <li className=""><Link to="/">Home</Link></li>
-                            <li className=""><Link to="/services">Services</Link></li>
-                            <li className=""><Link to="/blog">Blog</Link></li>
-                            <li className=""><Link to="/roadmap">Roadmap</Link></li>
-                            <li className=""><Link to="/about">About & Contact</Link></li>
+                            <li className=""><Link to="/blog/">Blog</Link></li>
+                            <li className=""><Link to="/roadmap/">Roadmap</Link></li>
+                            <li className=""><Link to="/about/">About & Contact</Link></li>
                             
                         </ul>
                     </Col>
@@ -50,7 +49,7 @@ const FooterComponent = () => {
                     </Col>
                     <Col className="text-end my-auto small">
                         <ul className="my-auto">
-                            <li><Link to="/terms-conditions">Terms & Conditions | Privacy & Cookies | Disclaimer</Link></li>
+                            <li><Link to="/terms-conditions/">Terms & Conditions | Privacy & Cookies | Disclaimer</Link></li>
                         </ul>
                     </Col>
                 </Row>

@@ -33,7 +33,7 @@ const HomePage = ({ data }) => {
                         <Card.Title className="checkers pt-4 pb-2 border-bottom border-dark">
                           <h3 className="px-3 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
                         </Card.Title>
-                        <Card.Body className="">
+                        <Card.Body>
                           <Card.Text>
                             <p className="pb-sm-1 pb-md-auto">{node.frontmatter.intro}</p>
                           </Card.Text>
@@ -75,10 +75,9 @@ export const query = graphql`
   }
 `
 
-
 export const Head = () => (
   <Seo title="Polyzentrik > Home"
-    description="Welcome! Digital solutions to help analyse and communicate sustainability. Websites that are, all, fast, beautiful, and sustainable." />
+    description="Digital solutions to help you at different stages of your sustainability journey." />
 )
 
 export default HomePage

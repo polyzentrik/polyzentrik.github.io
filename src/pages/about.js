@@ -65,7 +65,7 @@ const AboutPage = () => {
                     </Container>
                 </Col>
                 <Col md={4}>
-                    <Card className="mb-2 mt-sm-2 mt-md-auto">
+                    <Card className="mt-sm-2 mt-md-auto">
                         <Card.Body className="px-0 pt-0">
                             <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Contact</Card.Title>
                             <Card.Subtitle className="px-3 my-3">An initial conversation is always free of charge.</Card.Subtitle>
@@ -77,7 +77,7 @@ const AboutPage = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Card className="my-2">
+                    <Card>
                         <Card.Body className="px-0 pt-0">
                             <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Social media</Card.Title>
                             <Card.Subtitle className="px-3 my-3">Let's stay in touch via social media.</Card.Subtitle>
@@ -90,7 +90,7 @@ const AboutPage = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Card className="mb-2">
+                    <Card>
                         <Card.Body className="px-0 pt-0">
                             <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Company details</Card.Title>
                             <Card.Subtitle className="px-3 my-3">Polyzentrik is a company based in Finland.</Card.Subtitle>
@@ -103,7 +103,7 @@ const AboutPage = () => {
                     </Card>
                 </Col>
                 <Col className="mt-2">
-                    <Card className="mb-2 small">
+                    <Card>
                         <Card.Body className="px-0 pt-0">
                             <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Additional credits</Card.Title>
                             <Card.Subtitle className="px-3 my-3">All resources in this website are proprietary, available in the public domain, or under licenses which allow commercial use

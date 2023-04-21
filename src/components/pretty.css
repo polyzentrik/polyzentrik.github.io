@@ -25,7 +25,9 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+header,
+footer {
     font-family: unbounded;
 }
 
@@ -43,11 +45,6 @@ main {
 
 section {
     clear: both;
-}
-
-header,
-footer {
-    font-family: unbounded;
 }
 
 a {
@@ -184,11 +181,7 @@ footer p {
     border: none;
 }
 
-.carousel-indicators {
-    display: none;
-}
-
-
+.carousel-indicators,
 .carousel-control-next,
 .carousel-control-prev {
     display: none;
@@ -206,13 +199,15 @@ footer p {
     display: none;
 }
 
-.services .article-title {
-    border-bottom: 1px solid #000;
+.services .article-title,
+.blog .article-title h2,
+.blog .article-title p {
     background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
 }
 
-.checkers {
-    background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
+.services .article-title,
+.blog .article-title {
+    border-bottom: 1px solid #000;
 }
 
 .content h2 {
@@ -259,11 +254,16 @@ footer p {
     font-weight: 600;
 }
 
+.card {
+    margin-bottom: 14px;
+}
+
 .card .gatsby-image-wrapper {
     border-radius: 5px 5px 0 0;
 }
 
-.shop .gatsby-image-wrapper, .services-index img {
+.shop .gatsby-image-wrapper,
+.services-index img {
     width: 45% !important;
     margin: auto;
 }
@@ -287,8 +287,29 @@ footer p {
     letter-spacing: -0.03em;
 }
 
-.blog-index a, .services-index a {
+.blog-index a,
+.services-index a {
     color: #000;
+}
+
+.blog details {
+    margin-bottom: 3px;
+    max-height: 250px;
+    overflow: auto;
+    border: 1px dotted #000;
+    background-color: #dffaed;
+    padding: 0 14px;
+}
+
+.blog details summary {
+    font-weight: 600;
+    font-variant: small-caps;
+}
+
+.blog details ol li {
+    margin: 0.5em 0;
+    line-height: 0.9em;
+    font-size: smaller;
 }
 
 .post-title {
@@ -298,6 +319,10 @@ footer p {
 /**************************************/
 /********* CHERRIES ON TOP ***********/
 /************************************/
+
+.checkers {
+    background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
+}
 
 .clearer {
     clear: both;
@@ -366,7 +391,8 @@ details summary {
     border-color: #000;
 }
 
-.roadmap .card, .about .card {
+.roadmap .card,
+.about .card {
     border-color: #000;
 }
 
@@ -388,6 +414,11 @@ details summary {
 
 .capsies {
     font-variant: small-caps;
+}
+
+.yt-embed {
+    aspect-ratio: 16 /9;
+    width: 100%;
 }
 
 /**************************************/
@@ -434,7 +465,7 @@ main {
 }
 
 /**************************************/
-/******** RESPONSIVE TRICKS **********/
+/************ RESPONSIVE *************/
 /************************************/
 
 @media screen and (min-width: 768px) {

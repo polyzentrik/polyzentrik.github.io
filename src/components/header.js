@@ -19,13 +19,13 @@ const HeaderComponent = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto hover-include">
                             <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-                            <Nav.Item><Nav.Link href="/blog">Blog</Nav.Link></Nav.Item>
-                            <Nav.Item><Nav.Link href="/roadmap">Roadmap</Nav.Link></Nav.Item>
-                            <Nav.Item><Nav.Link href="/about">About & Contact</Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/blog/">Blog</Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/roadmap/">Roadmap</Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/about/">About & Contact</Nav.Link></Nav.Item>
                         </Nav>
                         <Nav>
                             <Nav.Item>
-                                <Nav.Link href="/gateway">
+                                <Nav.Link href="/gateway/">
                                     <Button variant="" className="special-bg capsies px-5 pink border border-2 border-dark">Pay / Donate</Button>
                                 </Nav.Link>
                             </Nav.Item>

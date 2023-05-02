@@ -1,7 +1,7 @@
 # Workflow to upload artifact to AWS
 #
 #
-name: Deploy GH-Pages site to AWS
+name: Deploy to AWS
 
 on:
   workflow_run:
@@ -19,9 +19,7 @@ jobs:
         with:
           name: github-pages
       - name: Display structure of downloaded files
-          run: ls -R
-      
-
+        run: ls -R
       #- name: 'Unzip artifact'
       #  run: unzip pr_number.zip
 

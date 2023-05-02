@@ -100,6 +100,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: github-pages
+      - name: Extract files in artifact
+        run: tar -xvzf artifact.tar
       - name: Display structure of downloaded files
         run: ls -R
 

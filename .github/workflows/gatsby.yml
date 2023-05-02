@@ -77,10 +77,11 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
+          name: gh-artifact
           path: ./public
 
-  # Deployment job
-  deploy:
+  # GH Pages Deployment job
+  gh-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -90,6 +91,20 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+  # AWS Deployment job
+  aws-deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: 'Download artifact'
+        uses: actions/download-artifact@v3
+        with:
+          name: gh-artifact
+      - name: Display structure of downloaded files
+        run: ls -R
+
+
     #  - name: Configure AWS Credentials
     #    uses: aws-actions/configure-aws-credentials@v1
     #    with:

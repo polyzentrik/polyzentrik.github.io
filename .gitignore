@@ -5,3 +5,4 @@ public/
 .aws-functions
 .env*
 utils/
+.github\workflows\gatsby.yml

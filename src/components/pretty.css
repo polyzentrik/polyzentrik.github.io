@@ -132,10 +132,11 @@ footer ul li {
 
 .lower-footer {
     border-top: 1px dotted #fff;
+    margin-top: 3em;
 }
 
-.lower-footer a {
-    color: #fff;
+.lower-footer ul li {
+    text-align: right;
 }
 
 footer p {
@@ -421,6 +422,32 @@ details summary {
     width: 100%;
 }
 
+.carbon-badge, #wcb, #wcb_a, #wcb_p, #wcb_g, #wcb_2 {
+    font-family: monospace !important;
+    font-size: small;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #111 !important;
+}
+
+#wcb_a, #wcb_2 {
+    display: none !important;
+}
+
+#wcb_g::before {
+    content: "this page emits only";
+    margin-right: 5px;
+}
+
+#wcb_g::after {
+    content: ".";
+    margin-right: 1px;
+}
+
+.copy-r {
+    font-size: x-small;
+}
+
 /**************************************/
 /************* ANIMATIONS ************/
 /************************************/
@@ -505,6 +532,7 @@ main {
 
     .lower-footer ul li {
         display: inline-block;
+        text-align: left;
     }
 
     .blog h2.pzntrk,
@@ -525,8 +553,12 @@ main {
         border: 0;
     }
 
+    header .navbar {
+        min-height: 15vh;
+    }
+
     .branding {
-        min-height: 50vh;
+        min-height: 70vh;
     }
 
     .branding h1 {

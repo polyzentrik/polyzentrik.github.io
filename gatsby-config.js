@@ -19,7 +19,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-remove-fingerprints`,
-    `remark-grid-tables`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {

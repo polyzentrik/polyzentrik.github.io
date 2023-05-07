@@ -10,14 +10,14 @@ import "../components/pretty.css"
 const HeaderComponent = () => {
     return (
         <header className="green">
-            <Navbar collapseOnSelect expand="lg" bg="white" className="border-bottom border-1 border-dark">
+            <Navbar collapseOnSelect expand="lg" bg="white">
                 <Container fluid>
                     <Navbar.Brand href="/">
-                        <StaticImage src="../images/graphics/icon.png" className="d-inline-block align-top" alt="Logo" width={70} aspectRatio={1 / 1} />
+                        <StaticImage src="../images/graphics/icon.png" alt="Logo" width={70} aspectRatio={1 / 1} />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="border-1"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto hover-include">
+                        <Nav className="me-auto">
                             <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
                             <Nav.Item><Nav.Link href="/blog/">Blog</Nav.Link></Nav.Item>
                             <Nav.Item><Nav.Link href="/roadmap/">Roadmap</Nav.Link></Nav.Item>
@@ -32,12 +32,12 @@ const HeaderComponent = () => {
                             <Nav.Item className="border border-end border-1 border-dark mx-2 hidey-lg">
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href="https://www.linkedin.com/company/polyzentrik/" target="_blank" rel="noopener noreferrer" className="hidey">
+                                <Nav.Link href="https://www.linkedin.com/company/polyzentrik/" target="_blank" rel="noopener noreferrer">
                                     <BsLinkedin /><span className="accessibility-hide">LinkedIn</span>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href="https://github.com/polyzentrik" target="_blank" rel="noopener noreferrer" className="hidey">
+                                <Nav.Link href="https://github.com/polyzentrik" target="_blank" rel="noopener noreferrer">
                                     <BsGithub /><span className="accessibility-hide">GitHub</span>
                                 </Nav.Link>
                             </Nav.Item>

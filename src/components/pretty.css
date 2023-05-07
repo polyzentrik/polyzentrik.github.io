@@ -64,11 +64,21 @@ header .navbar {
 }
 
 header #responsive-navbar-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: #fff;
-    padding: 1rem 1rem 3rem;
-    border: 2px solid #ddd;
-    border-top-width: 0;
     z-index: 1;
+    padding-top: calc(100vh/4);
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+header .navbar-toggler {
+    margin-right: 0.7em;
+    border: 1px dotted #111;
+    z-index: 2;
 }
 
 header .nav-item {
@@ -89,11 +99,7 @@ nav svg {
     font-size: 2.5rem;
 }
 
-.top-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+
 
 footer {
     background: #111;
@@ -129,7 +135,7 @@ footer ul li {
 .linky ul {
     font-size: 1.3rem;
 }
-
+benefits
 .lower-footer {
     border-top: 1px dotted #fff;
     margin-top: 3em;
@@ -172,14 +178,12 @@ footer p {
 }
 
 .benefits-carousel {
-    margin-bottom: 35px;
-    font-family: unbounded;
+    margin: 0 auto 35px auto;
     font-size: large;
 }
 
-.carousel .card {
-    background-color: rgba(250, 250, 250, 0.1);
-    border: none;
+.benefits-carousel p {
+    margin: 0.5em auto 0.5em 1em;
 }
 
 .carousel-indicators,
@@ -592,6 +596,11 @@ main {
 
     .blog .gatsby-resp-image-wrapper:hover {
         max-width: 60% !important;
+    }
+
+    header #responsive-navbar-nav {
+        position: relative;
+        min-height: 0;
     }
 }
 

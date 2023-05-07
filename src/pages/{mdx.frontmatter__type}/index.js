@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState, useEffect } from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
@@ -14,6 +15,39 @@ const ContentPage = ({ location, data }) => {
   const path = location.pathname.slice(1, -1)
   const posts = data.allMdx.nodes.filter(node => node.frontmatter.type === path)
 
+  // Infinite scroll implementation by Eric Howey (https://github.com/ehowey/loadmore-demo).
+  // So clean! Can't really do better than that.
+
+  // State for the list, state to trigger load, state to determine if there is more to load
+  const [list, setList] = useState([...posts.slice(0, 6)])
+  const [loadMore, setLoadMore] = useState(false)
+  const [hasMore, setHasMore] = useState(posts.length > 6)
+
+  // Load more button click
+  const handleLoadMore = () => {
+    setLoadMore(true)
+  }
+
+  // Handle loading more articles
+  useEffect(() => {
+    if (loadMore && hasMore) {
+      const currentLength = list.length
+      const isMore = currentLength < posts.length
+      const nextResults = isMore
+        ? posts.slice(currentLength, currentLength + 10)
+        : []
+      setList([...list, ...nextResults])
+      setLoadMore(false)
+    }
+  }, [loadMore, hasMore]) //eslint-disable-line
+
+  //Check if there is more
+  useEffect(() => {
+    const isMore = list.length < posts.length
+    setHasMore(isMore)
+  }, [list]) //eslint-disable-line
+
+  // Now do the posts
   if (path === "services") {
     return (
       <Layout pageTitle={path} >
@@ -37,7 +71,7 @@ const ContentPage = ({ location, data }) => {
             <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
               <Masonry>
                 {
-                  posts.map(node => (
+                  list.map(node => (
                     <article key={node.id}>
                       <Card className="m-1 checkers border-dark">
                         <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
@@ -51,7 +85,7 @@ const ContentPage = ({ location, data }) => {
                             <p>{node.excerpt}</p>
                           </Card.Text>
                           <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                            <Button variant="info" className="special-bg pink float-end mb-3 border border-dark mx-3">Read more...</Button>
+                            <Button variant="light" className="pink float-end mb-3 border border-dark mx-3">Read more...</Button>
                           </Link>
                         </Card.Body>
                       </Card>
@@ -60,6 +94,13 @@ const ContentPage = ({ location, data }) => {
                 }
               </Masonry>
             </ResponsiveMasonry>
+            <Container className="text-center">
+              {hasMore ? (
+                <Button onClick={handleLoadMore} variant="warning" className="big-p border border-dark w-75 mt-3">Click to load more.</Button>
+              ) : (
+                <span></span>
+              )}
+            </Container>
           </Row>
         </Container>
       </Layout>
@@ -93,7 +134,7 @@ export const query = graphql`
 `
 export const Head = ({ location }) => (
   <Seo title={"Polyzentrik > " + location.pathname.charAt(1).toUpperCase() + location.pathname.slice(2, -1)}
-    description="Read more in our (very cool and highly sustainable) website." />
+    description="Read more in our (cool and sustainable) website." />
 )
 
 export default ContentPage

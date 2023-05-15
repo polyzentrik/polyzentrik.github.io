@@ -99,8 +99,6 @@ nav svg {
     font-size: 2.5rem;
 }
 
-
-
 footer {
     background: #111;
     color: #aaa;
@@ -202,6 +200,15 @@ footer p {
 
 .services .optional {
     display: none;
+}
+
+.blog .navbar-brand{
+    margin-right: 0;
+}
+
+.blog .nav-link{
+    margin: auto 4px;
+    font-size: small;
 }
 
 .services .article-title,
@@ -357,10 +364,6 @@ footer p {
 
 .tab-content {
     font-size: small;
-}
-
-.nav-tabs .nav-link {
-    color: #15141A;
 }
 
 .socialShare {

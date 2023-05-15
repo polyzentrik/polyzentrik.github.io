@@ -13,8 +13,8 @@ import "../../components/pretty.css"
 import CategoriesComponent from '../../components/categories'
 
 const ContentPage = ({ location, data }) => {
-  const path = location.pathname.slice(1, -1)
-  const posts = data.allMdx.nodes.filter(node => node.frontmatter.type === path)
+  const path = location.pathname.split("/")
+  const posts = data.allMdx.nodes.filter(node => node.frontmatter.categories === path[2])
 
   // Infinite scroll implementation by Eric Howey (https://github.com/ehowey/loadmore-demo).
   // Can't really do better than that.
@@ -47,14 +47,14 @@ const ContentPage = ({ location, data }) => {
     const isMore = list.length < posts.length
     setHasMore(isMore)
   }, [list]) //eslint-disable-line
-  
-  
+
+
   // Now do the posts
-  if (path === "services") {
+  if (path[1] === "services") {
     return (
-      <Layout pageTitle={path} >
-        <p className="big-p">For consumption by search engines.</p>
-        <p className="big-p">If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a better description of our services.</p>
+      <Layout pageTitle={path[1] + "/" + path[2]}>
+        <p className="big-p">This page is here for future usage. If and when we have enough services, we will split them into categories.</p>
+        <p className="big-p">If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a list of services.</p>
         {
           posts.map(node => (
             <article key={node.id}>
@@ -67,7 +67,7 @@ const ContentPage = ({ location, data }) => {
     )
   } else {
     return (
-      <Layout pageTitle={path} >
+      <Layout pageTitle={path[2].replace("-", " ")} >
         <p className="big-p">Thoughts on digital sustainability.</p>
         <Container className="blog-index">
         <CategoriesComponent />
@@ -114,7 +114,10 @@ const ContentPage = ({ location, data }) => {
 
 export const query = graphql`
   query {
-    allMdx(sort: {frontmatter: {date: DESC}}) {
+    allMdx(
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {type: {in: "blog"}}}
+      ) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")

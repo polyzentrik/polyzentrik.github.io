@@ -35,14 +35,16 @@ const FooterComponent = () => {
                         <h2>Services</h2>
                         <ul className="mt-0">
                             <li className=""><Link to="/services/sustainability-reporting/">Sustainability reporting</Link></li>
-                            <li className=""><Link to="/services/web-development/">Website development</Link></li>
+                            <li className=""><Link to="/services/web-development/">Sustainable website development</Link></li>
                             <li className=""><Link to="/services/sustainability-transcriptions-ai/">Sustainability transcriptions</Link></li>
+                            <li className=""><Link to="/services/sustainability-content-ai/">Sustainability content generation</Link></li>
                         </ul>
                     </Col>
                     <Col className='mt-3 mt-md-0'>
                         <h2>Site</h2>
                         <ul className="mt-0">
                             <li className=""><Link to="/">Home</Link></li>
+                            <li className=""><Link to="/services/">Services</Link></li>
                             <li className=""><Link to="/blog/">Blog</Link></li>
                             <li className=""><Link to="/roadmap/">Roadmap</Link></li>
                             <li className=""><Link to="/about/">About & Contact</Link></li>

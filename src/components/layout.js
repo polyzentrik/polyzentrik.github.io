@@ -25,33 +25,29 @@ const Layout = ({ pageTitle, children }) => {
     if (typeof window === 'undefined') {
         return <></>;
     } else {
-
         return (
             <Container fluid className="px-0 mx-0">
                 <HeaderComponent />
                 <main className="page-content">
-                        <section>
-                            <Container fluid className="green-bg">
-                            <Row className="branding border-top border-bottom border-1 border-dark">
-                                <Col className="welcome my-md-auto col-12 col-md-6">
+                    <section>
+                        <Container fluid className="slide-bg text-center">
+                            <Row className="branding checkers">
+                                <Col className="welcome my-md-auto">
                                     <h1 className="pzntrk">{data.site.siteMetadata.title}</h1>
-                                    <h2 className="hidey-lg mb-5">{data.site.siteMetadata.description}</h2>
-                                </Col>
-                                <Col className="my-md-auto col-12 col-md-6">
-                                    <p className="big-p">We offer digital resources and services that can help you at different stages of your sustainability journey.</p>
-                                    <BenefitsComponent />
+                                    <p>Digital resources and services to help you at different stages of your sustainability journey</p>
                                 </Col>
                             </Row>
-                            </Container>
-                        </section>
-                        <section className="content">
-                            <Container>
+                        </Container>
+                        <BenefitsComponent />
+                    </section>
+                    <section className="content">
+                        <Container>
                             <Row>
                                 <h2 className="pzntrk">{pageTitle}</h2>
                                 <div>{children}</div>
                             </Row>
-                            </Container>
-                        </section> 
+                        </Container>
+                    </section>
                 </main>
                 <FooterComponent />
             </Container>

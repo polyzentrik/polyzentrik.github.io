@@ -58,11 +58,6 @@ a:hover {
 /**************************************/
 /*********** NAVBARS **************/
 /************************************/
-header,
-header .navbar {
-    height: 10rem;
-}
-
 header #responsive-navbar-nav {
     position: absolute;
     top: 0;
@@ -82,17 +77,25 @@ header .navbar-toggler {
 }
 
 header .nav-item {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.1rem;
     font-variant: small-caps;
 }
 
-.green a {
-    color: rgb(17, 102, 62);
+header .dropdown-menu {
+    margin-top: 0 !important;
+    padding-top: 0;
+    border: 0;
+    text-align: center;
+    font-size: small;
 }
 
-.green-bg {
-    background: rgb(136, 240, 191, 0.3);
+header .dropdown:hover .dropdown-menu {
+    display: block !important;
+    }
+
+.green a {
+    color: rgb(17, 102, 62);
 }
 
 nav svg {
@@ -133,10 +136,9 @@ footer ul li {
 .linky ul {
     font-size: 1.3rem;
 }
-benefits
+
 .lower-footer {
     border-top: 1px dotted #fff;
-    margin-top: 3em;
 }
 
 .lower-footer ul li {
@@ -154,18 +156,20 @@ footer p {
     overflow-wrap: break-word;
 }
 
+.branding {
+    border-top: 1px dotted #000;
+    border-bottom: 1px dotted #000;
+    min-height: 30vh;
+}
+
 .pzntrk {
     font-weight: 900;
     letter-spacing: 0.8vw;
     text-transform: uppercase;
 }
 
-.branding {
-    padding: 5vh 2%;
-}
-
 .branding h1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .branding h2 {
@@ -176,12 +180,20 @@ footer p {
 }
 
 .benefits-carousel {
-    margin: 0 auto 35px auto;
     font-size: large;
+    text-align: center;
+    font-variant: small-caps;
+    background-color: rgba(242, 245, 57, 0.952);
+    margin-bottom: 3em;
+    border-bottom: 1px dotted #000;
 }
 
 .benefits-carousel p {
-    margin: 0.5em auto 0.5em 1em;
+    margin: 0.5em auto;
+}
+
+.benefits-carousel a {
+    text-decoration: none;
 }
 
 .carousel-indicators,
@@ -200,15 +212,6 @@ footer p {
 
 .services .optional {
     display: none;
-}
-
-.blog .navbar-brand{
-    margin-right: 0;
-}
-
-.blog .nav-link{
-    margin: auto 4px;
-    font-size: small;
 }
 
 .services .article-title,
@@ -291,17 +294,18 @@ footer p {
     background-color: rgba(7, 200, 109, 0.2);
 }
 
-.services-index .card-title,
-.blog-index .card-title,
-.hello .card-title {
-    font-variant: small-caps;
-    font-weight: 600;
-    letter-spacing: -0.03em;
+.blog-index .card, .blog-index .card-title {
+    border-style: dotted !important;
+    border-color: #000 !important;
 }
 
-.blog-index a,
-.services-index a {
-    color: #000;
+.blog-index .card-title {
+    border-left: 0;
+    border-right: 0;
+}
+
+.homepage .card-title {
+    border-top: 0;
 }
 
 .blog details {
@@ -466,7 +470,7 @@ main {
     animation-timing-function: ease-in-out;
 }
 
-.green-bg {
+.slide-bg {
     animation-name: branding-animation;
     animation-duration: 0.5s;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -504,13 +508,12 @@ main {
 
 @media screen and (min-width: 768px) {
     .branding {
-        min-height: 45vh;
         padding: 1rem 3% 0;
-        margin-bottom: 50px;
+        
     }
 
     .branding h1 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     .hidey {
@@ -560,16 +563,12 @@ main {
         border: 0;
     }
 
-    header .navbar {
-        min-height: 15vh;
-    }
-
-    .branding {
-        min-height: 70vh;
+    header .dropdown-menu {
+        text-align: left;
     }
 
     .branding h1 {
-        font-size: 7rem;
+        font-size: 5rem;
     }
 
     .hidey-lg {
@@ -578,6 +577,10 @@ main {
 
     .border-hidey {
         border-left: 1px solid #dee2e6;
+    }
+
+    .inverse-hidey {
+        display: none;
     }
 
     .blog .post-title {

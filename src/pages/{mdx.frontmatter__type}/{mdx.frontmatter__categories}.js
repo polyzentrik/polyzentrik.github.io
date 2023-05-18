@@ -10,7 +10,6 @@ import Row from 'react-bootstrap/Row'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import "../../components/pretty.css"
-import CategoriesComponent from '../../components/categories'
 
 const ContentPage = ({ location, data }) => {
   const path = location.pathname.split("/")
@@ -70,7 +69,6 @@ const ContentPage = ({ location, data }) => {
       <Layout pageTitle={path[2].replace("-", " ")} >
         <p className="big-p">Thoughts on digital sustainability.</p>
         <Container className="blog-index">
-        <CategoriesComponent />
           <Row>
             <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
               <Masonry>

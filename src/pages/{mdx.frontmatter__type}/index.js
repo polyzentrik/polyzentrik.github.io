@@ -1,5 +1,4 @@
-import * as React from "react"
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
@@ -7,10 +6,10 @@ import Seo from '../../components/seo'
 import Layout from '../../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import "../../components/pretty.css"
-import CategoriesComponent from '../../components/categories'
 
 const ContentPage = ({ location, data }) => {
   const path = location.pathname.slice(1, -1)
@@ -47,50 +46,66 @@ const ContentPage = ({ location, data }) => {
     const isMore = list.length < posts.length
     setHasMore(isMore)
   }, [list]) //eslint-disable-line
-  
-  
+
+
   // Now do the posts
   if (path === "services") {
     return (
       <Layout pageTitle={path} >
-        <p className="big-p">For consumption by search engines.</p>
-        <p className="big-p">If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a better description of our services.</p>
-        {
-          posts.map(node => (
-            <article key={node.id}>
-              <Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link>
-              <p>{node.excerpt}</p>
-            </article>
-          ))
-        }
+        <p className="big-p"><p>We can help you <em>be more sustainable</em>. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p> </p>
+        <Row className="mb-2 hello">
+          <Col lg={12}>
+            <Container>
+              <Row className="">
+                {
+                  posts.map(node => (
+                    <Col className="col-12 col-md-6 d-flex services-index">
+                      <Card className="mb-2 px-0 mx-0 border-dark">
+                        <article key={node.id}>
+                          <Card.Title className="checkers pt-4 pb-2 border-bottom border-dark">
+                            <h3 className="px-3 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
+                          </Card.Title>
+                          <Card.Body>
+                            <Card.Text>
+                              <p className="pb-sm-1 pb-md-auto">{node.frontmatter.intro}</p>
+                            </Card.Text>
+                            <Link to={`/services/${node.frontmatter.slug}`}>
+                              <Button variant="info" className="special-bg pink float-end mb-3 border border-1 border-dark">Learn more...</Button>
+                            </Link>
+                          </Card.Body>
+                        </article>
+                      </Card>
+                    </Col>
+                  ))
+                }
+              </Row>
+            </Container>
+          </Col>
+        </Row>
       </Layout>
     )
   } else {
     return (
       <Layout pageTitle={path} >
-        <p className="big-p">Thoughts on digital sustainability.</p>
+        <p className="big-p">Let's talk a little about...</p>
         <Container className="blog-index">
-        <CategoriesComponent />
           <Row>
-            <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
+            <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4 }}>
               <Masonry>
                 {
                   list.map(node => (
                     <article key={node.id} className={node.frontmatter.categories}>
-                      <Card className="m-1 checkers border-dark">
+                      <Card className="m-1 checkers border border-secondary">
                         <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                           <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                         </Link>
                         <Card.Body className="px-0 pt-0">
-                          <Card.Title className="pt-2 pb-3 border-top border-bottom border-dark bg-white">
+                          <Card.Title className="pt-2 pb-3 border-top border-bottom bg-white">
                             <h3 className="px-2 small"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                           </Card.Title>
                           <Card.Text className="px-3">
                             <p>{node.excerpt}</p>
                           </Card.Text>
-                          <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                            <Button variant="light" className="pink float-end mb-3 border border-dark mx-3">Read more...</Button>
-                          </Link>
                         </Card.Body>
                       </Card>
                     </article>
@@ -119,14 +134,15 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
-          slug
           type
+          slug
+          intro
           categories
           author
           hero_image {
             childImageSharp {
               gatsbyImageData  (
-                layout: CONSTRAINED
+                layout: FULL_WIDTH
                 )
             }
           }

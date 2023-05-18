@@ -74,16 +74,31 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`, options: {
-        fonts: [`Unbounded\:300,600,900`], display: 'swap'
-      }
-    },
+    //{
+    //  resolve: `gatsby-plugin-google-fonts`, options: {
+    //    fonts: [`Unbounded\:300,600,900`], display: 'swap'
+    //  }
+    //},
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
         lang: 'en-GB'
       }
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google2: [
+            {
+              family: "Unbounded",
+              axes: "wght@300;600;900", // multiple ranges are supported, ex: "wght@300..500;700..900"
+              fontDisplay: 'swap',
+              strategy: 'selfHosted',
+            },
+          ],
+        },
+      },
     },
   ]
 };

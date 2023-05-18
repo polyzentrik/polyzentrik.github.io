@@ -1,27 +1,41 @@
-import * as React from 'react'
+import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image'
-import { BsLinkedin, BsGithub } from "react-icons/bs"
+import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button'
 import "../components/pretty.css"
 
 const HeaderComponent = () => {
     return (
-        <header className="green">
+        <header className="green py-3">
             <Navbar collapseOnSelect expand="lg" bg="white">
                 <Container fluid>
                     <Navbar.Brand href="/">
-                        <StaticImage src="../images/graphics/icon.png" alt="Logo" width={70} aspectRatio={1 / 1} />
+                        <StaticImage src="../images/graphics/icon.png" alt="Logo" width={50} aspectRatio={1 / 1} />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="border-1"/>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="border-1" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-                            <Nav.Item><Nav.Link href="/blog/">Blog</Nav.Link></Nav.Item>
-                            <Nav.Item><Nav.Link href="/roadmap/">Roadmap</Nav.Link></Nav.Item>
-                            <Nav.Item><Nav.Link href="/about/">About & Contact</Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/services/">Services</Nav.Link></Nav.Item>
+                            <NavDropdown title="Blog" id="blog-dropdown"
+                                renderMenuOnMount={true}
+                                onClick={() => { if (window.screen.width > 992) { window.location.href = '/blog/' } }} >
+                                <NavDropdown.Item href="/blog/" className="inverse-hidey">
+                                    All categories
+                                </NavDropdown.Item>
+                                <NavDropdown.Item href="/blog/company/">
+                                    Polyzentrik
+                                </NavDropdown.Item>
+                                <NavDropdown.Item href="/blog/sustainability/">
+                                    Digital sustainability
+                                </NavDropdown.Item>
+                                <NavDropdown.Item href="/blog/artificial-intelligence/">
+                                    Sustainable AI</NavDropdown.Item>
+                            </NavDropdown>
                         </Nav>
                         <Nav>
                             <Nav.Item>

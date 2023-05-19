@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import FooterComponent from './footer'
-import BenefitsComponent from './benefits'
+import BrandingComponent from './branding'
 import HeaderComponent from './header'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -27,29 +27,24 @@ const Layout = ({ pageTitle, children }) => {
     } else {
         return (
             <Container fluid className="px-0 mx-0">
-                <HeaderComponent />
-                <main className="page-content">
-                    <section>
-                        <Container fluid className="slide-bg text-center">
-                            <Row className="branding checkers">
-                                <Col className="welcome my-md-auto">
-                                    <h1 className="pzntrk">{data.site.siteMetadata.title}</h1>
-                                    <p>Digital resources and services to help you at different stages of your sustainability journey</p>
-                                </Col>
-                            </Row>
-                        </Container>
-                        <BenefitsComponent />
-                    </section>
-                    <section className="content">
-                        <Container>
+                <header>
+                    <HeaderComponent />
+                    <BrandingComponent />
+                    
+                </header>
+                <main>
+                    <section className="content mt-5">
+                        <Container fluid className="px-0">
                             <Row>
-                                <h2 className="pzntrk">{pageTitle}</h2>
+                                <h2 className="pzntrk hide">{pageTitle}</h2>
                                 <div>{children}</div>
                             </Row>
                         </Container>
                     </section>
                 </main>
-                <FooterComponent />
+                <footer>
+                    <FooterComponent />
+                </footer>
             </Container>
 
         )

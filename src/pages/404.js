@@ -8,6 +8,7 @@ import "../components/pretty.css"
 const NotFoundPage = () => {
   return (
     <Layout pageTitle="Page not found">
+      <h2 className="pzntrk">Page not found</h2>
       <Row>
         <p>Sorry 😔, we couldn’t find what you were looking for. Chances are, this page does not exist.</p>
         <p>Try creating a page if you are an admin.</p>
@@ -20,6 +21,6 @@ const NotFoundPage = () => {
 export default NotFoundPage
 
 export const Head = () => (
-  <Seo title="Polyzentrik > About"
+  <Seo title="Polyzentrik > 404"
     description="Page not found." />
 )

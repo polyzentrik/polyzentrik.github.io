@@ -8,6 +8,7 @@ import ProductsComponent from "../components/products/products"
 const GatewayPage = () => {
     return (
         <Layout pageTitle="Online payments gateway">
+            <h2 className="pzntrk">Online payments gateway</h2>
             <p className="big-p">Online payments gateway<sup>1, 2</sup> for <span className="text-decoration-underline">existing</span><sup>3, 4</sup> users and supporters.</p>
             <ProductsComponent />
             <br />

@@ -52,6 +52,7 @@ const ContentPage = ({ location, data }) => {
   if (path === "services") {
     return (
       <Layout pageTitle={path} >
+        <h2 className="pzntrk">{path}</h2>
         <p className="big-p"><p>We can help you <em>be more sustainable</em>. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p> </p>
         <Row className="mb-2 hello">
           <Col lg={12}>
@@ -60,9 +61,9 @@ const ContentPage = ({ location, data }) => {
                 {
                   posts.map(node => (
                     <Col className="col-12 col-md-6 d-flex services-index">
-                      <Card className="mb-2 px-0 mx-0 border-dark">
+                      <Card className="mb-2 px-0 mx-0 checkers">
                         <article key={node.id}>
-                          <Card.Title className="checkers pt-4 pb-2 border-bottom border-dark">
+                          <Card.Title className="pt-4 pb-2 bg-white">
                             <h3 className="px-3 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
                           </Card.Title>
                           <Card.Body>
@@ -70,7 +71,7 @@ const ContentPage = ({ location, data }) => {
                               <p className="pb-sm-1 pb-md-auto">{node.frontmatter.intro}</p>
                             </Card.Text>
                             <Link to={`/services/${node.frontmatter.slug}`}>
-                              <Button variant="info" className="special-bg pink float-end mb-3 border border-1 border-dark">Learn more...</Button>
+                              <Button variant="light" className="pink float-end mb-2">Learn more...</Button>
                             </Link>
                           </Card.Body>
                         </article>
@@ -87,6 +88,7 @@ const ContentPage = ({ location, data }) => {
   } else {
     return (
       <Layout pageTitle={path} >
+        <h2 className="pzntrk">{path}</h2>
         <p className="big-p">Let's talk a little about...</p>
         <Container className="blog-index">
           <Row>
@@ -95,13 +97,13 @@ const ContentPage = ({ location, data }) => {
                 {
                   list.map(node => (
                     <article key={node.id} className={node.frontmatter.categories}>
-                      <Card className="m-1 checkers border border-secondary">
+                      <Card className="m-1 checkers">
                         <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                           <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                         </Link>
                         <Card.Body className="px-0 pt-0">
-                          <Card.Title className="pt-2 pb-3 border-top border-bottom bg-white">
-                            <h3 className="px-2 small"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
+                          <Card.Title className="pt-2 pb-3 bg-white">
+                            <h3 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                           </Card.Title>
                           <Card.Text className="px-3">
                             <p>{node.excerpt}</p>
@@ -113,9 +115,9 @@ const ContentPage = ({ location, data }) => {
                 }
               </Masonry>
             </ResponsiveMasonry>
-            <Container className="text-center">
+            <Container className="text-end">
               {hasMore ? (
-                <Button onClick={handleLoadMore} variant="dark" className="big-p border border-dark w-50 mt-3">Click to load more.</Button>
+                <Button onClick={handleLoadMore} variant="dark" className="border w-100 mt-3">Click to load more.</Button>
               ) : (
                 <span></span>
               )}

@@ -14,7 +14,7 @@ html {
 }
 
 /**************************************/
-/******* MAIN HTML ELEMENTS **********/
+/******* KEY HTML ELEMENTS **********/
 /************************************/
 body {
     background: white;
@@ -31,16 +31,9 @@ footer {
     font-family: unbounded;
 }
 
-blockquote {
-    margin: 7px 5%;
-    font-style: italic;
-    border-left: 3px solid #bbb;
-    padding: 0 7px;
-}
-
 main {
-    padding-bottom: 5rem;
-    background: repeating-linear-gradient(75deg, #fff, #efefef 3px, rgb(8, 131, 45) 3px);
+    min-height: 70vh;
+    padding-bottom: 3rem;
 }
 
 section {
@@ -55,9 +48,20 @@ a:hover {
     color: rgb(201, 19, 98) !important;
 }
 
+blockquote {
+    margin: 7px 5%;
+    font-style: italic;
+    border-left: 3px solid #bbb;
+    padding: 0 7px;
+}
+
 /**************************************/
-/*********** NAVBARS **************/
+/***** HEADER & FOOTER NAVBARS *******/
 /************************************/
+header .navbar {
+    min-height: 10vh;
+}
+
 header #responsive-navbar-nav {
     position: absolute;
     top: 0;
@@ -104,7 +108,7 @@ nav svg {
 
 footer {
     background: #111;
-    color: #aaa;
+    color: #ccc;
     border-top: 1px dotted #fff;
 }
 
@@ -145,6 +149,11 @@ footer ul li {
     text-align: right;
 }
 
+.lower-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 footer p {
     margin-right: 7px;
 }
@@ -154,6 +163,8 @@ footer p {
 /************************************/
 .welcome {
     overflow-wrap: break-word;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .branding {
@@ -164,41 +175,38 @@ footer p {
 
 .pzntrk {
     font-weight: 900;
-    letter-spacing: 0.8vw;
     text-transform: uppercase;
 }
 
 .branding h1 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .branding h2 {
     font-size: medium;
     font-weight: 600;
-    letter-spacing: 0.3vw;
     text-transform: uppercase;
 }
 
-.benefits-carousel {
+.services-carousel {
     font-size: large;
-    text-align: center;
-    font-variant: small-caps;
-    background-color: rgba(242, 245, 57, 0.952);
-    margin-bottom: 3em;
-    border-bottom: 1px dotted #000;
+    text-align: left;
 }
 
-.benefits-carousel p {
-    margin: 0.5em auto;
+.services-carousel .carousel-item {
+    height: 400px;
 }
 
-.benefits-carousel a {
-    text-decoration: none;
+.services-carousel p {
+    margin: 0;
+    padding: 0;
 }
 
-.carousel-indicators,
-.carousel-control-next,
-.carousel-control-prev {
+.services-carousel .carousel-item {
+    margin-bottom: 3px;
+}
+
+.carousel-indicators {
     display: none;
 }
 
@@ -214,15 +222,14 @@ footer p {
     display: none;
 }
 
+.homepage-blog-index {
+    margin: 5em auto;
+}
+
 .services .article-title,
 .blog .article-title h2,
 .blog .article-title p {
     background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
-}
-
-.services .article-title,
-.blog .article-title {
-    border-bottom: 1px solid #000;
 }
 
 .content h2 {
@@ -269,43 +276,9 @@ footer p {
     font-weight: 600;
 }
 
-.card {
-    margin-bottom: 14px;
-}
-
-.card .gatsby-image-wrapper {
-    border-radius: 5px 5px 0 0;
-}
-
-.shop .gatsby-image-wrapper,
-.services-index img {
+.shop .gatsby-image-wrapper {
     width: 45% !important;
     margin: auto;
-}
-
-.blog .gatsby-resp-image-wrapper {
-    max-width: 80% !important;
-    margin: 21px auto 0;
-    border: 1px dotted;
-}
-
-.services-index .card:hover,
-.blog-index .card:hover {
-    background-color: rgba(7, 200, 109, 0.2);
-}
-
-.blog-index .card, .blog-index .card-title {
-    border-style: dotted !important;
-    border-color: #000 !important;
-}
-
-.blog-index .card-title {
-    border-left: 0;
-    border-right: 0;
-}
-
-.homepage .card-title {
-    border-top: 0;
 }
 
 .blog details {
@@ -378,6 +351,7 @@ footer p {
     margin: 14px 7px auto 0;
 }
 
+.content h2.hide,
 .hidey,
 .hidey-lg {
     display: none;
@@ -385,27 +359,6 @@ footer p {
 
 details summary {
     margin-bottom: 14px;
-}
-
-.page404 {
-    min-height: 100vh;
-    padding: 10vh 7rem;
-}
-
-.about .card-title,
-.roadmap .card-title {
-    letter-spacing: 0.2vw;
-}
-
-.roadmap .card {
-    max-height: 600px;
-    overflow: auto;
-    border-color: #000;
-}
-
-.roadmap .card,
-.about .card {
-    border-color: #000;
 }
 
 .footnote {
@@ -429,25 +382,31 @@ details summary {
 }
 
 .yt-embed {
-    aspect-ratio: 16 /9;
+    aspect-ratio: 16/9;
     width: 100%;
+}
+
+.badger {
+    margin-top: 1em;
+    font-size: small;
 }
 
 .carbon-badge, #wcb, #wcb_a, #wcb_p, #wcb_g, #wcb_2 {
     font-family: monospace !important;
-    font-size: small;
-    padding: 0 !important;
+    font-weight: 600;
+    padding: 0 5px !important;
+    border-radius: 3px;
     margin: 0 !important;
-    background-color: #111 !important;
+    color: #000;
+    background-color: #38b87c;
 }
 
-#wcb_a, #wcb_2 {
-    display: none !important;
+#wcb_a, #wcb_g, #wcb_p {
+    display: none;
 }
 
-#wcb_g::before {
-    content: "this page emits only";
-    margin-right: 5px;
+#wcb_2::after {
+    content: ".";
 }
 
 #wcb_g::after {
@@ -507,11 +466,6 @@ main {
 /************************************/
 
 @media screen and (min-width: 768px) {
-    .branding {
-        padding: 1rem 3% 0;
-        
-    }
-
     .branding h1 {
         font-size: 3rem;
     }
@@ -554,7 +508,6 @@ main {
         text-align: left;
         margin-left: 10px;
     }
-
 }
 
 @media screen and (min-width: 992px) {
@@ -568,7 +521,7 @@ main {
     }
 
     .branding h1 {
-        font-size: 5rem;
+        font-size: 6rem;
     }
 
     .hidey-lg {

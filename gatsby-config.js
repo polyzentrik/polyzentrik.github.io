@@ -8,7 +8,7 @@ module.exports = {
   },
   siteMetadata: {
     title: "Polyzentrik",
-    description: "Digital sustainability solutions",
+    description: "Digital resources to help you at different stages of your sustainability journey.",
     siteUrl: "https://www.polyzentrik.com",
     image: "/logo-banner.png"
   },

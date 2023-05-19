@@ -18,14 +18,17 @@ const FooterComponent = () => {
     `)
 
     return (
-        <footer className="mb-0 pb-0">
+        <div className="main-footer">
             <Container fluid className="">
-                <Row className="pb-2">
+                <Row className="middle-footer">
                     <Col md={6} className="">
                         <Row>
+                            <ul className="small d-flex badger">
+                                <li className="me-1">As per the&nbsp;<a href="https://www.websitecarbon.com" target="_blank" rel="noreferrer noopener">Website Carbon</a>, this page is...</li>
+                                <li><div id="wcb"></div></li>
+                            </ul>
                             <h1 className="pzntrk mb-0">{data.site.siteMetadata.title}</h1>
                             <p className="mt-0 small copy-r">&#169; {fecha().year}. All rights reserved.</p>
-                            <br />
                         </Row>
                         <Row className="mt-3">
 
@@ -44,8 +47,8 @@ const FooterComponent = () => {
                         <h2>Site</h2>
                         <ul className="mt-0">
                             <li className=""><Link to="/">Home</Link></li>
-                            <li className=""><Link to="/services/">Services</Link></li>
                             <li className=""><Link to="/blog/">Blog</Link></li>
+                            <li className=""><Link to="/services/">Services</Link></li>
                             <li className=""><Link to="/roadmap/">Roadmap</Link></li>
                             <li className=""><Link to="/about/">About & Contact</Link></li>
 
@@ -53,12 +56,6 @@ const FooterComponent = () => {
                     </Col>
                 </Row>
                 <Row className="lower-footer d-flex py-2 small">
-                    <Col md={6} className="my-auto small">
-                        <ul className="my-auto small">
-                            <li className="me-1">As per the&nbsp;<a href="https://www.websitecarbon.com" target="_blank" rel="noreferrer noopener">Website Carbon</a>,</li>
-                            <li><div id="wcb" class="small"></div></li>
-                        </ul>
-                    </Col>
                     <Col className="text-end my-auto small">
                         <ul className="my-auto small">
                             <li><Link to="/terms-conditions/">Terms & Conditions | Privacy & Cookies | Disclaimer</Link></li>
@@ -67,7 +64,7 @@ const FooterComponent = () => {
                 </Row>
             </Container>
             <Script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" />
-        </footer>
+        </div>
     )
 }
 

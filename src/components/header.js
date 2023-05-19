@@ -1,5 +1,4 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image'
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
@@ -10,21 +9,18 @@ import "../components/pretty.css"
 
 const HeaderComponent = () => {
     return (
-        <header className="green py-3">
-            <Navbar collapseOnSelect expand="lg" bg="white">
+        <div className="green py-0">
+            <Navbar collapseOnSelect expand="lg" className="py-3">
                 <Container fluid>
-                    <Navbar.Brand href="/">
-                        <StaticImage src="../images/graphics/icon.png" alt="Logo" width={50} aspectRatio={1 / 1} />
-                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" className="border-1" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
                             <Nav.Item><Nav.Link href="/services/">Services</Nav.Link></Nav.Item>
                             <NavDropdown title="Blog" id="blog-dropdown"
-                                renderMenuOnMount={true}
+                                renderMenuOnMount={true} 
                                 onClick={() => { if (window.screen.width > 992) { window.location.href = '/blog/' } }} >
-                                <NavDropdown.Item href="/blog/" className="inverse-hidey">
+                                <NavDropdown.Item href="/">
                                     All categories
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="/blog/company/">
@@ -59,7 +55,7 @@ const HeaderComponent = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </header>
+        </div>
     )
 }
 

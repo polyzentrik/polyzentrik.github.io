@@ -52,6 +52,7 @@ const ContentPage = ({ location, data }) => {
   if (path[1] === "services") {
     return (
       <Layout pageTitle={path[1] + "/" + path[2]}>
+        <h2 className="pzntrk">{path[1] + " > " + path[2]}</h2>
         <p className="big-p">This page is here for future usage. If and when we have enough services, we will split them into categories.</p>
         <p className="big-p">If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a list of services.</p>
         {
@@ -67,6 +68,7 @@ const ContentPage = ({ location, data }) => {
   } else {
     return (
       <Layout pageTitle={path[2].replace("-", " ")} >
+        <h2 className="pzntrk">{"Blog > " + path[2].replace("-", " ")}</h2>
         <p className="big-p">Thoughts on digital sustainability.</p>
         <Container className="blog-index">
           <Row>

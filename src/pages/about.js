@@ -13,21 +13,22 @@ import Tab from 'react-bootstrap/Tab'
 const AboutPage = () => {
     return (
         <Layout pageTitle="About">
+            <h2 className="pzntrk">About</h2>
             <p className="big-p">Get to know Polyzentrik.</p>
             <Row className="about">
                 <Col md={8}>
                     <Container className="card rounded bg-white">
                         <Row className="">
-                        <h2 className="pzntrk mb-0 border-bottom border-dark px-2 py-2 checkers">Founder</h2>
+                        <h3 className="pzntrk mb-0 card-title px-2 py-2 checkers">Founder</h3>
                             <Col lg={3} className="linky text-center pt-3">
                                 <StaticImage src="../images/with-suit.jpeg" alt="Photo of J" className="rounded" />
-                                <ul>
+                                <ul className="text-end">
                                     <li><a href="https://www.linkedin.com/in/jbolns" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsLinkedin /></a></li>
                                     <li><a href="https://github.com/jbolns" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsGithub /></a></li>
                                     <li><a href="https://www.josebolanos.xyz/" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsHouseFill /></a></li>
                                 </ul>
                             </Col>
-                            <Col className="border-hidey border-dark pt-3 px-0 py-0 pb-2">
+                            <Col className="border-hidey pt-3 px-0 py-0 pb-2">
                                 <Container className="px-3">
                                     <p>Polyzentrik is (currently) a private practice by Dr José A Bolanos.</p>
                                     <p>José studied and worked for a while in some of the top universities in the UK and Germany, on projects related to sustainability, private governance, and the future of policy. After, he learned how to code and use a variety of data and business intelligence tools.</p>
@@ -67,7 +68,7 @@ const AboutPage = () => {
                 <Col md={4}>
                     <Card className="mt-sm-2 mt-md-auto">
                         <Card.Body className="px-0 pt-0">
-                            <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Contact</Card.Title>
+                            <h3 className="px-2 pzntrk py-3 checkers small card-title">Contact</h3>
                             <Card.Subtitle className="px-3 my-3">An initial conversation is always free of charge.</Card.Subtitle>
                             <Card.Text className="px-3 linky text-end">
                                 <ul>
@@ -79,7 +80,7 @@ const AboutPage = () => {
                     </Card>
                     <Card>
                         <Card.Body className="px-0 pt-0">
-                            <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Social media</Card.Title>
+                            <h3 className="px-2 pzntrk py-3 checkers small card-title">Social media</h3>
                             <Card.Subtitle className="px-3 my-3">Let's stay in touch via social media.</Card.Subtitle>
                             <Card.Text className="px-3 linky text-end">
                                 <ul>
@@ -92,7 +93,7 @@ const AboutPage = () => {
                     </Card>
                     <Card>
                         <Card.Body className="px-0 pt-0">
-                            <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Company details</Card.Title>
+                            <h3 className="px-2 pzntrk py-3 checkers small card-title">Company details</h3>
                             <Card.Subtitle className="px-3 my-3">Polyzentrik is a company based in Finland.</Card.Subtitle>
                             <Card.Text className="px-3 small">
                                 <p className="my-0"><strong>Company name.</strong> Polyzentrik Tmi.</p>
@@ -105,7 +106,7 @@ const AboutPage = () => {
                 <Col className="mt-2">
                     <Card>
                         <Card.Body className="px-0 pt-0">
-                            <Card.Title className="px-2 pzntrk py-3 border-bottom border-dark border-1 checkers">Additional credits</Card.Title>
+                            <h3 className="px-2 pzntrk py-3 checkers small card-title">Additional credits</h3>
                             <Card.Subtitle className="px-3 my-3">All resources in this website are proprietary, available in the public domain, or under licenses which allow commercial use
                                     without attribution. That said, we are grateful to the persons/organisations whose work facilitated ours.</Card.Subtitle>
                             <Card.Text className="px-3">

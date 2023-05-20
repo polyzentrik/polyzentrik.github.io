@@ -52,11 +52,9 @@ const ContentPage = ({ location, data }) => {
   if (path === "services") {
     return (
       <Layout pageTitle={path} >
-        <h2 className="pzntrk">{path}</h2>
-        <p className="big-p"><p>We can help you <em>be more sustainable</em>. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p> </p>
         <Row className="mb-2 hello">
           <Col lg={12}>
-            <Container>
+            <Container className="mt-5">
               <Row className="">
                 {
                   posts.map(node => (
@@ -88,9 +86,7 @@ const ContentPage = ({ location, data }) => {
   } else {
     return (
       <Layout pageTitle={path} >
-        <h2 className="pzntrk">{path}</h2>
-        <p className="big-p">Let's talk a little about...</p>
-        <Container className="blog-index">
+        <Container className="blog-index mt-5">
           <Row>
             <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4 }}>
               <Masonry>

@@ -96,7 +96,7 @@ header .dropdown-menu {
 
 header .dropdown:hover .dropdown-menu {
     display: block !important;
-    }
+}
 
 .green a {
     color: rgb(17, 102, 62);
@@ -188,22 +188,8 @@ footer p {
     text-transform: uppercase;
 }
 
-.services-carousel {
-    font-size: large;
-    text-align: left;
-}
-
-.services-carousel .carousel-item {
-    height: 400px;
-}
-
-.services-carousel p {
-    margin: 0;
-    padding: 0;
-}
-
-.services-carousel .carousel-item {
-    margin-bottom: 3px;
+.services-intro {
+    margin-top: 5em;
 }
 
 .carousel-indicators {
@@ -223,19 +209,7 @@ footer p {
 }
 
 .homepage-blog-index {
-    margin: 5em auto;
-}
-
-.services .article-title,
-.blog .article-title h2,
-.blog .article-title p {
-    background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
-}
-
-.content h2 {
-    letter-spacing: normal;
-    margin-top: 28px;
-    margin-bottom: 14px;
+    margin: 4em auto;
 }
 
 .blog h2.pzntrk,
@@ -391,7 +365,12 @@ details summary {
     font-size: small;
 }
 
-.carbon-badge, #wcb, #wcb_a, #wcb_p, #wcb_g, #wcb_2 {
+.carbon-badge,
+#wcb,
+#wcb_a,
+#wcb_p,
+#wcb_g,
+#wcb_2 {
     font-family: monospace !important;
     font-weight: 600;
     padding: 0 5px !important;
@@ -401,7 +380,9 @@ details summary {
     background-color: #38b87c;
 }
 
-#wcb_a, #wcb_g, #wcb_p {
+#wcb_a,
+#wcb_g,
+#wcb_p {
     display: none;
 }
 

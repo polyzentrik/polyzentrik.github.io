@@ -8,7 +8,6 @@ import Card from 'react-bootstrap/Card'
 const RoadmapPage = () => {
     return (
         <Layout pageTitle="Strategic Roadmap">
-            <h2 className="pzntrk">Strategic Roadmap</h2>
             <p className="big-p">Our strategy visualised in the best format the Internet has to offer.</p>
             <Row className="roadmap">
                 <Col md={6} className="my-2">

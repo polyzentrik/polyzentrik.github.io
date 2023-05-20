@@ -33,10 +33,10 @@ const Layout = ({ pageTitle, children }) => {
                     
                 </header>
                 <main>
-                    <section className="content mt-5">
+                    <section className="content mt-0">
                         <Container fluid className="px-0">
                             <Row>
-                                <h2 className="pzntrk hide">{pageTitle}</h2>
+                                <h2 className="pzntrk text-center shadow py-5 special-bg">{pageTitle}</h2>
                                 <div>{children}</div>
                             </Row>
                         </Container>

@@ -13,8 +13,7 @@ import Tab from 'react-bootstrap/Tab'
 const AboutPage = () => {
     return (
         <Layout pageTitle="About">
-            <h2 className="pzntrk">About</h2>
-            <p className="big-p">Get to know Polyzentrik.</p>
+            <Container className="mt-5">
             <Row className="about">
                 <Col md={8}>
                     <Container className="card rounded bg-white">
@@ -128,6 +127,7 @@ const AboutPage = () => {
                     </Card>
                 </Col>
             </Row>
+            </Container>
         </Layout >
     )
 }

@@ -14,7 +14,7 @@ const Post = ({ data, children }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.type + " /"}>
       <Container className={data.mdx.frontmatter.type}>
-        <Row className="my-2 d-flex border rounded bg-white">
+        <Row className="mt-5 d-flex border rounded bg-white">
           <Col lg={5} className="article-title p-0 border border-bottom">
             <h2 className="pzntrk my-0 pt-3 pb-1 px-4">{data.mdx.frontmatter.title}</h2>
             <p className="small text-center my-0 px-4 pb-4 text-lg-end optional">By <a href={data.mdx.frontmatter.author_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.author}</a>.</p>

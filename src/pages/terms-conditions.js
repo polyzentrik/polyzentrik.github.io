@@ -14,11 +14,10 @@ import Tab from 'react-bootstrap/Tab'
 const TermsConditionsPage = () => {
     return (
         <Layout pageTitle="Terms & conditions">
-            <h2 className="pzntrk">Terms & conditions</h2>
-            <p className="big-p">By using our website and/or services you agree to the following.</p>
             <Row>
                 <Col md={12}>
-                    <Container className="border rounded bg-white px-3">
+                    <Container className="border rounded bg-white px-3 mt-5">
+                    <p className="big-p mt-5">By using our website and/or services you agree to the following.</p>
                         <Row className="my-2">
                             <Col>
                                 <h3 className="my-3 border-bottom">Summary</h3>

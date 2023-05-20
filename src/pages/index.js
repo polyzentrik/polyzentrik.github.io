@@ -16,16 +16,16 @@ const HomePage = ({ data }) => {
 
   return (
     <Layout pageTitle="Welcome">
-       <ServicesComponent />
-      <Row className="text-center shadow homepage-blog-index">
-        <Container className="col-8 offset-2 py-5">
-       
+      
+      <Row className="text-center homepage-blog-index">
+        <Container className="col-8 offset-">
           <Row>
             <Col lg={3} className="d-flex">
               <Container className="my-md-auto">
                 <h3 className="my-md-auto pzntrk">Latest from our blog</h3>
+                <p className="big-p">We also regularly publish fairly decent content about data, AI, and digital sustainability.</p>
                 <Link to={`/blog/`}>
-                  <Button variant="dark" className="big-p pink border w-100 mt-3">Go to blog.</Button>
+                  <Button variant="dark" className="big-p pink border w-100">Go to blog</Button>
                 </Link>
               </Container>
             </Col>
@@ -34,8 +34,7 @@ const HomePage = ({ data }) => {
                 <Row className="d-flex">
                   {
                     posts.map(node => (
-
-                      <Col md={12} lg={3} className="px-0 my-md-auto">
+                      <Col md={12} lg={4} className="px-0 my-md-auto">
                         <article key={node.id}>
                           <Card className="m-1">
                             <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
@@ -61,6 +60,7 @@ const HomePage = ({ data }) => {
           </Row>
         </Container>
       </Row>
+      <ServicesComponent />
     </Layout >
   )
 }
@@ -70,7 +70,7 @@ query {
   allMdx(
     sort: {frontmatter: {date: DESC}}
     filter: {frontmatter: {type: {eq: "blog"}}}
-    limit: 4) 
+    limit: 3) 
     {
     nodes {
       frontmatter {

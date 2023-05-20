@@ -107,9 +107,11 @@ nav svg {
 }
 
 footer {
+    margin-top: 5em;
+    padding-top: 0.4em;
+    border-top: 1px dotted #fff;
     background: #111;
     color: #ccc;
-    border-top: 1px dotted #fff;
 }
 
 footer a {
@@ -142,6 +144,7 @@ footer ul li {
 }
 
 .lower-footer {
+    margin-top: 2em;
     border-top: 1px dotted #fff;
 }
 
@@ -210,6 +213,10 @@ footer p {
 
 .homepage-blog-index {
     margin: 4em auto;
+}
+
+.homepage-blog-index .card:hover, .services-intro .card:hover, .blog-index .card:hover, .services-index .card:hover {
+    background-color: #e2fbfa;
 }
 
 .blog h2.pzntrk,

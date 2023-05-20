@@ -25,7 +25,7 @@ const HomePage = ({ data }) => {
                 <h3 className="my-md-auto pzntrk">Latest from our blog</h3>
                 <p className="big-p">We also regularly publish fairly decent content about data, AI, and digital sustainability.</p>
                 <Link to={`/blog/`}>
-                  <Button variant="dark" className="big-p pink border w-100">Go to blog</Button>
+                  <Button variant="dark" className="big-p border w-100">Go to blog</Button>
                 </Link>
               </Container>
             </Col>
@@ -36,12 +36,12 @@ const HomePage = ({ data }) => {
                     posts.map(node => (
                       <Col md={12} lg={4} className="px-0 my-md-auto">
                         <article key={node.id}>
-                          <Card className="m-1">
+                          <Card className="m-1 shadow">
                             <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                               <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                             </Link>
                             <Card.Body className="px-0 pt-0">
-                              <Card.Title className="py-3 bg-white">
+                              <Card.Title className="py-3">
                                 <h4 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
                               </Card.Title>
                               <Card.Text className="px-3">

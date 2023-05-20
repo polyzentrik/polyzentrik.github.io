@@ -74,19 +74,19 @@ const ContentPage = ({ location, data }) => {
                 {
                   list.map(node => (
                     <article key={node.id} className={node.frontmatter.categories}>
-                      <Card className="m-1 checkers border-dark">
+                      <Card className="m-1 checkers">
                         <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                           <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                         </Link>
                         <Card.Body className="px-0 pt-0">
-                          <Card.Title className="pt-2 pb-3 border-top border-bottom border-dark bg-white">
-                            <h3 className="px-2 small"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
+                          <Card.Title className="pt-2 pb-3 bg-white">
+                            <h3 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                           </Card.Title>
                           <Card.Text className="px-3">
                             <p>{node.excerpt}</p>
                           </Card.Text>
                           <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                            <Button variant="light" className="pink float-end mb-3 border border-dark mx-3">Read more...</Button>
+                            <Button variant="light" className="pink float-end mb-3 border mx-3">Read more...</Button>
                           </Link>
                         </Card.Body>
                       </Card>

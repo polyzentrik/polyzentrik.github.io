@@ -20,7 +20,7 @@ const FooterComponent = () => {
     return (
         <div className="main-footer">
             <Container fluid className="">
-                <Row className="middle-footer">
+                <Row>
                     <Col md={6} className="">
                         <Row>
                             <ul className="small d-flex badger">
@@ -29,9 +29,6 @@ const FooterComponent = () => {
                             </ul>
                             <h1 className="pzntrk mb-0">{data.site.siteMetadata.title}</h1>
                             <p className="mt-0 small copy-r">&#169; {fecha().year}. All rights reserved.</p>
-                        </Row>
-                        <Row className="mt-3">
-
                         </Row>
                     </Col>
                     <Col md={3} className='mt-3 mt-md-0'>

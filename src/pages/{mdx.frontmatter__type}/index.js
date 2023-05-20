@@ -59,12 +59,12 @@ const ContentPage = ({ location, data }) => {
                 {
                   posts.map(node => (
                     <Col className="col-12 col-md-6 d-flex services-index">
-                      <Card className="mb-2 px-0 mx-0 checkers">
+                      <Card className="mb-2 px-0 mx-0">
                         <article key={node.id}>
-                          <Card.Title className="pt-4 pb-2 bg-white">
+                          <Card.Title className="pt-4 pb-2">
                             <h3 className="px-3 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
                           </Card.Title>
-                          <Card.Body>
+                          <Card.Body className="checkers">
                             <Card.Text>
                               <p className="pb-sm-1 pb-md-auto">{node.frontmatter.intro}</p>
                             </Card.Text>
@@ -113,7 +113,7 @@ const ContentPage = ({ location, data }) => {
             </ResponsiveMasonry>
             <Container className="text-end">
               {hasMore ? (
-                <Button onClick={handleLoadMore} variant="dark" className="border w-100 mt-3">Click to load more.</Button>
+                <Button onClick={handleLoadMore} variant="dark" className="big-p border w-100 mt-3">Click to load more.</Button>
               ) : (
                 <span></span>
               )}

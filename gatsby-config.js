@@ -85,19 +85,20 @@ module.exports = {
         lang: 'en-GB'
       }
     },
-    //{
-    //  resolve: `gatsby-plugin-webfonts`,
-    //  options: {
-    //    fonts: {
-    //      google2: [
-    //        {
-    //          family: "Unbounded",
-    //          axes: "wght@900", // multiple ranges are supported, ex: "wght@300..500;700..900"
-    //          strategy: 'selfHosted',
-    //        },
-    //      ],
-    //    },
-    //  },
-    //},
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Unbounded",
+              variants: ["300","900"],
+              strategy: 'selfHosted',
+            },
+          ],
+        },
+        formats: ['woff2'],
+      },
+    },
   ]
 };

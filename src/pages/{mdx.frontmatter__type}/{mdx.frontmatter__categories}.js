@@ -74,15 +74,15 @@ const ContentPage = ({ location, data }) => {
                 {
                   list.map(node => (
                     <article key={node.id} className={node.frontmatter.categories}>
-                      <Card className="m-1 checkers">
+                      <Card className="m-1 shadow">
                         <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                           <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                         </Link>
-                        <Card.Body className="px-0 pt-0">
-                          <Card.Title className="pt-2 pb-3 bg-white">
+                        <Card.Body className="p-0">
+                          <Card.Title className="p-2">
                             <h3 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                           </Card.Title>
-                          <Card.Text className="px-3">
+                          <Card.Text className="p-3 checkers">
                             <p>{node.excerpt}</p>
                           </Card.Text>
                           <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>

@@ -111,16 +111,15 @@ footer {
     padding-top: 0.4em;
     border-top: 1px dotted #fff;
     background: #111;
-    color: #ccc;
+    color: #ddd;
 }
 
 footer a {
-    text-decoration: none;
     color: #38b87c;
 }
 
 footer a:hover {
-    color: #aaa !important;
+    color: #fff !important;
 }
 
 footer ul {
@@ -130,13 +129,9 @@ footer ul {
 
 footer ul li,
 .linky ul li {
-    display: inline-block;
+    display: block;
     list-style-type: none;
     margin-right: 7px;
-}
-
-footer ul li {
-    display: block;
 }
 
 .linky ul {
@@ -154,7 +149,6 @@ footer ul li {
 
 .lower-footer a {
     color: #fff;
-    text-decoration: underline;
 }
 
 footer p {
@@ -185,16 +179,6 @@ footer p {
     font-size: 3rem;
 }
 
-.branding h2 {
-    font-size: medium;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.services-intro {
-    margin-top: 5em;
-}
-
 .carousel-indicators {
     display: none;
 }
@@ -215,8 +199,15 @@ footer p {
     margin: 4em auto;
 }
 
-.homepage-blog-index .card:hover, .services-intro .card:hover, .blog-index .card:hover, .services-index .card:hover {
+.homepage-blog-index .card:hover,
+.services-intro .card:hover,
+.blog-index .card:hover,
+.services-index .card:hover {
     background-color: #e2fbfa;
+}
+
+.services-intro {
+    margin-top: 5em;
 }
 
 .blog h2.pzntrk,
@@ -299,11 +290,6 @@ footer p {
 }
 
 .big-p {
-    font-family: monospace;
-    font-size: x-large;
-}
-
-.content .big-p {
     font-size: large;
     font-weight: 600;
 }
@@ -463,10 +449,6 @@ main {
     }
 
     .big-p {
-        font-size: xx-large;
-    }
-
-    .content .big-p {
         font-size: x-large;
     }
 

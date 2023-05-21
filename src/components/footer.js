@@ -37,7 +37,8 @@ const FooterComponent = () => {
                             <li className=""><Link to="/services/sustainability-reporting/">Sustainability reporting</Link></li>
                             <li className=""><Link to="/services/web-development/">Sustainable website development</Link></li>
                             <li className=""><Link to="/services/sustainability-transcriptions-ai/">Sustainability transcriptions</Link></li>
-                            <li className=""><Link to="/services/sustainability-content-ai/">Sustainability content generation</Link></li>
+                            <li className=""><Link to="/services/sustainability-content-ai/">Sustainability content (AI)</Link></li>
+                            <li className=""><Link to="/services/sustainability-content-ai/">Sustainability content generation </Link></li>
                         </ul>
                     </Col>
                     <Col className='mt-3 mt-md-0'>

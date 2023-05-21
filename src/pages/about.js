@@ -16,7 +16,7 @@ const AboutPage = () => {
             <Container className="mt-5">
             <Row className="about">
                 <Col md={8}>
-                    <Container className="card rounded bg-white">
+                    <Container className="card shadow">
                         <Row className="">
                         <h3 className="pzntrk mb-0 card-title px-2 py-2 checkers">Founder</h3>
                             <Col lg={3} className="linky text-center pt-3">
@@ -65,7 +65,7 @@ const AboutPage = () => {
                     </Container>
                 </Col>
                 <Col md={4}>
-                    <Card className="mt-sm-2 mt-md-auto">
+                    <Card className="mt-2 mt-md-auto shadow">
                         <Card.Body className="px-0 pt-0">
                             <h3 className="px-2 pzntrk py-3 checkers small card-title">Contact</h3>
                             <Card.Subtitle className="px-3 my-3">An initial conversation is always free of charge.</Card.Subtitle>
@@ -77,7 +77,7 @@ const AboutPage = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Card>
+                    <Card className="mt-2 shadow">
                         <Card.Body className="px-0 pt-0">
                             <h3 className="px-2 pzntrk py-3 checkers small card-title">Social media</h3>
                             <Card.Subtitle className="px-3 my-3">Let's stay in touch via social media.</Card.Subtitle>
@@ -90,7 +90,7 @@ const AboutPage = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Card>
+                    <Card className="mt-2 shadow">
                         <Card.Body className="px-0 pt-0">
                             <h3 className="px-2 pzntrk py-3 checkers small card-title">Company details</h3>
                             <Card.Subtitle className="px-3 my-3">Polyzentrik is a company based in Finland.</Card.Subtitle>
@@ -103,7 +103,7 @@ const AboutPage = () => {
                     </Card>
                 </Col>
                 <Col className="mt-2">
-                    <Card>
+                    <Card className="shadow">
                         <Card.Body className="px-0 pt-0">
                             <h3 className="px-2 pzntrk py-3 checkers small card-title">Additional credits</h3>
                             <Card.Subtitle className="px-3 my-3">All resources in this website are proprietary, available in the public domain, or under licenses which allow commercial use

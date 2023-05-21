@@ -59,17 +59,17 @@ const ContentPage = ({ location, data }) => {
                 {
                   posts.map(node => (
                     <Col className="col-12 col-md-6 d-flex services-index">
-                      <Card className="mb-2 px-0 mx-0">
+                      <Card className="m-1 shadow">
                         <article key={node.id}>
                           <Card.Title className="pt-4 pb-2">
-                            <h3 className="px-3 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
+                            <h3 className="px-2 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
                           </Card.Title>
-                          <Card.Body className="checkers">
+                          <Card.Body className="p-3 checkers">
                             <Card.Text>
-                              <p className="pb-sm-1 pb-md-auto">{node.frontmatter.intro}</p>
+                              <p>{node.frontmatter.intro}</p>
                             </Card.Text>
                             <Link to={`/services/${node.frontmatter.slug}`}>
-                              <Button variant="light" className="pink float-end mb-2">Learn more...</Button>
+                              <Button variant="light" className="pink float-end mb-3 border mx-3">Learn more...</Button>
                             </Link>
                           </Card.Body>
                         </article>
@@ -93,17 +93,20 @@ const ContentPage = ({ location, data }) => {
                 {
                   list.map(node => (
                     <article key={node.id} className={node.frontmatter.categories}>
-                      <Card className="m-1 checkers">
+                      <Card className="m-1 shadow">
                         <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                           <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                         </Link>
-                        <Card.Body className="px-0 pt-0">
-                          <Card.Title className="pt-2 pb-3 bg-white">
+                        <Card.Body className="p-0">
+                          <Card.Title className="p-2">
                             <h3 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                           </Card.Title>
-                          <Card.Text className="px-3">
+                          <Card.Text className="p-3 checkers">
                             <p>{node.excerpt}</p>
                           </Card.Text>
+                          <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                            <Button variant="light" className="pink float-end mb-3 border mx-3">Read more...</Button>
+                          </Link>
                         </Card.Body>
                       </Card>
                     </article>

@@ -38,7 +38,7 @@ const ServicesComponent = () => {
         return (
                 <Container fluid className="py-5 m-0 services-intro shadow special-bg">
                         <Row>
-                                <Col className="col-6 offset-3">
+                                <Col className="col-lg-6 offset-lg-3">
                                         <Container>
                                                 <h3 className="my-md-auto pzntrk">Our services</h3>
                                                 <p className="big-p"><p>We can help you <em>be more sustainable</em>. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p> 
@@ -63,7 +63,7 @@ const ServicesComponent = () => {
                                                         }
                                                 </Row>
                                                 <Link to={`/services/`}>
-                                                        <Button variant="dark" className="big-p border float-end mt-2 w-25">Go to services</Button>
+                                                        <Button variant="dark" className="big-p border float-end mt-2">Go to services</Button>
                                                 </Link>
                                         </Container>
                                 </Col>

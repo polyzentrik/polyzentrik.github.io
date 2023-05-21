@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useStaticQuery, graphql, Link, Script } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -57,7 +57,6 @@ const FooterComponent = () => {
                     </Col>
                 </Row>
             </Container>
-            <Script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" />
         </div>
     )
 }

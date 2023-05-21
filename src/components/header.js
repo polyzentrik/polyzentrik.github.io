@@ -20,7 +20,7 @@ const HeaderComponent = () => {
                             <NavDropdown title="Blog" id="blog-dropdown"
                                 renderMenuOnMount={true} 
                                 onClick={() => { if (window.screen.width > 992) { window.location.href = '/blog/' } }} >
-                                <NavDropdown.Item href="/">
+                                <NavDropdown.Item href="/blog/">
                                     All categories
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="/blog/company/">

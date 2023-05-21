@@ -28,7 +28,7 @@ h4,
 h5,
 header,
 footer {
-    font-family: tahoma;
+    font-family: unbounded, tahoma;
 }
 
 main {
@@ -82,7 +82,7 @@ header .navbar-toggler {
 
 header .nav-item {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-variant: small-caps;
 }
 
@@ -290,7 +290,7 @@ footer p {
 }
 
 .big-p {
-    font-size: large;
+    font-size: medium;
     font-weight: 600;
 }
 

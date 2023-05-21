@@ -23,7 +23,7 @@ const HomePage = ({ data }) => {
             <Col lg={3} className="d-flex">
               <Container className="my-md-auto">
                 <h3 className="my-md-auto pzntrk">Latest from our blog</h3>
-                <p className="big-p">We also regularly publish fairly decent content about data, AI, and digital sustainability.</p>
+                <p className="big-p overflow-auto">We also regularly publish fairly decent content about data, AI, and digital sustainability.</p>
                 <Link to={`/blog/`}>
                   <Button variant="dark" className="big-p border w-100 mb-3">Go to blog</Button>
                 </Link>

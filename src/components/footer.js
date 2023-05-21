@@ -23,10 +23,6 @@ const FooterComponent = () => {
                 <Row>
                     <Col md={6} className="">
                         <Row>
-                            <ul className="small d-flex badger">
-                                <li className="me-1">As per the&nbsp;<a href="https://www.websitecarbon.com" target="_blank" rel="noreferrer noopener">Website Carbon</a>, this page is...</li>
-                                <li><div id="wcb"></div></li>
-                            </ul>
                             <h1 className="pzntrk mb-0">{data.site.siteMetadata.title}</h1>
                             <p className="mt-0 small copy-r">&#169; {fecha().year}. All rights reserved.</p>
                         </Row>

@@ -82,7 +82,7 @@ header .navbar-toggler {
 
 header .nav-item {
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-variant: small-caps;
 }
 
@@ -351,41 +351,6 @@ details summary {
 .yt-embed {
     aspect-ratio: 16/9;
     width: 100%;
-}
-
-.badger {
-    margin-top: 1em;
-    font-size: small;
-}
-
-.carbon-badge,
-#wcb,
-#wcb_a,
-#wcb_p,
-#wcb_g,
-#wcb_2 {
-    font-family: monospace !important;
-    font-weight: 600;
-    padding: 0 5px !important;
-    border-radius: 3px;
-    margin: 0 !important;
-    color: #000;
-    background-color: #38b87c;
-}
-
-#wcb_a,
-#wcb_g,
-#wcb_p {
-    display: none;
-}
-
-#wcb_2::after {
-    content: ".";
-}
-
-#wcb_g::after {
-    content: ".";
-    margin-right: 1px;
 }
 
 .copy-r {

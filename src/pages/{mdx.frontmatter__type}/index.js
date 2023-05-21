@@ -156,7 +156,7 @@ export const query = graphql`
 `
 export const Head = ({ location }) => (
   <Seo title={"Polyzentrik > " + location.pathname.charAt(1).toUpperCase() + location.pathname.slice(2, -1)}
-    description="Read more in our (cool and sustainable) website." />
+    description="Read more in our website." />
 )
 
 export default ContentPage

@@ -8,7 +8,7 @@ module.exports = {
   },
   siteMetadata: {
     title: "Polyzentrik",
-    description: "Digital sustainability solutions",
+    description: "Digital resources to help you at different stages of your sustainability journey.",
     siteUrl: "https://www.polyzentrik.com",
     image: "/logo-banner.png"
   },
@@ -19,7 +19,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-remove-fingerprints`,
-    `remark-grid-tables`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -75,16 +74,31 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`, options: {
-        fonts: [`Unbounded\:300,600,900`], display: 'swap'
-      }
-    },
+    //{
+    //  resolve: `gatsby-plugin-google-fonts`, options: {
+    //    fonts: [`Unbounded\:300,600,900`], display: 'swap'
+    //  }
+    //},
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
         lang: 'en-GB'
       }
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google2: [
+            {
+              family: "Unbounded",
+              axes: "wght@300;600;900", // multiple ranges are supported, ex: "wght@300..500;700..900"
+              fontDisplay: 'swap',
+              strategy: 'selfHosted',
+            },
+          ],
+        },
+      },
     },
   ]
 };

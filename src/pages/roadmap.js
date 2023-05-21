@@ -8,13 +8,13 @@ import Card from 'react-bootstrap/Card'
 const RoadmapPage = () => {
     return (
         <Layout pageTitle="Strategic Roadmap">
-            <p className="big-p">Our strategy visualised in the best format the Internet has to offer.</p>
             <Row className="roadmap">
                 <Col md={6} className="my-2">
-                    <Card>
+                    <Card className="shadow">
                         <Card.Body className="px-0 py-0">
-                            <Card.Title className="pzntrk mt-0 py-3 px-2 mb-3 border-bottom border-dark checkers">ASCII Roadmap</Card.Title>
+                            <h3 className="pzntrk mt-0 py-3 px-2 mb-3 checkers card-title small">ASCII Roadmap</h3>
                             <Card.Text className="ascii px-3">
+                            <p>Our strategy visualised in the best format the Internet has to offer.</p>
                                 <pre>::::::::::::::::::::::::::::::::::::</pre>
                                 <pre>::   ___     ___    ___   ____    ::</pre>
                                 <pre>::  |__ \   / _ \  |__ \  |___ \  ::</pre>
@@ -82,9 +82,9 @@ const RoadmapPage = () => {
                     </Card>
                 </Col>
                 <Col md={6} className="my-2">
-                    <Card>
+                    <Card className="shadow">
                         <Card.Body className="px-0 py-0">
-                            <Card.Title className="pzntrk mt-0 py-3 px-2 mb-3 border-bottom border-dark checkers">Summary strategy</Card.Title>
+                            <h3 className="pzntrk mt-0 py-3 px-2 mb-3 checkers card-title small">Summary strategy</h3>
                             <Card.Text className="px-3">
                                 <p>Polyzentrik will follow Y Combinator's "plan for the worst" <a href="https://techcrunch.com/2022/05/19/yc-advises-founders-to-plan-for-the-worst/" target="_blank" rel="noreferrer">advice</a> and adhere to what is known as a <em>default alive</em> strategy. If possibilities allow, the plan can be accelerated. If needed, however, the company aims to be ready to survive the current crisis in development mode.</p>
                                 <p>Guidelines:</p>

@@ -14,19 +14,19 @@ const Post = ({ data, children }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.type + " /"}>
       <Container className={data.mdx.frontmatter.type}>
-        <Row className="my-2 d-flex border rounded bg-white border border-dark">
-          <Col lg={5} className="article-title p-0">
+        <Row className="mt-5 d-flex border rounded bg-white">
+          <Col lg={5} className="article-title p-0 border border-bottom">
             <h2 className="pzntrk my-0 pt-3 pb-1 px-4">{data.mdx.frontmatter.title}</h2>
             <p className="small text-center my-0 px-4 pb-4 text-lg-end optional">By <a href={data.mdx.frontmatter.author_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.author}</a>.</p>
-            <span className="float-end border-top border-dark optional top-sm"><ShareComponent /></span>
+            <span className="float-end border-top optional top-sm"><ShareComponent /></span>
           </Col>
-          <Col sm={12} lg={6} className="border-1 border-start border-bottom py-3 align-self-end post-title optional border-dark"> 
+          <Col sm={12} lg={6} className="border border-start border-bottom py-3 align-self-end post-title optional"> 
             <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
             <p className="my-0 py-0 small text-end">Photo by <a href={data.mdx.frontmatter.hero_image_credit_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.hero_image_credit_text}</a>.</p>
           </Col>
           <Col className="py-3 px-4 article-content">
             {children}
-            <Container fluid className="border-1 border-top my-3">
+            <Container fluid className="border border-top my-3">
               <span className="float-end"><ShareComponent /></span>
             </Container>
           </Col>

@@ -1,83 +1,106 @@
-import * as React from "react"
+import React from "react"
 import { Link, graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import ServicesComponent from '../components/services'
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import "../components/pretty.css"
 import Button from 'react-bootstrap/Button'
-import Container from 'react-bootstrap/Container'
+import "../components/pretty.css"
 
 const HomePage = ({ data }) => {
-  const posts = data.allMdx.nodes
+  const posts = data.allMdx.nodes.filter(node => node.frontmatter.type === "blog")
 
   return (
-    <Layout pageTitle="Our services">
-      <p className="big-p"><p>We can help you <em>be more sustainable</em>. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p> </p>
-      <Row className="mb-2 hello">
-        <Col lg={3} className="hidey-lg">
-          <Card className="border-2 border-dark">
-            <StaticImage src={"../images/graphics/flexibility.jpg"} alt="A close-up picture of follage" />
-          </Card>
-        </Col>
-        <Col lg={9} className="">
-          <Container>
-            <Row className="">
-              {
-                posts.map(node => (
-                  <Col className="col-12 col-md-6 d-flex services-index">
-                    <Card className="mb-2 px-0 mx-0 border-dark">
-                      <article key={node.id}>
-                        <Card.Title className="checkers pt-4 pb-2 border-bottom border-dark">
-                          <h3 className="px-3 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
-                        </Card.Title>
-                        <Card.Body>
-                          <Card.Text>
-                            <p className="pb-sm-1 pb-md-auto">{node.frontmatter.intro}</p>
-                          </Card.Text>
-                          <Link to={`/services/${node.frontmatter.slug}`}>
-                            <Button variant="info" className="special-bg pink float-end mb-3 border border-1 border-dark">Learn more...</Button>
-                          </Link>
-                        </Card.Body>
-                      </article>
-                    </Card>
-                  </Col>
-                ))
-              }
-            </Row>
-          </Container>
-        </Col>
+    <Layout pageTitle="Welcome">
+
+      <Row className="text-center homepage-blog-index">
+        <Container className="col-lg-8 offset-lg-2">
+          <Row>
+            <Col lg={3} className="d-flex">
+              <Container className="my-md-auto">
+                <h3 className="my-md-auto pzntrk">Latest from our blog</h3>
+                <p className="big-p">We also regularly publish fairly decent content about data, AI, and digital sustainability.</p>
+                <Link to={`/blog/`}>
+                  <Button variant="dark" className="big-p border w-100 mb-3">Go to blog</Button>
+                </Link>
+              </Container>
+            </Col>
+            <Col lg={9}>
+              <Container>
+                <Row className="d-flex">
+                  {
+                    posts.map(node => (
+                      <Col md={4} className="px-0 my-md-auto">
+                        <article key={node.id}>
+                          <Card className="m-1 shadow">
+                            <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                              <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
+                            </Link>
+                            <Card.Body className="p-0">
+                              <Card.Title className="p-2">
+                                <h4 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
+                              </Card.Title>
+                              <Card.Text className="p-3 checkers">
+                                <p>{node.excerpt}</p>
+                              </Card.Text>
+                              <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                                <Button variant="light" className="pink float-end mb-3 border mx-3">Read more...</Button>
+                              </Link>
+                            </Card.Body>
+                          </Card>
+                        </article>
+                      </Col>
+
+                    ))
+                  }
+                </Row>
+              </Container>
+            </Col>
+          </Row>
+        </Container>
       </Row>
+      <ServicesComponent />
     </Layout >
   )
 }
 
 export const query = graphql`
-  query {
-    allMdx(
-      sort: {frontmatter: {rank: DESC}}
-      filter: {frontmatter: {type: {eq: "services"}}}
-      ) {
-      nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-          type
-          slug
-          intro
-          rank
+query {
+  allMdx(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {type: {eq: "blog"}}}
+    limit: 3) 
+    {
+    nodes {
+      frontmatter {
+        date(formatString: "MMMM D, YYYY")
+        title
+        type
+        slug
+        categories
+        author
+        hero_image {
+          childImageSharp {
+            gatsbyImageData  (
+              layout: FULL_WIDTH
+              )
+          }
         }
-        id
       }
+      id
+      excerpt
     }
   }
+}
 `
 
 export const Head = () => (
   <Seo title="Polyzentrik > Home"
-    description="Digital solutions to help you at different stages of your sustainability journey." />
+    description="A micro-magazine about data, AI, & digital sustainability." />
 )
 
 export default HomePage

@@ -20,6 +20,6 @@ const NotFoundPage = () => {
 export default NotFoundPage
 
 export const Head = () => (
-  <Seo title="Polyzentrik > About"
+  <Seo title="Polyzentrik > 404"
     description="Page not found." />
 )

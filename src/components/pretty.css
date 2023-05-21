@@ -14,7 +14,7 @@ html {
 }
 
 /**************************************/
-/******* MAIN HTML ELEMENTS **********/
+/******* KEY HTML ELEMENTS **********/
 /************************************/
 body {
     background: white;
@@ -31,16 +31,9 @@ footer {
     font-family: unbounded;
 }
 
-blockquote {
-    margin: 7px 5%;
-    font-style: italic;
-    border-left: 3px solid #bbb;
-    padding: 0 7px;
-}
-
 main {
-    padding-bottom: 5rem;
-    background: repeating-linear-gradient(75deg, #fff, #efefef 3px, rgb(8, 131, 45) 3px);
+    min-height: 70vh;
+    padding-bottom: 3rem;
 }
 
 section {
@@ -55,59 +48,78 @@ a:hover {
     color: rgb(201, 19, 98) !important;
 }
 
+blockquote {
+    margin: 7px 5%;
+    font-style: italic;
+    border-left: 3px solid #bbb;
+    padding: 0 7px;
+}
+
 /**************************************/
-/*********** NAVBARS **************/
+/***** HEADER & FOOTER NAVBARS *******/
 /************************************/
-header,
 header .navbar {
-    height: 10rem;
+    min-height: 10vh;
 }
 
 header #responsive-navbar-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: #fff;
-    padding: 1rem 1rem 3rem;
-    border: 2px solid #ddd;
-    border-top-width: 0;
     z-index: 1;
+    padding-top: calc(100vh/4);
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+header .navbar-toggler {
+    margin-right: 0.7em;
+    border: 1px dotted #111;
+    z-index: 2;
 }
 
 header .nav-item {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.1rem;
     font-variant: small-caps;
+}
+
+header .dropdown-menu {
+    margin-top: 0 !important;
+    padding-top: 0;
+    border: 0;
+    text-align: center;
+    font-size: small;
+}
+
+header .dropdown:hover .dropdown-menu {
+    display: block !important;
 }
 
 .green a {
     color: rgb(17, 102, 62);
 }
 
-.green-bg {
-    background: rgb(136, 240, 191, 0.3);
-}
-
 nav svg {
     font-size: 2.5rem;
 }
 
-.top-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 footer {
-    background: #111;
-    color: #aaa;
+    margin-top: 5em;
+    padding-top: 0.4em;
     border-top: 1px dotted #fff;
+    background: #111;
+    color: #ddd;
 }
 
 footer a {
-    text-decoration: none;
     color: #38b87c;
 }
 
 footer a:hover {
-    color: #aaa !important;
+    color: #fff !important;
 }
 
 footer ul {
@@ -117,13 +129,9 @@ footer ul {
 
 footer ul li,
 .linky ul li {
-    display: inline-block;
+    display: block;
     list-style-type: none;
     margin-right: 7px;
-}
-
-footer ul li {
-    display: block;
 }
 
 .linky ul {
@@ -131,7 +139,12 @@ footer ul li {
 }
 
 .lower-footer {
+    margin-top: 2em;
     border-top: 1px dotted #fff;
+}
+
+.lower-footer ul li {
+    text-align: right;
 }
 
 .lower-footer a {
@@ -147,43 +160,26 @@ footer p {
 /************************************/
 .welcome {
     overflow-wrap: break-word;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.branding {
+    border-top: 1px dotted #000;
+    border-bottom: 1px dotted #000;
+    min-height: 30vh;
 }
 
 .pzntrk {
     font-weight: 900;
-    letter-spacing: 0.8vw;
     text-transform: uppercase;
-}
-
-.branding {
-    padding: 5vh 2%;
 }
 
 .branding h1 {
     font-size: 3rem;
 }
 
-.branding h2 {
-    font-size: medium;
-    font-weight: 600;
-    letter-spacing: 0.3vw;
-    text-transform: uppercase;
-}
-
-.benefits-carousel {
-    margin-bottom: 35px;
-    font-family: unbounded;
-    font-size: large;
-}
-
-.carousel .card {
-    background-color: rgba(250, 250, 250, 0.1);
-    border: none;
-}
-
-.carousel-indicators,
-.carousel-control-next,
-.carousel-control-prev {
+.carousel-indicators {
     display: none;
 }
 
@@ -199,21 +195,19 @@ footer p {
     display: none;
 }
 
-.services .article-title,
-.blog .article-title h2,
-.blog .article-title p {
-    background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
+.homepage-blog-index {
+    margin: 4em auto;
 }
 
-.services .article-title,
-.blog .article-title {
-    border-bottom: 1px solid #000;
+.homepage-blog-index .card:hover,
+.services-intro .card:hover,
+.blog-index .card:hover,
+.services-index .card:hover {
+    background-color: #e2fbfa;
 }
 
-.content h2 {
-    letter-spacing: normal;
-    margin-top: 28px;
-    margin-bottom: 14px;
+.services-intro {
+    margin-top: 5em;
 }
 
 .blog h2.pzntrk,
@@ -254,42 +248,9 @@ footer p {
     font-weight: 600;
 }
 
-.card {
-    margin-bottom: 14px;
-}
-
-.card .gatsby-image-wrapper {
-    border-radius: 5px 5px 0 0;
-}
-
-.shop .gatsby-image-wrapper,
-.services-index img {
+.shop .gatsby-image-wrapper {
     width: 45% !important;
     margin: auto;
-}
-
-.blog .gatsby-resp-image-wrapper {
-    max-width: 80% !important;
-    margin: 21px auto 0;
-    border: 1px dotted;
-}
-
-.services-index .card:hover,
-.blog-index .card:hover {
-    background-color: rgba(7, 200, 109, 0.2);
-}
-
-.services-index .card-title,
-.blog-index .card-title,
-.hello .card-title {
-    font-variant: small-caps;
-    font-weight: 600;
-    letter-spacing: -0.03em;
-}
-
-.blog-index a,
-.services-index a {
-    color: #000;
 }
 
 .blog details {
@@ -329,11 +290,6 @@ footer p {
 }
 
 .big-p {
-    font-family: monospace;
-    font-size: x-large;
-}
-
-.content .big-p {
     font-size: large;
     font-weight: 600;
 }
@@ -354,10 +310,6 @@ footer p {
     font-size: small;
 }
 
-.nav-tabs .nav-link {
-    color: #15141A;
-}
-
 .socialShare {
     margin-left: 0;
 }
@@ -366,6 +318,7 @@ footer p {
     margin: 14px 7px auto 0;
 }
 
+.content h2.hide,
 .hidey,
 .hidey-lg {
     display: none;
@@ -373,27 +326,6 @@ footer p {
 
 details summary {
     margin-bottom: 14px;
-}
-
-.page404 {
-    min-height: 100vh;
-    padding: 10vh 7rem;
-}
-
-.about .card-title,
-.roadmap .card-title {
-    letter-spacing: 0.2vw;
-}
-
-.roadmap .card {
-    max-height: 600px;
-    overflow: auto;
-    border-color: #000;
-}
-
-.roadmap .card,
-.about .card {
-    border-color: #000;
 }
 
 .footnote {
@@ -417,8 +349,47 @@ details summary {
 }
 
 .yt-embed {
-    aspect-ratio: 16 /9;
+    aspect-ratio: 16/9;
     width: 100%;
+}
+
+.badger {
+    margin-top: 1em;
+    font-size: small;
+}
+
+.carbon-badge,
+#wcb,
+#wcb_a,
+#wcb_p,
+#wcb_g,
+#wcb_2 {
+    font-family: monospace !important;
+    font-weight: 600;
+    padding: 0 5px !important;
+    border-radius: 3px;
+    margin: 0 !important;
+    color: #000;
+    background-color: #38b87c;
+}
+
+#wcb_a,
+#wcb_g,
+#wcb_p {
+    display: none;
+}
+
+#wcb_2::after {
+    content: ".";
+}
+
+#wcb_g::after {
+    content: ".";
+    margin-right: 1px;
+}
+
+.copy-r {
+    font-size: x-small;
 }
 
 /**************************************/
@@ -432,7 +403,7 @@ main {
     animation-timing-function: ease-in-out;
 }
 
-.green-bg {
+.slide-bg {
     animation-name: branding-animation;
     animation-duration: 0.5s;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -469,14 +440,8 @@ main {
 /************************************/
 
 @media screen and (min-width: 768px) {
-    .branding {
-        min-height: 45vh;
-        padding: 1rem 3% 0;
-        margin-bottom: 50px;
-    }
-
     .branding h1 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     .hidey {
@@ -484,10 +449,6 @@ main {
     }
 
     .big-p {
-        font-size: xx-large;
-    }
-
-    .content .big-p {
         font-size: x-large;
     }
 
@@ -505,6 +466,7 @@ main {
 
     .lower-footer ul li {
         display: inline-block;
+        text-align: left;
     }
 
     .blog h2.pzntrk,
@@ -516,7 +478,6 @@ main {
         text-align: left;
         margin-left: 10px;
     }
-
 }
 
 @media screen and (min-width: 992px) {
@@ -525,12 +486,12 @@ main {
         border: 0;
     }
 
-    .branding {
-        min-height: 50vh;
+    header .dropdown-menu {
+        text-align: left;
     }
 
     .branding h1 {
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .hidey-lg {
@@ -539,6 +500,10 @@ main {
 
     .border-hidey {
         border-left: 1px solid #dee2e6;
+    }
+
+    .inverse-hidey {
+        display: none;
     }
 
     .blog .post-title {
@@ -560,6 +525,11 @@ main {
 
     .blog .gatsby-resp-image-wrapper:hover {
         max-width: 60% !important;
+    }
+
+    header #responsive-navbar-nav {
+        position: relative;
+        min-height: 0;
     }
 }
 

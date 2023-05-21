@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react"
+import * as React from "react"
+import { useState, useEffect } from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
@@ -6,14 +7,13 @@ import Seo from '../../components/seo'
 import Layout from '../../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import "../../components/pretty.css"
 
 const ContentPage = ({ location, data }) => {
-  const path = location.pathname.slice(1, -1)
-  const posts = data.allMdx.nodes.filter(node => node.frontmatter.type === path)
+  const path = location.pathname.split("/")
+  const posts = data.allMdx.nodes.filter(node => node.frontmatter.categories === path[2])
 
   // Infinite scroll implementation by Eric Howey (https://github.com/ehowey/loadmore-demo).
   // Can't really do better than that.
@@ -49,46 +49,27 @@ const ContentPage = ({ location, data }) => {
 
 
   // Now do the posts
-  if (path === "services") {
+  if (path[1] === "services") {
     return (
-      <Layout pageTitle={path} >
-        <Row className="mb-2 hello">
-          <Col lg={12}>
-            <Container className="mt-5">
-              <Row className="">
-                {
-                  posts.map(node => (
-                    <Col className="col-12 col-md-6 d-flex services-index">
-                      <Card className="m-1 shadow">
-                        <article key={node.id}>
-                          <Card.Title className="pt-4 pb-2">
-                            <h3 className="px-2 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
-                          </Card.Title>
-                          <Card.Body className="p-3 checkers">
-                            <Card.Text>
-                              <p>{node.frontmatter.intro}</p>
-                            </Card.Text>
-                            <Link to={`/services/${node.frontmatter.slug}`}>
-                              <Button variant="light" className="pink float-end mb-3 border mx-3">Learn more...</Button>
-                            </Link>
-                          </Card.Body>
-                        </article>
-                      </Card>
-                    </Col>
-                  ))
-                }
-              </Row>
-            </Container>
-          </Col>
-        </Row>
+      <Layout pageTitle={path[1] + "/" + path[2]}>
+        <p className="big-p">This page is here for future usage. If and when we have enough services, we will split them into categories.</p>
+        <p className="big-p">If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a list of services.</p>
+        {
+          posts.map(node => (
+            <article key={node.id}>
+              <Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link>
+              <p>{node.excerpt}</p>
+            </article>
+          ))
+        }
       </Layout>
     )
   } else {
     return (
-      <Layout pageTitle={path} >
+      <Layout pageTitle={path[2].replace("-", " ")} >
         <Container className="blog-index mt-5">
           <Row>
-            <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4 }}>
+            <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
               <Masonry>
                 {
                   list.map(node => (
@@ -114,9 +95,9 @@ const ContentPage = ({ location, data }) => {
                 }
               </Masonry>
             </ResponsiveMasonry>
-            <Container className="text-end">
+            <Container className="text-center">
               {hasMore ? (
-                <Button onClick={handleLoadMore} variant="dark" className="big-p border w-100 mt-3">Click to load more.</Button>
+                <Button onClick={handleLoadMore} variant="dark" className="big-p border border-dark w-50 mt-3">Click to load more.</Button>
               ) : (
                 <span></span>
               )}
@@ -130,20 +111,22 @@ const ContentPage = ({ location, data }) => {
 
 export const query = graphql`
   query {
-    allMdx(sort: {frontmatter: {date: DESC}}) {
+    allMdx(
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {type: {in: "blog"}}}
+      ) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
-          type
           slug
-          intro
+          type
           categories
           author
           hero_image {
             childImageSharp {
               gatsbyImageData  (
-                layout: FULL_WIDTH
+                layout: CONSTRAINED
                 )
             }
           }

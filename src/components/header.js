@@ -24,14 +24,14 @@ const HeaderComponent = () => {
                                 <NavDropdown.Item href="/blog/">
                                     All categories
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="/blog/company/">
+                                <NavDropdown.Item href="/blog/polyzentrik/">
                                     Polyzentrik
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="/blog/sustainability/">
                                     Digital sustainability
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="/blog/artificial-intelligence/">
-                                    Sustainable AI</NavDropdown.Item>
+                                    Artificial intelligence</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                         <Nav>

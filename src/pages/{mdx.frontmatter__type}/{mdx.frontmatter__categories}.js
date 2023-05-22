@@ -69,7 +69,7 @@ const ContentPage = ({ location, data }) => {
       <Layout pageTitle={path[2].replace("-", " ")} >
         <Container className="blog-index mt-5">
           <Row>
-            <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
+            <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4 }}>
               <Masonry>
                 {
                   list.map(node => (

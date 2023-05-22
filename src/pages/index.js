@@ -18,12 +18,12 @@ const HomePage = ({ data }) => {
     <Layout pageTitle="Welcome">
 
       <Row className="text-center homepage-blog-index">
-        <Container className="col-lg-8 offset-lg-2">
+        <Container className="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
           <Row>
             <Col lg={3} className="d-flex">
               <Container className="my-md-auto">
                 <h3 className="my-md-auto pzntrk">Latest from our blog</h3>
-                <p className="big-p overflow-auto">We also regularly publish fairly decent content about data, AI, and digital sustainability.</p>
+                <p className="big-p">We also regularly publish fairly decent content about data, AI, and digital sustain&shy;ability.</p>
                 <Link to={`/blog/`}>
                   <Button variant="dark" className="big-p border w-100 mb-3">Go to blog</Button>
                 </Link>

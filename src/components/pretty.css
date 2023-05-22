@@ -295,6 +295,10 @@ footer p {
 .big-p {
     font-size: medium;
     font-weight: 600;
+    word-wrap: break-word;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
 }
 
 .pink {

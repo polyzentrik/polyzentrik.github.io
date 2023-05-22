@@ -25,10 +25,13 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5 {
+    font-family: unbounded, tahoma;
+}
+
 header,
 footer {
-    font-family: unbounded, tahoma;
+    font-family: tahoma;
 }
 
 main {
@@ -292,6 +295,10 @@ footer p {
 .big-p {
     font-size: medium;
     font-weight: 600;
+    word-wrap: break-word;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
 }
 
 .pink {
@@ -441,7 +448,6 @@ main {
 
     .services h2.pzntrk {
         text-align: left;
-        margin-left: 10px;
     }
 }
 

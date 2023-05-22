@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button'
 import "../components/pretty.css"
 
+
 const HeaderComponent = () => {
     return (
         <div className="green py-0">
@@ -23,14 +24,14 @@ const HeaderComponent = () => {
                                 <NavDropdown.Item href="/blog/">
                                     All categories
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="/blog/company/">
+                                <NavDropdown.Item href="/blog/polyzentrik/">
                                     Polyzentrik
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="/blog/sustainability/">
                                     Digital sustainability
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="/blog/artificial-intelligence/">
-                                    Sustainable AI</NavDropdown.Item>
+                                    Artificial intelligence</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                         <Nav>
@@ -43,12 +44,12 @@ const HeaderComponent = () => {
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link href="https://www.linkedin.com/company/polyzentrik/" target="_blank" rel="noopener noreferrer">
-                                    <BsLinkedin /><span className="accessibility-hide">LinkedIn</span>
+                                    <BsLinkedin title="LinkedIn"/>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link href="https://github.com/polyzentrik" target="_blank" rel="noopener noreferrer">
-                                    <BsGithub /><span className="accessibility-hide">GitHub</span>
+                                    <BsGithub title="GitHub"/>
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>

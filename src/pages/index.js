@@ -10,20 +10,21 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import "../components/pretty.css"
+import MissionComponent from "../components/mission"
 
 const HomePage = ({ data }) => {
   const posts = data.allMdx.nodes.filter(node => node.frontmatter.type === "blog")
 
   return (
     <Layout pageTitle="Welcome">
-
-      <Row className="text-center homepage-blog-index">
-        <Container className="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-          <Row>
+      <MissionComponent />
+      <Row className="text-center home-blog-index shadow my-5 py-5">
+        <Container fluid className="my-auto">
+          <Row className="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
             <Col lg={3} className="d-flex">
               <Container className="my-md-auto">
                 <h3 className="my-md-auto pzntrk">Latest from our blog</h3>
-                <p className="big-p">We also regularly publish fairly decent content about data, AI, and digital sustain&shy;ability.</p>
+                <p className="word-breakie">We regularly publish fairly decent content about data, AI, and digital sustain&shy;ability.</p>
                 <Link to={`/blog/`}>
                   <Button variant="dark" className="big-p border w-100 mb-3">Go to blog</Button>
                 </Link>

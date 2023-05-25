@@ -52,7 +52,7 @@ const ContentPage = ({ location, data }) => {
   if (path === "services") {
     return (
       <Layout pageTitle={path} >
-        <Row className="mb-2 hello">
+        <Row className="mb-2 hello shadow my-5 py-5">
           <Col lg={12}>
             <Container className="mt-5">
               <Row className="">
@@ -86,42 +86,45 @@ const ContentPage = ({ location, data }) => {
   } else {
     return (
       <Layout pageTitle={path} >
-        <Container className="blog-index mt-5">
-          <Row>
-            <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4 }}>
-              <Masonry>
-                {
-                  list.map(node => (
-                    <article key={node.id} className={node.frontmatter.categories}>
-                      <Card className="m-1 shadow">
-                        <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                          <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
-                        </Link>
-                        <Card.Body className="p-0">
-                          <Card.Title className="p-2">
-                            <h3 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
-                          </Card.Title>
-                          <Card.Text className="p-3 checkers">
-                            <p>{node.excerpt}</p>
-                          </Card.Text>
+        <Container fluid className="blog-index">
+          <Row className="shadow my-5 py-5">
+            <Col className="col-10 offset-1 py-5">
+              <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5}}>
+                <Masonry>
+                  {
+                    list.map(node => (
+                      <article key={node.id} className={node.frontmatter.categories}>
+                        <Card className="m-1 shadow">
                           <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                            <Button variant="light" className="pink float-end mb-3 border mx-3">Read more...</Button>
+                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                           </Link>
-                        </Card.Body>
-                      </Card>
-                    </article>
-                  ))
-                }
-              </Masonry>
-            </ResponsiveMasonry>
-            <Container className="text-end">
-              {hasMore ? (
-                <Button onClick={handleLoadMore} variant="dark" className="big-p border w-100 mt-3">Click to load more.</Button>
-              ) : (
-                <span></span>
-              )}
-            </Container>
+                          <Card.Body className="p-0">
+                            <Card.Title className="p-2">
+                              <h3 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
+                            </Card.Title>
+                            <Card.Text className="p-3 checkers">
+                              <p>{node.excerpt}</p>
+                            </Card.Text>
+                            <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                              <Button variant="light" className="pink float-end mb-3 border mx-3">Read more...</Button>
+                            </Link>
+                          </Card.Body>
+                        </Card>
+                      </article>
+                    ))
+                  }
+                </Masonry>
+              </ResponsiveMasonry>
+            </Col>
           </Row>
+          <Container className="text-center">
+            {hasMore ? (
+              <Button onClick={handleLoadMore} variant="dark" className="big-p border w-75 mt-3">Click to load more.</Button>
+            ) : (
+              <span></span>
+            )}
+          </Container>
+
         </Container>
       </Layout>
     )

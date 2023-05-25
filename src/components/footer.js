@@ -45,7 +45,6 @@ const FooterComponent = () => {
                             <li className=""><Link to="/services/">Services</Link></li>
                             <li className=""><Link to="/roadmap/">Roadmap</Link></li>
                             <li className=""><Link to="/about/">About & Contact</Link></li>
-
                         </ul>
                     </Col>
                 </Row>

@@ -71,10 +71,15 @@ header #responsive-navbar-nav {
     left: 0;
     background-color: #fff;
     z-index: 1;
-    padding-top: calc(100vh/4);
+    padding-top: calc(100vh/5);
     min-height: 100vh;
     width: 100%;
     text-align: center;
+}
+
+header #responsive-navbar-nav.show .nav-item,
+header #responsive-navbar-nav.show .dropdown-item {
+    margin: 5px auto;
 }
 
 header .navbar-toggler {
@@ -132,13 +137,13 @@ footer ul {
 
 footer ul li,
 .linky ul li {
-    display: block;
+    display: inline-block;
     list-style-type: none;
     margin-right: 7px;
 }
 
 .linky ul {
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 
 .lower-footer {
@@ -171,6 +176,7 @@ footer p {
     border-top: 1px dotted #000;
     border-bottom: 1px dotted #000;
     min-height: 30vh;
+    letter-spacing: 0.3em;
 }
 
 .pzntrk {
@@ -179,7 +185,12 @@ footer p {
 }
 
 .branding h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.branding p {
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .carousel-indicators {
@@ -198,19 +209,25 @@ footer p {
     display: none;
 }
 
-.homepage-blog-index {
+.home-blog-index {
     margin: 4em auto;
 }
 
-.homepage-blog-index .card:hover,
-.services-intro .card:hover,
+.company-statement {
+    margin: 2em auto;
+    text-align: center;
+}
+
+.home-blog-index .card:hover,
+.home-bar .card:hover,
 .blog-index .card:hover,
 .services-index .card:hover {
     background-color: #e2fbfa;
 }
 
-.services-intro {
-    margin-top: 5em;
+.home-bar {
+    margin: 10em auto 5em;
+    padding: 10em 0;
 }
 
 .blog h2.pzntrk,
@@ -292,13 +309,25 @@ footer p {
     clear: both;
 }
 
-.big-p {
-    font-size: medium;
+.bg-pink {
+    background-color: #FF7D9D;
+}
+
+.bg-yellow {
+    background-color: rgb(244, 181, 235);
+}
+
+.word-breakie {
     font-weight: 600;
     word-wrap: break-word;
     -webkit-hyphens: manual;
     -ms-hyphens: manual;
     hyphens: manual;
+}
+
+.big-p {
+    font-size: medium;
+    font-weight: 600;
 }
 
 .pink {
@@ -313,7 +342,8 @@ footer p {
     font-size: 1.5rem;
 }
 
-.tab-content {
+.tab-content,
+.nav-tabs {
     font-size: small;
 }
 
@@ -414,6 +444,11 @@ main {
 @media screen and (min-width: 768px) {
     .branding h1 {
         font-size: 3rem;
+    }
+
+    .branding p {
+        font-size: 1.1rem;
+        font-weight: 600;
     }
 
     .hidey {

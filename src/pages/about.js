@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { BsLinkedin, BsGithub, BsHouseFill, BsTelephoneFill, BsEnvelope } from "react-icons/bs"
+import MissionComponent from "../components/mission"
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import Container from 'react-bootstrap/Container'
@@ -12,6 +13,7 @@ import Tab from 'react-bootstrap/Tab'
 const AboutPage = () => {
     return (
         <Layout pageTitle="About">
+            <MissionComponent />
             <Row className="text-center shadow my-5">
                 <Container fluid className="my-auto">
                     <Row className="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">

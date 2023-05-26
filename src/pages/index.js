@@ -43,7 +43,7 @@ const HomePage = ({ data }) => {
                             </Link>
                             <Card.Body className="p-0">
                               <Card.Title className="p-2">
-                                <h4 className="px-2"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
+                                <h4 className="px-2 small"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
                               </Card.Title>
                               <Card.Text className="p-3 checkers">
                                 <p>{node.excerpt}</p>

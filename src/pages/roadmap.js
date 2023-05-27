@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import MissionComponent from "../components/mission"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -9,6 +10,7 @@ import Card from 'react-bootstrap/Card'
 const RoadmapPage = () => {
     return (
         <Layout pageTitle="Strategic Roadmap">
+            <MissionComponent />
             <Container>
                 <Row className="roadmap">
                     <Col md={6} className="my-2">

@@ -18,6 +18,7 @@ const HeaderComponent = () => {
                         <Nav className="me-auto">
                             <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
                             <Nav.Item><Nav.Link href="/services/">Services</Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/about/">About</Nav.Link></Nav.Item>
                             <NavDropdown title="Blog" id="blog-dropdown"
                                 renderMenuOnMount={true} 
                                 onClick={() => { if (window.screen.width > 992) { window.location.href = '/blog/' } }} >
@@ -37,7 +38,7 @@ const HeaderComponent = () => {
                         <Nav>
                             <Nav.Item>
                                 <Nav.Link href="/gateway/">
-                                    <Button variant="" className="special-bg capsies px-5 pink border border-2 border-dark">Pay / Donate</Button>
+                                    <Button variant="" className="special-bg capsies px-5 pink border border-2 border-dark">Payments Gateway</Button>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item className="border border-end border-1 border-dark mx-2 hidey-lg">

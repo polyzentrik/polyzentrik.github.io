@@ -22,7 +22,7 @@ const Layout = ({ pageTitle, children }) => {
                     <section className="content mt-0">
                         <Container fluid className="">
                             <Row>
-                                <h2 className="pzntrk text-center shadow py-5 special-bg">{pageTitle}</h2>
+                                <h2 className="pzntrk text-center shadow py-5 special-bg" data-sal="slide-left" data-sal-delay="200" data-sal-easing="ease">{pageTitle}</h2>
                                 <div>{children}</div>
                             </Row>
                         </Container>

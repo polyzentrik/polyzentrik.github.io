@@ -21,10 +21,10 @@ const AboutPage = () => {
                             <Container className="my-md-auto text-start">
                                 <StaticImage src="../images/with-Ando.jpeg" alt="Photo of J" className="rounded" />
                                 <span className="linky">
-                                    <ul className="text-end">
+                                    <ul className="text-end small">
                                         <li><a href="https://www.linkedin.com/in/jbolns" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsLinkedin /></a></li>
-                                        <li><a href="https://github.com/jbolns" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsGithub /></a></li>
-                                        <li><a href="https://www.josebolanos.xyz/" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsHouseFill /></a></li>
+                                        <li><a href="https://github.com/jbolns" target="_blank" rel="noreferrer" aria-label="Link to GitHub"><BsGithub /></a></li>
+                                        <li><a href="https://www.josebolanos.xyz/" target="_blank" rel="noreferrer" aria-label="Link to personal website"><BsHouseFill /></a></li>
                                     </ul>
                                 </span>
                                 <Tabs defaultActiveKey="education" id="left-tabs" className="small">

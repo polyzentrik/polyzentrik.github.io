@@ -20,9 +20,9 @@ const HomePage = ({ data }) => {
       <MissionComponent />
       <Row className="text-center home-blog-index shadow my-5 py-5">
         <Container fluid className="my-auto">
-          <Row className="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+          <Row className="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2" >
             <Col lg={3} className="d-flex">
-              <Container className="my-md-auto">
+              <Container className="my-md-auto" data-sal="flip-right" data-sal-delay="400" data-sal-easing="ease">
                 <h3 className="my-md-auto pzntrk">Latest from our blog</h3>
                 <p className="word-breakie">We regularly publish fairly decent content about data, AI, and digital sustain&shy;ability.</p>
                 <Link to={`/blog/`}>
@@ -35,7 +35,7 @@ const HomePage = ({ data }) => {
                 <Row className="d-flex">
                   {
                     posts.map(node => (
-                      <Col md={4} className="px-0 my-md-auto">
+                      <Col md={4} className="px-0 my-md-auto" data-sal="flip-left" data-sal-delay="400" data-sal-easing="ease">
                         <article key={node.id}>
                           <Card className="m-1 shadow">
                             <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
@@ -64,7 +64,7 @@ const HomePage = ({ data }) => {
           </Row>
         </Container>
       </Row>
-      <ServicesComponent />
+      <ServicesComponent/>
     </Layout >
   )
 }

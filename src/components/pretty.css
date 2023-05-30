@@ -249,6 +249,11 @@ footer p {
     letter-spacing: -0.04em;
 }
 
+.blog .card,
+.services .card {
+    margin: 0.3em auto;
+}
+
 .blog h3,
 .services h3 {
     font-size: x-large;

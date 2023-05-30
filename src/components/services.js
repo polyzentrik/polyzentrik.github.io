@@ -46,7 +46,7 @@ const ServicesComponent = () => {
                         <Row className="text-center d-flex">
                             {
                                 posts.map(node => (
-                                    <Col className="my-1" data-sal="flip-left" data-sal-delay="400" data-sal-easing="ease">
+                                    <Col className="my-1 col-10 offset-1 offset-md-0 col-md-4 col-xl-3" data-sal="flip-left" data-sal-delay="400" data-sal-easing="ease">
                                         <Card variant="top" className="h-100">
                                             <article key={node.id}>
                                                 <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
@@ -54,10 +54,10 @@ const ServicesComponent = () => {
                                                 </Link>
                                                 <Card.Body>
                                                     <Card.Title>
-                                                        <h3 className="small">
+                                                        <h4 className="small">
                                                             <Link to={`/services/${node.frontmatter.slug}`}>
                                                                 {node.frontmatter.title}
-                                                            </Link></h3>
+                                                            </Link></h4>
                                                     </Card.Title>
                                                     <Card.Text>
                                                     </Card.Text>

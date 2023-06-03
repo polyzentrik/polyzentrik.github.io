@@ -5,10 +5,10 @@ import Container from 'react-bootstrap/Container'
 
 const ProductsComponent = () => {
     return (
-        <Container className="col-10 mt-5">
+        <Container className="mt-5">
             <p className="big-p">Online payments gateway<sup>1, 2</sup> for <span className="text-decoration-underline">existing</span><sup>3, 4</sup> users and supporters.</p>
-            <div class="row shop">
-                <div class="col-12 col-lg-6 d-flex">
+            <div class="row shop d-flex">
+                <div class="col-12 col-lg-6 my-1">
                     <div class="card d-flex">
                         <h3 class="px-2 py-3 checkers card-title pzntrk small">Pay for services</h3>
                         <StaticImage src={"../../images/graphics/analytics-plus.png"} alt="A logo representing the idea of a neural network" />
@@ -16,9 +16,9 @@ const ProductsComponent = () => {
                         <a href="https://buy.stripe.com/eVa16F6XJ6XB8PS4gk" target="_blank" rel="noreferrer noopener" class="btn checkers btn-lg border col-10 offset-1" role="button">Pay</a>
                         <p class="small text-center capsies"><Link to="/terms-conditions">Terms & Conditions</Link></p>
                     </div>
-                </div>
+               </div>
 
-                <div class="col-12 col-lg-6 d-flex">
+                <div class="col-12 col-lg-6 my-1">
                     <div class="card d-flex">
                         <h3 class="px-2 py-3 checkers card-title pzntrk small">Pay it forward</h3>
                         <StaticImage src={"../../images/graphics/content-plus.png"} alt="A logo representing the idea of an explosion of colour and creativity" />

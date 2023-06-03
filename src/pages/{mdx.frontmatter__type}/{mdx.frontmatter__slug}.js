@@ -22,7 +22,7 @@ const Post = ({ data, children }) => {
           </Col>
           <Col sm={12} lg={6} className="border-start border-bottom py-3 align-self-end post-title optional"> 
             <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
-            <p className="my-0 py-0 small text-end">Photo by <a href={data.mdx.frontmatter.hero_image_credit_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.hero_image_credit_text}</a>.</p>
+            <p className="my-0 py-0 small text-end">Image by <a href={data.mdx.frontmatter.hero_image_credit_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.hero_image_credit_text}</a>.</p>
           </Col>
           <Col className="py-3 px-4 article-content border-start border-bottom">
             {children}

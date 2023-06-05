@@ -21,7 +21,7 @@ const ProductsComponent = () => {
                 <div class="col-12 col-lg-6 my-1">
                     <div class="card d-flex">
                         <h3 class="px-2 py-3 checkers card-title pzntrk small">Pay it forward</h3>
-                        <StaticImage src={"../../images/graphics/content-plus.png"} alt="A logo representing the idea of an explosion of colour and creativity" />
+                        <StaticImage src={"../../images/graphics/dev-plus.png"} alt="A logo representing the idea of an explosion of colour and creativity" />
                         <p className="mx-5 my-4 text-center capsies">Help us produce public resources.</p>
                         <a href="https://buy.stripe.com/28o16Fci381F7LOeUX" target="_blank" rel="noreferrer noopener" class="btn checkers btn-lg border col-10 offset-1" role="button">Pay</a>
                         <p class="small text-center capsies"><Link to="/terms-conditions">Terms & Conditions</Link></p>

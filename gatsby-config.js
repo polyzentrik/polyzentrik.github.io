@@ -74,11 +74,6 @@ module.exports = {
         ]
       }
     },
-    //{
-    //  resolve: `gatsby-plugin-google-fonts`, options: {
-    //    fonts: [`Unbounded\:300,600,900`], display: 'swap'
-    //  }
-    //},
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
@@ -114,6 +109,14 @@ module.exports = {
           rootMargin: '0% 50%', // Corresponds to root's bounding box margin
           enterEventName: 'sal:in', // Enter event name
           exitEventName: 'sal:out', // Exit event name
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.polyzentrik.com',
+        sitemap: 'https://www.polyzentrik.com/sitemap-index.xml',
+        policy: [{userAgent: '*', allow: '/'}]
       }
     }
   ]

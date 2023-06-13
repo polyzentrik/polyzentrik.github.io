@@ -14,13 +14,13 @@ const MissionComponent = () => {
                 <Container fluid className="company-statement text-center">
                         <Row data-sal="zoom-out" data-sal-delay="600" data-sal-easing="ease">
                                 <Col className="col-lg-6 offset-lg-3">
-                                        <Button variant="light" onClick={() => setMission(true)} className="pink m-1 bg-warning border shadow">
+                                        <Button variant="light" onClick={() => setMission(true)} className="m-1 bg-warning border shadow">
                                                 <p className="p-0 m-0">Our mission</p>
                                         </Button>
-                                        <Button variant="light" onClick={() => setMethod(true)} className="pink m-1 bg-warning border shadow">
+                                        <Button variant="light" onClick={() => setMethod(true)} className="m-1 bg-warning border shadow">
                                                 <p className="p-0 m-0">Our method</p>
                                         </Button>
-                                        <Button variant="light" onClick={() => setMindset(true)} className="pink m-1 bg-warning border shadow">
+                                        <Button variant="light" onClick={() => setMindset(true)} className="m-1 bg-warning border shadow">
                                                 <p className="p-0 m-0">Our mindset</p>
                                         </Button>
 

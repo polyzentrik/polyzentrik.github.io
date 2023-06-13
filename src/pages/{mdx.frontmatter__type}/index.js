@@ -60,7 +60,7 @@ const ContentPage = ({ location, data }) => {
                             <Row className="">
                                 {
                                     posts.map(node => (
-                                        <Col className="col-12 col-md-6 d-flex services-index">
+                                        <Col className="col-12 col-md-6 d-flex services-index" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                                             <Card className="m-1 shadow">
                                                 <article key={node.id}>
                                                     <Card.Title className="pt-4 pb-2">
@@ -90,14 +90,14 @@ const ContentPage = ({ location, data }) => {
             <Layout pageTitle={path} >
                 <MissionComponent />
                 <Container fluid className="blog-index">
-                    <Row className="shadow my-5 py-5">
+                    <Row className="shadow my-5 py-5" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                         <Col className="col-10 offset-1 py-5">
                             <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
                                 <Masonry>
                                     {
                                         list.map(node => (
+                                            <Card className="m-1 shadow">
                                             <article key={node.id} className={node.frontmatter.categories}>
-                                                <Card className="m-1 shadow">
                                                     <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                                                         <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                                                     </Link>
@@ -112,8 +112,9 @@ const ContentPage = ({ location, data }) => {
                                                             <Button variant="light" className="pink float-end mb-3 border mx-3">Read more...</Button>
                                                         </Link>
                                                     </Card.Body>
-                                                </Card>
+                                                
                                             </article>
+                                            </Card>
                                         ))
                                     }
                                 </Masonry>

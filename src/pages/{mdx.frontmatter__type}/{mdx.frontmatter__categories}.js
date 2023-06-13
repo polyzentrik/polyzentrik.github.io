@@ -70,7 +70,7 @@ const ContentPage = ({ location, data }) => {
       <Layout pageTitle={path[2].replace("-", " ")} >
         <MissionComponent />
         <Container className="blog-index mt-5">
-          <Row>
+          <Row data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
             <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4 }}>
               <Masonry>
                 {

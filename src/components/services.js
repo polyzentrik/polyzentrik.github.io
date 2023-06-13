@@ -41,12 +41,14 @@ const ServicesComponent = () => {
             <Row data-sal="zoom-out">
                 <Col className="col-lg-8 offset-lg-2">
                     <Container>
+                        <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                         <h3 className="my-md-auto pzntrk">Services</h3>
                         <p>We can help you <em>be more sustainable</em> in your digital activities. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p>
+                        </span>
                         <Row className="text-center d-flex">
                             {
                                 posts.map(node => (
-                                    <Col className="my-1 col-10 offset-1 offset-md-0 col-md-4 col-xl-3" data-sal="flip-left" data-sal-delay="400" data-sal-easing="ease">
+                                    <Col className="my-1 col-10 offset-1 offset-md-0 col-md-4 col-xl-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                                         <Card variant="top" className="h-100">
                                             <article key={node.id}>
                                                 <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>

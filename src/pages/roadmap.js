@@ -13,7 +13,7 @@ const RoadmapPage = () => {
             <MissionComponent />
             <Container>
                 <Row className="roadmap">
-                    <Col md={6} className="my-2">
+                    <Col md={6} className="my-2" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                         <Card className="shadow">
                             <Card.Body className="px-0 py-0">
                                 <h3 className="pzntrk mt-0 py-3 px-2 mb-3 checkers card-title small">ASCII Roadmap</h3>
@@ -85,7 +85,7 @@ const RoadmapPage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={6} className="my-2">
+                    <Col md={6} className="my-2" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                         <Card className="shadow">
                             <Card.Body className="px-0 py-0">
                                 <h3 className="pzntrk mt-0 py-3 px-2 mb-3 checkers card-title small">Summary strategy</h3>

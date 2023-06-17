@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import MissionComponent from "../../components/mission"
 import Seo from '../../components/seo'
 import Layout from '../../components/layout'
 import Container from 'react-bootstrap/Container'
@@ -53,7 +52,6 @@ const ContentPage = ({ location, data }) => {
     if (path === "services") {
         return (
             <Layout pageTitle={path} >
-                <MissionComponent />
                 <Row className="mb-2 hello shadow my-5 py-5">
                     <Col lg={12}>
                         <Container className="mt-5">
@@ -88,9 +86,8 @@ const ContentPage = ({ location, data }) => {
     } else {
         return (
             <Layout pageTitle={path} >
-                <MissionComponent />
                 <Container fluid className="blog-index">
-                    <Row className="shadow my-5 py-5" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+                    <Row className="shadow my-5 py-5">
                         <Col className="col-10 offset-1 py-5">
                             <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
                                 <Masonry>

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import MissionComponent from "../../components/mission"
 import Seo from '../../components/seo'
 import Layout from '../../components/layout'
 import Container from 'react-bootstrap/Container'
@@ -68,9 +67,8 @@ const ContentPage = ({ location, data }) => {
   } else {
     return (
       <Layout pageTitle={path[2].replace("-", " ")} >
-        <MissionComponent />
         <Container className="blog-index mt-5">
-          <Row data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+          <Row>
             <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4 }}>
               <Masonry>
                 {

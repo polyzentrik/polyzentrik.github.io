@@ -1,7 +1,6 @@
 import * as React from "react"
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import MissionComponent from "../components/mission"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -10,11 +9,10 @@ import Card from 'react-bootstrap/Card'
 const RoadmapPage = () => {
     return (
         <Layout pageTitle="Strategic Roadmap">
-            <MissionComponent />
             <Container>
                 <Row className="roadmap">
-                    <Col md={6} className="my-2" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                        <Card className="shadow">
+                    <Col md={6} className="my-2">
+                        <Card className="shadow" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                             <Card.Body className="px-0 py-0">
                                 <h3 className="pzntrk mt-0 py-3 px-2 mb-3 checkers card-title small">ASCII Roadmap</h3>
                                 <Card.Text className="ascii px-3">
@@ -85,14 +83,14 @@ const RoadmapPage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={6} className="my-2" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                        <Card className="shadow">
+                    <Col md={6} className="my-2">
+                        <Card className="shadow" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                             <Card.Body className="px-0 py-0">
                                 <h3 className="pzntrk mt-0 py-3 px-2 mb-3 checkers card-title small">Summary strategy</h3>
-                                <Card.Text className="px-3">
+                                <Card.Text className="px-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                                     <p>Polyzentrik will follow Y Combinator's "plan for the worst" <a href="https://techcrunch.com/2022/05/19/yc-advises-founders-to-plan-for-the-worst/" target="_blank" rel="noreferrer">advice</a> and adhere to what is known as a <em>default alive</em> strategy. If possibilities allow, the plan can be accelerated. If needed, however, the company aims to be ready to survive the current crisis in development mode.</p>
                                     <p>Guidelines:</p>
-                                    <ul>
+                                    <ul >
                                         <li>1-y. runway minimum, 2-y. ideal.</li>
                                         <li>Steady capacity development, at the speed allowed by funding.</li>
                                         <li>Burn rate minimised by operating with no debt.</li>

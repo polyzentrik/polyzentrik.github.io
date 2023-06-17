@@ -20,7 +20,7 @@ const Post = ({ data, children }) => {
             <p className="small text-center my-0 px-4 pb-4 text-lg-end optional">By <a href={data.mdx.frontmatter.author_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.author}</a>.</p>
             <span className="float-end border-top optional top-sm" ><ShareComponent /></span>
           </Col>
-          <Col sm={12} lg={6} className="border-start border-bottom py-3 align-self-end post-title optional" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+          <Col sm={12} lg={6} className="border-start border-bottom py-3 align-self-end post-title optional">
             <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
             <p className="my-0 py-0 small text-end">Image by <a href={data.mdx.frontmatter.hero_image_credit_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.hero_image_credit_text}</a>.</p>
           </Col>

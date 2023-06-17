@@ -94,27 +94,27 @@ const AboutPage = () => {
                 </Container>
             </Row>
 
-            <Container fluid className="home-bar special-bg shadow" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+            <Container fluid className="home-bar special-bg shadow">
                 <Row>
                     <Col className="col-lg-6 offset-lg-3">
                         <Container>
                             <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                                <h3 className="my-md-auto pzntrk">Polyzentrik's purpose</h3>
+                                <h3 className="pzntrk">Polyzentrik's purpose</h3>
                                 <p>We guide ourselves by the following statements.</p>
                             </span>
                             <span className="my-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                                <h4>Mission</h4>
-                                <p>To help individuals and small to mid-sized organisations access and use digital technologies, especially where it relates to sustainability.To help individuals and small to mid-sized organisations access and use digital technologies, especially where it relates to sustainability.</p>
+                                <h4>Our mission</h4>
+                                <p>To help individuals and SMEs access and use digital technologies, especially, but not exclusively, where it relates to sustainability.</p>
                             </span>
                             <span className="my-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                                <h4>Method</h4>
-                                <p>We are working towards a modular approach to digital sustainability. We are slowly but steadily developing services and resources that solve specific sustainability challenges by themselves and can combined into more complex solutions.</p>
+                                <h4>Our method</h4>
+                                <p>We think modularly. We are developing small services and resources that solve concrete challenges and can combined into more complex solutions.</p>
                             </span>
                             <span className="my-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                                <h4>Mindset</h4>
-                                <p>We practice what we preach. This page is incredibly fast and highly sustainable.
-                                    Don't take our word for it, ask <a href="https://pagespeed.web.dev/analysis/https-www-polyzentrik-com/hef1ww54o2?form_factor=desktop" target="_blank" rel="noopener noreferrer">Google's PageSpeed Insights</a> and
-                                    the <a href="https://www.websitecarbon.com/website/polyzentrik-com/" target="_blank" rel="noopener noreferrer">Website Carbon Calculator</a>.</p>
+                                <h4>Our mindset</h4>
+                                <p>We lead by example. This page is fast and highly sustainable.
+                                    Don't take our word, ask <a href="https://pagespeed.web.dev/analysis/https-www-polyzentrik-com/hef1ww54o2?form_factor=desktop" target="_blank" rel="noopener noreferrer">Google's PageSpeed Insights</a> and
+                                    the <a href="https://www.websitecarbon.com/website/polyzentrik-com/" target="_blank" rel="noopener noreferrer">WCC</a>.</p>
                             </span>
                         </Container>
                     </Col>
@@ -122,7 +122,7 @@ const AboutPage = () => {
             </Container>
 
 
-            <Container fluid className="home-bar special-bg shadow" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+            <Container fluid className="home-bar shadow" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                 <Row>
                     <Col className="col-lg-6 offset-lg-3">
                         <Container>

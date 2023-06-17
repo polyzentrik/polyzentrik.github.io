@@ -8,7 +8,7 @@
     scroll-behavior: unset !important;
 }
 
-html {
+html, * {
     margin: 0;
     padding: 0;
 }
@@ -17,8 +17,17 @@ html {
 /******* KEY HTML ELEMENTS **********/
 /************************************/
 body {
-    background: white;
     font-family: monospace, sans-serif, arial;
+}
+
+.container-fluid {
+    padding: 0;
+    overflow: hidden;
+}
+
+header,
+footer {
+    font-family: tahoma;
 }
 
 h1,
@@ -29,18 +38,9 @@ h5 {
     font-family: unbounded, tahoma;
 }
 
-header,
-footer {
-    font-family: tahoma;
-}
-
 main {
     min-height: 70vh;
     padding-bottom: 3rem;
-}
-
-section {
-    clear: both;
 }
 
 a {
@@ -49,6 +49,11 @@ a {
 
 a:hover {
     color: rgb(201, 19, 98) !important;
+}
+
+.pink a {
+    color: rgb(201, 19, 98);
+    /*color: rgb(17, 102, 62);*/
 }
 
 blockquote {
@@ -61,15 +66,14 @@ blockquote {
 /**************************************/
 /***** HEADER & FOOTER NAVBARS *******/
 /************************************/
-header .navbar {
-    min-height: 10vh;
+header .main-nav .nav-item {
+    border-right: 1px dashed black;
 }
 
 header #responsive-navbar-nav {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #fff;
     z-index: 1;
     padding-top: calc(100vh/5);
     min-height: 100vh;
@@ -77,48 +81,63 @@ header #responsive-navbar-nav {
     text-align: center;
 }
 
-header #responsive-navbar-nav.show .nav-item,
-header #responsive-navbar-nav.show .dropdown-item {
+header #responsive-navbar-nav.show .nav-item {
     margin: 5px auto;
 }
 
 header .navbar-toggler {
     margin-right: 0.7em;
-    border: 1px dotted #111;
+    border: 0;
+    border-left: 2px solid black !important;
+    border-right: 2px solid black !important;
     z-index: 2;
+    outline: none !important;
+    box-shadow: none;
+}
+
+header *:focus,
+header *:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 header .nav-item {
-    font-weight: 300;
-    font-size: 1.1rem;
-    font-variant: small-caps;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
-header .dropdown-menu {
-    margin-top: 0 !important;
-    padding-top: 0;
-    border: 0;
-    text-align: center;
-    font-size: small;
+.topper h1 {
+    margin-top: 0;
+    padding: 1rem 3rem;
+    color: aliceblue;
+    background: #000;
+    border: 1px dotted black;
+    border-top: 1px dotted aliceblue;
 }
 
-header .dropdown:hover .dropdown-menu {
-    display: block !important;
+.topper ul {
+    display: none;
+    padding: 14px 7px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    margin-right: 3px;
 }
 
-.green a {
-    color: rgb(17, 102, 62);
+.topper ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 7px;
 }
 
-nav svg {
-    font-size: 2.5rem;
+.topper svg {
+    font-size: 1.5rem;
 }
 
 footer {
     margin-top: 5em;
     padding-top: 0.4em;
     border-top: 1px dotted #fff;
-    background: #111;
+    background: black;
     color: #ddd;
 }
 
@@ -137,9 +156,8 @@ footer ul {
 
 footer ul li,
 .linky ul li {
-    display: inline-block;
+    display: block;
     list-style-type: none;
-    margin-right: 7px;
 }
 
 .linky ul {
@@ -166,17 +184,15 @@ footer p {
 /**************************************/
 /********* SITE BRANDING *************/
 /************************************/
-.welcome {
-    overflow-wrap: break-word;
-    margin-top: auto;
-    margin-bottom: auto;
+.scene {
+    background: black;
+    margin-bottom: 0;
 }
 
-.branding {
-    border-top: 1px dotted #000;
-    border-bottom: 1px dotted #000;
-    min-height: 30vh;
+.site-info {
+    overflow-wrap: break-word;
     letter-spacing: 0.3em;
+    color: black;
 }
 
 .pzntrk {
@@ -184,17 +200,8 @@ footer p {
     text-transform: uppercase;
 }
 
-.branding h1 {
+.site-info h1 {
     font-size: 2rem;
-}
-
-.branding p {
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.carousel-indicators {
-    display: none;
 }
 
 /**************************************/
@@ -226,8 +233,8 @@ footer p {
 }
 
 .home-bar {
-    margin: 10em auto 5em;
-    padding: 10em 0;
+    margin: 3em auto 5em;
+    padding: 5em 0;
 }
 
 .blog h2.pzntrk,
@@ -300,6 +307,11 @@ footer p {
 
 .post-title {
     height: 100%;
+}
+
+.roadmap .ascii {
+    max-height: 600px;
+    overflow: auto;
 }
 
 /**************************************/
@@ -406,13 +418,19 @@ details summary {
 header,
 main {
     animation-name: fade-in;
-    animation-duration: 0.8s;
+    animation-duration: 0.7s;
     animation-timing-function: ease-in-out;
 }
 
-.slide-bg {
-    animation-name: branding-animation;
-    animation-duration: 0.5s;
+.logo-entrance {
+    animation-name: branding-animation-1;
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.site-info-entrance {
+    animation-name: branding-animation-2;
+    animation-duration: 0.7s;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -426,7 +444,7 @@ main {
     }
 }
 
-@keyframes branding-animation {
+@keyframes branding-animation-1 {
     from {
         opacity: 0;
         background-color: #444;
@@ -434,8 +452,22 @@ main {
     }
 
     50% {
-        background-color: rgb(179, 221, 201);
+        background-color: rgb(138, 138, 138);
     }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes branding-animation-2 {
+    from {
+        opacity: 0;
+
+        transform: translate3d(0, -100%, 0) scale3d(1, 1, 1) rotate(0deg);
+    }
+
+    50% {}
 
     to {
         opacity: 1;
@@ -447,7 +479,7 @@ main {
 /************************************/
 
 @media screen and (min-width: 768px) {
-    .branding h1 {
+    .site-info h1 {
         font-size: 3rem;
     }
 
@@ -476,11 +508,6 @@ main {
         width: 100%;
     }
 
-    .lower-footer ul li {
-        display: inline-block;
-        text-align: left;
-    }
-
     .blog h2.pzntrk,
     .services h2.pzntrk {
         font-size: xx-large;
@@ -489,10 +516,17 @@ main {
     .services h2.pzntrk {
         text-align: left;
     }
+
+    .lower-footer ul li {
+        display: inline-block;
+        text-align: left;
+    }
 }
 
 @media screen and (min-width: 992px) {
     header #responsive-navbar-nav {
+        position: absolute;
+        min-height: 0;
         padding: 0;
         border: 0;
     }
@@ -501,8 +535,12 @@ main {
         text-align: left;
     }
 
-    .branding h1 {
+    .site-info h1 {
         font-size: 6rem;
+    }
+
+    .site-info {
+        margin-top: -1.6rem;
     }
 
     .hidey-lg {
@@ -541,6 +579,12 @@ main {
     header #responsive-navbar-nav {
         position: relative;
         min-height: 0;
+    }
+
+    footer ul li,
+    .linky ul li {
+        display: inline-block;
+        margin-right: 7px;
     }
 }
 

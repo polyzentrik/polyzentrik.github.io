@@ -8,8 +8,8 @@ import "../components/pretty.css"
 const BrandingComponent = () => {
     return (
         <section>
-            <Container fluid className="text-center branding">
-                <Row className="scene logo-entrance">
+            <Container fluid className="text-center branding fadey">
+                <Row className="scene">
                     <Scene />
                 </Row>
             </Container>

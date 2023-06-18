@@ -14,7 +14,7 @@ const Post = ({ data, children }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.type}>
       <Container className={data.mdx.frontmatter.type}>
-        <Row className="mt-5 d-flex shadow">
+        <Row className="horizontal-section shadow">
           <Col lg={5} className="article-title p-0">
             <h2 className="pzntrk my-0 pt-3 pb-1 px-4">{data.mdx.frontmatter.title}</h2>
             <p className="small text-center my-0 px-4 pb-4 text-lg-end optional">By <a href={data.mdx.frontmatter.author_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.author}</a>.</p>
@@ -24,9 +24,9 @@ const Post = ({ data, children }) => {
             <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
             <p className="my-0 py-0 small text-end">Image by <a href={data.mdx.frontmatter.hero_image_credit_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.hero_image_credit_text}</a>.</p>
           </Col>
-          <Col className="py-3 px-4 article-content border-start border-bottom">
+          <Col className="py-3 px-4 article-content">
             {children}
-            <Container fluid className="border border-top my-3">
+            <Container fluid className="my-3">
               <span className="float-end">
                 <ShareComponent />
               </span>

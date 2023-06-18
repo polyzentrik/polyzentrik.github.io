@@ -52,25 +52,30 @@ const ContentPage = ({ location, data }) => {
     if (path === "services") {
         return (
             <Layout pageTitle={path} >
-                <Row className="mb-2 hello shadow my-5 py-5">
+                <Row className="horizontal-section shadow">
                     <Col lg={12}>
-                        <Container className="mt-5">
-                            <Row className="">
+                        <Container>
+                            <Row>
                                 {
                                     posts.map(node => (
-                                        <Col className="col-12 col-md-6 d-flex services-index" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                                            <Card className="m-1 shadow">
+                                        <Col className="col-12 col-lg-6" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+                                            <Card >
                                                 <article key={node.id}>
+                                                    <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                                                        <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" data-sal="zoom-out" data-sal-delay="400" data-sal-easing="ease" />
+                                                    </Link>
                                                     <Card.Title className="pt-4 pb-2">
-                                                        <h3 className="px-2 small"><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
+                                                        <h4><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h4>
                                                     </Card.Title>
-                                                    <Card.Body className="p-3 checkers">
+                                                    <Card.Body>
                                                         <Card.Text>
                                                             <p>{node.frontmatter.intro}</p>
+                                                            <Link to={`/services/${node.frontmatter.slug}`}>
+                                                                <Button variant="light" className="more float-end mb-3 mx-3" >
+                                                                    Learn more
+                                                                </Button>
+                                                            </Link>
                                                         </Card.Text>
-                                                        <Link to={`/services/${node.frontmatter.slug}`}>
-                                                            <Button variant="light" className="pink float-end mb-3 border mx-3">Learn more...</Button>
-                                                        </Link>
                                                     </Card.Body>
                                                 </article>
                                             </Card>
@@ -86,31 +91,32 @@ const ContentPage = ({ location, data }) => {
     } else {
         return (
             <Layout pageTitle={path} >
-                <Container fluid className="blog-index">
-                    <Row className="shadow my-5 py-5">
-                        <Col className="col-10 offset-1 py-5">
+                <Container fluid>
+                    <Row className="horizontal-section shadow" >
+                        <Col className="col-10 offset-1">
                             <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
                                 <Masonry>
                                     {
                                         list.map(node => (
-                                            <Card className="m-1 shadow">
-                                            <article key={node.id} className={node.frontmatter.categories}>
+                                            <Card>
+                                                <article key={node.id} className={node.frontmatter.categories}>
                                                     <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                                                         <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                                                     </Link>
-                                                    <Card.Body className="p-0">
-                                                        <Card.Title className="p-2">
-                                                            <h3 className="px-2 small"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
+                                                    <Card.Body>
+                                                        <Card.Title>
+                                                            <h4><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
                                                         </Card.Title>
-                                                        <Card.Text className="p-3 checkers">
+                                                        <Card.Text>
                                                             <p>{node.excerpt}</p>
+                                                            <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                                                                <Button variant="light" className="more float-end mb-3 mx-3" >
+                                                                    Read more
+                                                                </Button>
+                                                            </Link>
                                                         </Card.Text>
-                                                        <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                                                            <Button variant="light" className="pink float-end mb-3 border mx-3">Read more...</Button>
-                                                        </Link>
                                                     </Card.Body>
-                                                
-                                            </article>
+                                                </article>
                                             </Card>
                                         ))
                                     }
@@ -120,7 +126,7 @@ const ContentPage = ({ location, data }) => {
                     </Row>
                     <Container className="text-center">
                         {hasMore ? (
-                            <Button onClick={handleLoadMore} variant="dark" className="big-p border w-75 mt-3">Click to load more.</Button>
+                            <Button onClick={handleLoadMore} variant="dark" className="bg-black big-p w-75 mt-3">Click to load more.</Button>
                         ) : (
                             <span></span>
                         )}

@@ -20,7 +20,7 @@ class Scene extends React.Component {
         // SET THE SCENE, & CAMERA, & RENDERER
         const scene = new THREE.Scene()
         //scene.background = new THREE.Color(0xe7b0c1)
-        scene.fog = new THREE.FogExp2(0xffffff, 0.05)
+        scene.fog = new THREE.FogExp2(0xffffff, 0.07)
 
         const camera = new THREE.PerspectiveCamera(75, this.mount.offsetWidth / this.mount.offsetHeight, 0.1, 1000)
         this.camera = camera

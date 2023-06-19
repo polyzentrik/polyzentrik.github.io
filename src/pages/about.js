@@ -64,10 +64,10 @@ const AboutPage = () => {
                                         <p>I was an academic for a bit, focused on sustainability, private governance, and the future of policy. I am now amongst probably-few political economists who can talk shop with data and AI engineers.</p>
                                         <p>The transition was somewhat of an accident.</p>
                                         <p>I took a few months after my last academic position to learn to code a little. Soon after, the universe threw me a curve ball and forced me to simultaneously deal with my father’s loss and my son’s birth. It was a very confusing time. </p>
-                                        <p>I took refuge in spending time with Ando and coding. And I learned, and kept learning, and then learned more. I became real good at it.</p>
-                                        <p>The experience also changed me. My interest in society and sustainability is still there, but I am now a more practical person who wants to solve problems rather than just talk about them.</p>
+                                        <p>I took refuge in spending time with Ando and in coding. And I learned, and kept learning, and then learned more. I became real good at it.</p>
+                                        <p>The experience also changed me. My interest in society and the environment is still there. However, I am now a more practical person who wants to solve problems rather than just talk about them.</p>
                                         <p>That is how Polyzentrik was born.</p>
-                                        <p>Digital technologies have their own risks, but they can do a lot of good. I therefore want to help others access and use digital technologies, especially where it relates to sustainability.</p>
+                                        <p>Digital technologies have their own risks, but they can do a lot of good. I therefore want to help others access and use digital technologies, so that we can all, together, make the world a better place.</p>
                                     </Row>
                                     <Row className="linky d-flex">
                                         <span className="my-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">

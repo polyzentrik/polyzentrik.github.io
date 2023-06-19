@@ -62,24 +62,16 @@ blockquote {
 /**************************************/
 /******** KEY SITEWIDE EFFECTS *******/
 /************************************/
-.checkers {
-    background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
+.pzntrk {
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .clearer {
     clear: both;
 }
 
-.bg-pink {
-    background-color: #FF7D9D;
-}
-
-.bg-yellow {
-    background-color: rgb(244, 181, 235);
-}
-
 .word-breakie {
-    font-weight: 600;
     word-wrap: break-word;
     -webkit-hyphens: manual;
     -ms-hyphens: manual;
@@ -127,17 +119,44 @@ header .nav-item a {
 }
 
 header *:focus,
-header *:active {
+header *:active, 
+.categorical *:focus,
+.categorical *:active {
     outline: none !important;
     box-shadow: none !important;
 }
 
-header .custom-toggler {
+header .custom-toggler, .categorical .custom-toggler {
     background: black;
     color: white;
     border: 0;
     z-index: 2;
     border-radius: 0;
+}
+
+.categorical .navbar-nav {
+    flex-wrap: wrap;
+}
+
+.categorical .custom-toggler {
+    background: transparent;
+    margin-right: 1em;
+}
+
+.categorical a {
+    color: black;
+    padding: 0.5em 0.7em;
+    margin-right: 0.7em;
+    font-variant: small-caps;
+    border: 0;
+    border-bottom: 1px dotted black;
+    text-decoration: none;
+}
+
+.categorical .active {
+    border-right: 1px;
+    border-style: dotted;
+    background: pink;
 }
 
 header .navbar-collapse {
@@ -223,11 +242,6 @@ header #responsive-navbar-nav.show .linky .nav-item {
     border-top: 1px dotted white;
 }
 
-.pzntrk {
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
 /**************************************/
 /******** MAIN CONTENT AREA **********/
 /************************************/
@@ -242,7 +256,7 @@ header #responsive-navbar-nav.show .linky .nav-item {
 
 .card {
     border: 0;
-    margin: 5%;
+    margin: 1em 2%;
     padding: 0;
     text-align: left;
     background: transparent;
@@ -279,6 +293,7 @@ header #responsive-navbar-nav.show .linky .nav-item {
     padding: 0.5em 0.4em;
 }
 
+.card-title, 
 .card-title a,
 .card-title h4 {
     color: white;
@@ -318,38 +333,16 @@ header #responsive-navbar-nav.show .linky .nav-item {
     display: none;
 }
 
-
-/*.home-blog-index .card:hover,
-.horizontal-section .card:hover,
-.blog-index .card:hover,
-.services-index .card:hover {
-    background-color: #e2fbfa;
-} */
+.blog,
+.services {
+    letter-spacing: -0.04em;
+}
 
 .blog h2.pzntrk,
 .services h2.pzntrk {
     font-size: x-large;
     text-align: center;
 }
-
-.blog figcaption,
-.services figcaption {
-    text-align: center;
-    font-size: smaller;
-    font-style: italic;
-    font-weight: 600;
-}
-
-.blog,
-.services {
-    letter-spacing: -0.04em;
-}
-
-/*
-.blog .card,
-.services .card {
-    margin: 0.3em auto;
-}*/
 
 .blog h3,
 .services h3 {
@@ -367,6 +360,14 @@ header #responsive-navbar-nav.show .linky .nav-item {
 .blog h5,
 .services h5 {
     font-size: medium;
+    font-weight: 600;
+}
+
+.blog figcaption,
+.services figcaption {
+    text-align: center;
+    font-size: smaller;
+    font-style: italic;
     font-weight: 600;
 }
 
@@ -417,11 +418,7 @@ footer {
 }
 
 footer a {
-    color: #38b87c;
-}
-
-footer a:hover {
-    color: #fff !important;
+    color: white;
 }
 
 footer ul {
@@ -434,8 +431,6 @@ footer ul li {
     list-style-type: none;
 }
 
-
-
 .lower-footer {
     margin-top: 2em;
     border-top: 1px dotted #fff;
@@ -443,10 +438,6 @@ footer ul li {
 
 .lower-footer ul li {
     text-align: right;
-}
-
-.lower-footer a {
-    color: #fff;
 }
 
 footer p {
@@ -521,6 +512,11 @@ details summary {
 
 .copy-r {
     font-size: x-small;
+}
+
+.transparent {
+    background: transparent;
+    margin-top: -14px;
 }
 
 /**************************************/
@@ -655,6 +651,11 @@ main,
 @media screen and (min-width: 992px) {
     header .dropdown-menu {
         text-align: left;
+    }
+
+
+    .categorical .navbar-collapse {
+        border-top: 0;
     }
 
     .hidey-lg {

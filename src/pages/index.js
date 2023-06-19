@@ -61,7 +61,9 @@ const HomePage = ({ data }) => {
         </Row>
       </Container>
 
-      <MissionComponent />
+      <span className="word-breakie">
+        <MissionComponent />
+      </span>
 
       <ServicesComponent />
     </Layout >

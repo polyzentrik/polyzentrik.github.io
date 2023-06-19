@@ -43,7 +43,7 @@ const ServicesComponent = () => {
                     <Container>
                         <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                             <h3 className="my-md-auto pzntrk">Services</h3>
-                            <p className="word-breakie">We can help you <em>be more sustainable</em> in your digital activities. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p>
+                            <p className="word-breakie">We can help improve your website – make it faster, prettier, and more sustainable. We can also help you <em>integrate</em>, <em>analyse</em>, and <em>communicate</em> your data and related analytics. Finally, we can help you measure and manage the footprint (and by extension costs) of your digital infrastructure. </p>
                         </span>
                         <Row className="text-center d-flex">
                             {

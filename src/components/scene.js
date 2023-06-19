@@ -5,9 +5,9 @@ import texture from '../images/graphics/pat-gray.png'
 
 // IF ALL GOES WELL THIS SCENE SHOULD END UP WITH A NETWORK OF INTERCONNECTED NODES THAT:
 // - Rotate on their own
-// - Allows further rotation after user input via pointer
+// - Allows additional model rotation via pointer
 // - Allows node scaling via hover
-// - Allows node color change upon clicking a node
+// - Allows node color change via click
 
 
 // GLOBAL STUFF I HAVE NO IDEA WHERE ELSE TO PUT
@@ -76,7 +76,7 @@ class Scene extends React.Component {
         const wrapper = new THREE.TextureLoader().load(texture)
 
         const lineGeo = new THREE.BufferGeometry();
-        const lineMaterial = new THREE.LineBasicMaterial({ vertexColors: true, linewidth: 3 })
+        const lineMaterial = new THREE.LineDashedMaterial({ dashSize: 0.1, gapSize: 0.09, vertexColors: true })
         
         const auxLineGeo = new THREE.BufferGeometry(); // No need for material for this one as it will use same as primary line
 
@@ -97,7 +97,6 @@ class Scene extends React.Component {
 
                 // If there is overlap with an existing node set boolean flag to false to repeat loop
                 if (positions.length > 0) {
-                    console.log(positions)
                     for (let j = 0; j < positions.length; j = j + 3) {
                         var dx = x - positions[(j)]
                         var dy = y - positions[(j + 1)]
@@ -113,7 +112,7 @@ class Scene extends React.Component {
             bool = false // Set boolean flag back to false to reset loop settings for next position
 
             // Place a node on the newly generated position, with a material of its own (to allow individual changes later on)
-            const nodeMaterial = new THREE.MeshPhongMaterial({ map: wrapper, wireframe: true }) 
+            const nodeMaterial = new THREE.MeshLambertMaterial({ map: wrapper, wireframe: true, depthWrite: true, depthTest: true }) 
             var object = new THREE.Mesh(nodeGeo, nodeMaterial)
             object.position.set(x, y, z)
 
@@ -145,11 +144,13 @@ class Scene extends React.Component {
         lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
         lineGeo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3))
         let line = new THREE.Line(lineGeo, lineMaterial)
+        line.computeLineDistances()
        
         // Auxiliary line will add edges between every two nodes (or maybe three - it's been a while)
         auxLineGeo.setAttribute('position', new THREE.Float32BufferAttribute(auxPositions, 3))
         auxLineGeo.setAttribute('color', new THREE.Float32BufferAttribute(auxColors, 3))
         let auxLine = new THREE.Line(auxLineGeo, lineMaterial)
+        auxLine.computeLineDistances()
 
         // Add both lines to the scene
         scene.add(line, auxLine);
@@ -171,7 +172,7 @@ class Scene extends React.Component {
         this.clickSituation = function () {
             
             // Reset colors of all nodes before changing new node
-            this.resetSituation()
+            //this.resetSituation()
 
             // ID node pointer is at 
             raycaster.setFromCamera(pointer, camera) 
@@ -187,13 +188,13 @@ class Scene extends React.Component {
         }
 
         // FUNCTION TO RESET COLORS OF NODES BEFORE CHANGING COLOR OF A NEW NODE
-        this.resetSituation = function () {
-            for (let i = 0; i < scene.children.length; i++) {
-                if (scene.children[i].material) {
-                    scene.children[i].material.color.set("aliceblue");
-                }
-            }
-        }
+        //this.resetSituation = function () {
+        //    for (let i = 0; i < scene.children.length; i++) {
+        //        if (scene.children[i].material) {
+        //            scene.children[i].material.color.set("aliceblue");
+        //        }
+        //    }
+        //}
 
         // FUNCTION TO SCALE UP ANY NODE BEING HOVERED
         this.hoverSituation = function () {
@@ -239,7 +240,7 @@ class Scene extends React.Component {
     // FUNCTION TO GET POINTER COORDINATES UPON CLICK AND CALL CLICK FUNCTIONS
     onPointerDown(event) {
 
-        this.resetSituation()
+        //this.resetSituation()
         this.clickSituation()
 
         if (this.mount) {

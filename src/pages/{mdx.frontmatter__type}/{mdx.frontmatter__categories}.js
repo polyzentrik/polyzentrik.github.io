@@ -5,9 +5,9 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import Seo from '../../components/seo'
 import Layout from '../../components/layout'
+import CategoriesComponent from "../../components/categories"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import "../../components/pretty.css"
@@ -66,7 +66,13 @@ const ContentPage = ({ location, data }) => {
       <Layout pageTitle={path[2].replace("-", " ")} >
         <Container fluid>
           <Row className="horizontal-section shadow">
-            <Col className="col-10 offset-1">
+            <Container className="col-10 mb-3 categorical">
+              <CategoriesComponent />
+            </Container>
+
+
+
+            <Container className="col-10 offset-1">
               <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
                 <Masonry>
                   {
@@ -102,7 +108,7 @@ const ContentPage = ({ location, data }) => {
                   <span></span>
                 )}
               </Container>
-            </Col>
+            </Container>
           </Row>
         </Container>
       </Layout>

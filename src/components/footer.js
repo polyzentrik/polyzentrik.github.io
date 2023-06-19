@@ -34,7 +34,6 @@ const FooterComponent = () => {
                             <li className=""><Link to="/services/web-development/">Sustainable website development</Link></li>
                             <li className=""><Link to="/services/sustainability-transcriptions-ai/">Sustainability transcriptions</Link></li>
                             <li className=""><Link to="/services/sustainability-content-ai/">Sustainability content (AI)</Link></li>
-                            <li className=""><Link to="/services/sustainability-content-ai/">Sustainability content generation </Link></li>
                         </ul>
                     </Col>
                     <Col className='mt-3 mt-md-0'>
@@ -45,6 +44,7 @@ const FooterComponent = () => {
                             <li className=""><Link to="/services/">Services</Link></li>
                             <li className=""><Link to="/roadmap/">Roadmap</Link></li>
                             <li className=""><Link to="/about/">About & Contact</Link></li>
+                            <li className=""><Link to="/gateway/">Payments gateway</Link></li>
                         </ul>
                     </Col>
                 </Row>

@@ -2,17 +2,30 @@ import React from "react"
 import Container from "react-bootstrap/esm/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import Card from 'react-bootstrap/Card'
+import Card from "react-bootstrap/Card"
 
 const MissionComponent = () => {
     return (
         <Container fluid className="horizontal-section shadow">
-            <Row>
-                <Col className="col-2 offset-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+            <Row className="col-10 offset-1">
+                <h3 className="pzntrk" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">Company</h3>
+                <p data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+                    We do websites, data, and (applied) AI solutions.
+                </p>
+                <p data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+                    We are very well-qualified for projects related to digital sustainability. These often involve a need for sustainability expertise, data integration, advanced analytics, and top-class website design. Polyzentrik is really good at all these things.
+                </p>
+                <p data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+                    That said, our main advantage is that we are incredibly imaginative. If you face a difficult problem with no clear solution, no matter your industry or sector, polyzentrik is your best choice.
+                </p>
+                <p data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+                    Get in touch! No project is too small, no problem is too big.
+                </p>
+                <Col className="col-10 offset-1 col-lg-4 offset-lg-0" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                     <Card>
                         <Card.Body>
                             <Card.Title data-sal="zoom-out" data-sal-delay="400" data-sal-easing="ease">
-                                <h4>Our mission</h4>
+                                <p className="m-2">Our mission</p>
                             </Card.Title>
                             <Card.Text>
                                 <p>To help individuals and SMEs access and use digital technologies, especially, but not exclusively, where it relates to sustainability.</p>
@@ -20,11 +33,11 @@ const MissionComponent = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col className="col-2" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+                <Col className="col-10 offset-1 col-lg-4 offset-lg-0" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                     <Card>
                         <Card.Body>
                             <Card.Title data-sal="zoom-out" data-sal-delay="400" data-sal-easing="ease">
-                                <h4>Our method</h4>
+                                <p className="m-2">Our method</p>
                             </Card.Title>
                             <Card.Text>
                                 <p>We think modularly. We are developing small services and resources that solve concrete challenges and can combined into more complex solutions.</p>
@@ -32,11 +45,11 @@ const MissionComponent = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col className="col-2" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+                <Col className="col-10 offset-1 col-lg-4 offset-lg-0" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                     <Card>
                         <Card.Body>
                             <Card.Title data-sal="zoom-out" data-sal-delay="400" data-sal-easing="ease">
-                                <h4>Our mindset</h4>
+                                <p className="m-2">Our mindset</p>
                             </Card.Title>
                             <Card.Text>
                                 <p>We lead by example. This page is fast and highly sustainable.

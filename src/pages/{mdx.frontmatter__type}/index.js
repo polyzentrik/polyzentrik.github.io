@@ -9,6 +9,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import CategoriesComponent from "../../components/categories"
 import "../../components/pretty.css"
 
 const ContentPage = ({ location, data }) => {
@@ -93,7 +94,10 @@ const ContentPage = ({ location, data }) => {
             <Layout pageTitle={path} >
                 <Container fluid>
                     <Row className="horizontal-section shadow" >
-                        <Col className="col-10 offset-1">
+                        <Container className="col-10 mb-3 categorical">
+                            <CategoriesComponent />
+                        </Container>
+                        <Container className="col-10 offset-1">
                             <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
                                 <Masonry>
                                     {
@@ -122,16 +126,15 @@ const ContentPage = ({ location, data }) => {
                                     }
                                 </Masonry>
                             </ResponsiveMasonry>
-                        </Col>
+                        </Container>
+                        <Container className="text-center">
+                            {hasMore ? (
+                                <Button onClick={handleLoadMore} variant="dark" className="bg-black big-p w-75 mt-3">Click to load more.</Button>
+                            ) : (
+                                <span></span>
+                            )}
+                        </Container>
                     </Row>
-                    <Container className="text-center">
-                        {hasMore ? (
-                            <Button onClick={handleLoadMore} variant="dark" className="bg-black big-p w-75 mt-3">Click to load more.</Button>
-                        ) : (
-                            <span></span>
-                        )}
-                    </Container>
-
                 </Container>
             </Layout>
         )

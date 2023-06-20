@@ -78,17 +78,8 @@ blockquote {
     hyphens: manual;
 }
 
-.big-p {
-    font-size: medium;
-    font-weight: 600;
-}
-
 .pink {
     color: rgb(201, 19, 98);
-}
-
-.special-bg {
-    background-color: rgb(219, 247, 241);
 }
 
 /**************************************/
@@ -119,14 +110,15 @@ header .nav-item a {
 }
 
 header *:focus,
-header *:active, 
+header *:active,
 .categorical *:focus,
 .categorical *:active {
     outline: none !important;
     box-shadow: none !important;
 }
 
-header .custom-toggler, .categorical .custom-toggler {
+header .custom-toggler,
+.categorical .custom-toggler {
     background: black;
     color: white;
     border: 0;
@@ -195,7 +187,7 @@ header .navbar-collapse.collapse.show {
 }
 
 header #responsive-navbar-nav.show .nav-item {
-    margin: 5px auto;
+    margin: 7px auto;
     border: none;
 }
 
@@ -233,25 +225,33 @@ header #responsive-navbar-nav.show .linky .nav-item {
 }
 
 .topper h1 {
-    margin-top: 0;
-    margin-right: 1rem;
-    padding: 1rem 3rem;
-    color: white;
-    background: #000;
-    border: 1px dotted black;
-    border-top: 1px dotted white;
+    margin-right: 0;
+    padding: 3rem 3rem 1rem 3rem;
+    border: 3px solid black;
+    border-top: 1px;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background-size: 300% 300%;
+    animation: more-gradient 10s ease-in-out infinite;
 }
 
 /**************************************/
 /******** MAIN CONTENT AREA **********/
 /************************************/
+.titulazo {
+    margin: 5em auto 0;
+    display: none;
+}
 .horizontal-section {
     background: lavenderblush;
     background: ghostwhite;
-    margin: 3em auto 5em;
-    padding: 5em 0;
+    margin: 3rem auto 5rem;
+    padding: 5rem 0;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
+}
+
+article h3 {
+    font-size: large;
 }
 
 .card {
@@ -266,17 +266,19 @@ header #responsive-navbar-nav.show .linky .nav-item {
     padding: 0;
 }
 
-.gatsby-image-wrapper, .gatsby-image-wrapper-constrained {
+.gatsby-image-wrapper,
+.gatsby-image-wrapper-constrained {
     background: white;
     width: 90% !important;
-    margin-left: 11%;
+    margin-left: 10%;
     border: 3px solid black;
     border-radius: 50px 0 5px 0;
     border-bottom: 0;
     transition: 0.7s;
 }
 
-.gatsby-image-wrapper:hover, .gatsby-image-wrapper-constrained:hover {
+.gatsby-image-wrapper:hover,
+.gatsby-image-wrapper-constrained:hover {
     border-top-left-radius: 0;
     border-top-right-radius: 50px;
     margin-left: 0;
@@ -293,7 +295,7 @@ header #responsive-navbar-nav.show .linky .nav-item {
     padding: 0.5em 0.4em;
 }
 
-.card-title, 
+.card-title,
 .card-title a,
 .card-title h4 {
     color: white;
@@ -308,7 +310,7 @@ header #responsive-navbar-nav.show .linky .nav-item {
 }
 
 .more {
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
     font-variant: small-caps;
     border: 1px dotted black;
     background-size: 300% 300%;
@@ -611,6 +613,12 @@ main,
 @media screen and (min-width: 768px) {
     .topper h1 {
         font-size: 3rem;
+        margin-top: 0;
+        padding: 1rem 3rem;
+        color: white;
+        background: #000;
+        border: 1px dotted black;
+        border-top: 1px dotted white;
     }
 
     .hidey {
@@ -653,6 +661,9 @@ main,
         text-align: left;
     }
 
+    .topper h1 {
+        margin-right: 7%;
+    }
 
     .categorical .navbar-collapse {
         border-top: 0;

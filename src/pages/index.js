@@ -46,7 +46,7 @@ const HomePage = ({ data }) => {
                             <Card.Text data-sal="zoom-out" data-sal-delay="200" data-sal-easing="ease">
                               <p>{node.excerpt}</p>
                               <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                                <Button variant="light" className="more float-end mb-3 mx-3" data-sal="zoom-out" data-sal-delay="200" data-sal-easing="ease">Read more</Button>
+                                <Button variant="light" className="more float-end mb-3 mx-3" data-sal="zoom-out" data-sal-delay="200" data-sal-easing="ease">Read full post</Button>
                               </Link>
                             </Card.Text>
                           </Card.Body>

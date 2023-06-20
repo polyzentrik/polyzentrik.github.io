@@ -16,7 +16,7 @@ const RoadmapPage = () => {
                             <Card.Body className="px-0 py-0">
                                 <h3 className="pzntrk mt-0 py-3 px-2 mb-3 checkers card-title small">ASCII Roadmap</h3>
                                 <Card.Text className="ascii px-3">
-                                    <p>Our strategy visualised in the best format the Internet has to offer.</p>
+                                    <p>Our strategy, visualised in the best format the Internet has to offer.</p>
                                     <pre>::::::::::::::::::::::::::::::::::::</pre>
                                     <pre>::   ___     ___    ___   ____    ::</pre>
                                     <pre>::  |__ \   / _ \  |__ \  |___ \  ::</pre>
@@ -91,11 +91,11 @@ const RoadmapPage = () => {
                                     <p>Polyzentrik will follow Y Combinator's "plan for the worst" <a href="https://techcrunch.com/2022/05/19/yc-advises-founders-to-plan-for-the-worst/" target="_blank" rel="noreferrer">advice</a> and adhere to what is known as a <em>default alive</em> strategy. If possibilities allow, the plan can be accelerated. If needed, however, the company aims to be ready to survive the current crisis in development mode.</p>
                                     <p>Guidelines:</p>
                                     <ul >
-                                        <li>1-y. runway minimum, 2-y. ideal.</li>
-                                        <li>Steady capacity development, at the speed allowed by funding.</li>
-                                        <li>Burn rate minimised by operating with no debt.</li>
-                                        <li>Proactive marketing on free and low-cost channels.</li>
-                                        <li>Being ready to fill in the blanks left by others is important.</li>
+                                        <li>1-y. runway minimum, 2-y. ideal</li>
+                                        <li>Steady capacity development at the speed allowed by funding</li>
+                                        <li>Burn rate minimised by operating with no debt</li>
+                                        <li>Proactive marketing on free and low-cost channels</li>
+                                        <li>Being ready to fill in the blanks left by others is important</li>
                                         <li>A key goal is to come out of the crisis with the capacity to rapidly deploy ambitious solutions when things re-ignite.</li>
                                     </ul>
                                     <p>Funding may be sought to accelerate development, provided it does not require deviating from the above.</p>

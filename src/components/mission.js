@@ -13,13 +13,10 @@ const MissionComponent = () => {
                     We do websites, data, and (applied) AI solutions.
                 </p>
                 <p data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                    We are very well-qualified for projects related to digital sustainability. These often involve a need for sustainability expertise, data integration, advanced analytics, and top-class website design. Polyzentrik is really good at all these things.
+                We have sustainability-oriented services and actively care for the social and environmental impact of everything we do. That said, our main advantage is that we are incredibly imaginative. If you face a complex digital transformation challenge with no clear solution in sight, no matter your industry or sector, polyzentrik is your best choice.
                 </p>
                 <p data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                    That said, our main advantage is that we are incredibly imaginative. If you face a difficult problem with no clear solution, no matter your industry or sector, polyzentrik is your best choice.
-                </p>
-                <p data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                    Get in touch! No project is too small, no problem is too big.
+                    Get in touch! No project is too small; no problem is too big.
                 </p>
                 <Col className="col-10 offset-1 col-lg-4 offset-lg-0" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                     <Card>
@@ -40,7 +37,7 @@ const MissionComponent = () => {
                                 <p className="m-2">Our method</p>
                             </Card.Title>
                             <Card.Text>
-                                <p>We think modularly. We are developing small services and resources that solve concrete challenges and can combined into more complex solutions.</p>
+                                <p>We think modularly. We are developing small services and resources that solve concrete challenges and can be combined into more complex solutions.</p>
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -53,7 +50,7 @@ const MissionComponent = () => {
                             </Card.Title>
                             <Card.Text>
                                 <p>We lead by example. This page is fast and highly sustainable.
-                                    Don't take our word, ask <a href="https://pagespeed.web.dev/analysis/https-www-polyzentrik-com/hef1ww54o2?form_factor=desktop" target="_blank" rel="noopener noreferrer">Google's PageSpeed Insights</a> and
+                                    Don't take our word for it. Ask <a href="https://pagespeed.web.dev/analysis/https-www-polyzentrik-com/hef1ww54o2?form_factor=desktop" target="_blank" rel="noopener noreferrer">Google's PageSpeed Insights</a> and
                                     the <a href="https://www.websitecarbon.com/website/polyzentrik-com/" target="_blank" rel="noopener noreferrer">WCC</a>.</p>
                             </Card.Text>
                         </Card.Body>

@@ -67,7 +67,7 @@ const AboutPage = () => {
                                         <p>I took refuge in spending time with Ando and in coding. And I learned, and kept learning, and then learned more. I became real good at it.</p>
                                         <p>The experience also changed me. My interest in society and the environment is still there. However, I am now a more practical person who wants to solve problems rather than just talk about them.</p>
                                         <p>That is how Polyzentrik was born.</p>
-                                        <p>Digital technologies have their own risks, but they can do a lot of good. I therefore want to help others access and use digital technologies, so that we can all, together, make the world a better place.</p>
+                                        <p>Digital technologies have their own risks, but they can do a lot of good. I therefore want to help others access and use digital technologies so that we can, together, make the world a better place.</p>
                                     </Row>
                                     <Row className="linky d-flex">
                                         <span className="my-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
@@ -103,7 +103,7 @@ const AboutPage = () => {
                         <Container>
                             <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                                 <h3 className="my-md-auto pzntrk">Additional credits</h3>
-                                <p>All resources in this website are proprietary, available in the public domain, or under licenses which allow commercial use
+                                <p>Unless otherwise noted, resources on this website are proprietary, available in the public domain, or under licenses which allow commercial use
                                     without attribution. That said, we are grateful to the persons/organisations whose work facilitated ours.</p>
                             </span>
                             <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
@@ -115,7 +115,7 @@ const AboutPage = () => {
                             <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                                 <p className="mb-0"><strong>Photography</strong></p>
                                 <ul>
-                                    <li><a href="https://evacristina.com/" target="_blank" rel="noreferrer">Eva Cristina</a>. Home page photo kindly provided by Eva Cristina.</li>
+                                    <li><a href="https://evacristina.com/" target="_blank" rel="noreferrer">Eva Cristina</a>. Eva Cristina kindly provided the home page photo of our initial website.</li>
                                 </ul>
                             </span>
                             <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">

@@ -102,7 +102,7 @@ query {
 
 export const Head = () => (
   <Seo title="Polyzentrik > Home"
-    description="Digital resources to help you at different stages of your sustainability journey." />
+    description="Websites, data, and (applied) AI solutions. We aim to help individuals and SMEs access and use digital technologies." />
 )
 
 export default HomePage

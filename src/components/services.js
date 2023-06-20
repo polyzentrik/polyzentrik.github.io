@@ -65,7 +65,7 @@ const ServicesComponent = () => {
                                                     <p>{node.frontmatter.intro}</p>
                                                             <Link to={`/services/${node.frontmatter.slug}`}>
                                                                 <Button variant="light" className="more float-end mb-3 mx-3" >
-                                                                    Learn more
+                                                                    Check service
                                                                 </Button>
                                                             </Link>
                                                     </Card.Text>

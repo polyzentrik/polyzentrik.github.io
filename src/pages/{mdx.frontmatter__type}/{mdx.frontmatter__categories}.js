@@ -52,26 +52,23 @@ const ContentPage = ({ location, data }) => {
   // Now do the posts
   if (path[1] === "services") {
     return (
-      <Layout pageTitle={path[1] + "/" + path[2]}>
+      <Layout pageTitle={path[1] + ": " + path[2]}>
         <Container fluid className="horizontal-section shadow">
           <Row className="col-10 offset-1">
-            <p className="big-p">This page is here for future usage. If and when we have enough services, we will split them into categories.</p>
-            <p className="big-p">If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a list of services.</p>
+            <p>This page is here for future usage. If and when we have enough services, we will split them into categories.</p>
+            <p>If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a list of services.</p>
           </Row>
         </Container>
       </Layout>
     )
   } else {
     return (
-      <Layout pageTitle={path[2].replace("-", " ")} >
+      <Layout pageTitle={path[1] + ": " + path[2].replace("-", " ")} >
         <Container fluid>
           <Row className="horizontal-section shadow">
             <Container className="col-10 mb-3 categorical">
               <CategoriesComponent />
             </Container>
-
-
-
             <Container className="col-10 offset-1">
               <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
                 <Masonry>
@@ -84,13 +81,13 @@ const ContentPage = ({ location, data }) => {
                           </Link>
                           <Card.Body>
                             <Card.Title>
-                              <h4><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
+                              <h3><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                             </Card.Title>
                             <Card.Text>
                               <p>{node.excerpt}</p>
                               <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                                 <Button variant="light" className="more float-end mb-3 mx-3" >
-                                  Read more
+                                  Read full post
                                 </Button>
                               </Link>
                             </Card.Text>

@@ -66,14 +66,14 @@ const ContentPage = ({ location, data }) => {
                                                         <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" data-sal="zoom-out" data-sal-delay="400" data-sal-easing="ease" />
                                                     </Link>
                                                     <Card.Title className="pt-4 pb-2">
-                                                        <h4><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h4>
+                                                        <h3><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
                                                     </Card.Title>
                                                     <Card.Body>
                                                         <Card.Text>
                                                             <p>{node.frontmatter.intro}</p>
                                                             <Link to={`/services/${node.frontmatter.slug}`}>
                                                                 <Button variant="light" className="more float-end mb-3 mx-3" >
-                                                                    Learn more
+                                                                    Check service
                                                                 </Button>
                                                             </Link>
                                                         </Card.Text>
@@ -109,13 +109,13 @@ const ContentPage = ({ location, data }) => {
                                                     </Link>
                                                     <Card.Body>
                                                         <Card.Title>
-                                                            <h4><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
+                                                            <h3><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                                                         </Card.Title>
                                                         <Card.Text>
                                                             <p>{node.excerpt}</p>
                                                             <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
                                                                 <Button variant="light" className="more float-end mb-3 mx-3" >
-                                                                    Read more
+                                                                    Read full post
                                                                 </Button>
                                                             </Link>
                                                         </Card.Text>

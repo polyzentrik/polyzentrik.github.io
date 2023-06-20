@@ -3,9 +3,9 @@ import { useState, useEffect } from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import MissionComponent from "../../components/mission"
 import Seo from '../../components/seo'
 import Layout from '../../components/layout'
+import CategoriesComponent from "../../components/categories"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Card from 'react-bootstrap/Card'
@@ -53,56 +53,61 @@ const ContentPage = ({ location, data }) => {
   if (path[1] === "services") {
     return (
       <Layout pageTitle={path[1] + "/" + path[2]}>
-        <p className="big-p">This page is here for future usage. If and when we have enough services, we will split them into categories.</p>
-        <p className="big-p">If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a list of services.</p>
-        {
-          posts.map(node => (
-            <article key={node.id}>
-              <Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link>
-              <p>{node.excerpt}</p>
-            </article>
-          ))
-        }
+        <Container fluid className="horizontal-section shadow">
+          <Row className="col-10 offset-1">
+            <p className="big-p">This page is here for future usage. If and when we have enough services, we will split them into categories.</p>
+            <p className="big-p">If you are a human and somehow arrived here, go to <Link to="/">HOME</Link> for a list of services.</p>
+          </Row>
+        </Container>
       </Layout>
     )
   } else {
     return (
       <Layout pageTitle={path[2].replace("-", " ")} >
-        <MissionComponent />
-        <Container className="blog-index mt-5">
-          <Row data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-            <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4 }}>
-              <Masonry>
-                {
-                  list.map(node => (
-                    <article key={node.id} className={node.frontmatter.categories}>
-                      <Card className="m-1 shadow">
-                        <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                          <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
-                        </Link>
-                        <Card.Body className="p-0">
-                          <Card.Title className="p-2">
-                            <h3 className="px-2 small"><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
-                          </Card.Title>
-                          <Card.Text className="p-3 checkers">
-                            <p>{node.excerpt}</p>
-                          </Card.Text>
+        <Container fluid>
+          <Row className="horizontal-section shadow">
+            <Container className="col-10 mb-3 categorical">
+              <CategoriesComponent />
+            </Container>
+
+
+
+            <Container className="col-10 offset-1">
+              <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
+                <Masonry>
+                  {
+                    list.map(node => (
+                      <Card>
+                        <article key={node.id} className={node.frontmatter.categories}>
                           <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                            <Button variant="light" className="pink float-end mb-3 border mx-3">Read more...</Button>
+                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
                           </Link>
-                        </Card.Body>
+                          <Card.Body>
+                            <Card.Title>
+                              <h4><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
+                            </Card.Title>
+                            <Card.Text>
+                              <p>{node.excerpt}</p>
+                              <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                                <Button variant="light" className="more float-end mb-3 mx-3" >
+                                  Read more
+                                </Button>
+                              </Link>
+                            </Card.Text>
+                          </Card.Body>
+                        </article>
                       </Card>
-                    </article>
-                  ))
-                }
-              </Masonry>
-            </ResponsiveMasonry>
-            <Container className="text-center">
-              {hasMore ? (
-                <Button onClick={handleLoadMore} variant="dark" className="big-p border border-dark w-50 mt-3">Click to load more.</Button>
-              ) : (
-                <span></span>
-              )}
+                    ))
+                  }
+                </Masonry>
+              </ResponsiveMasonry>
+              <Container className="text-center">
+                {hasMore ? (
+                  <Button onClick={handleLoadMore} variant="dark" className="bg-black big-p w-75 mt-3">Click to load more.</Button>
+                ) : (
+                  <span></span>
+                )}
+              </Container>
             </Container>
           </Row>
         </Container>

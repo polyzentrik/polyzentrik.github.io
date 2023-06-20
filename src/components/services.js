@@ -37,13 +37,13 @@ const ServicesComponent = () => {
     const posts = data.allMdx.nodes
 
     return (
-        <Container fluid className="home-bar special-bg shadow">
-            <Row data-sal="zoom-out">
+        <Container fluid className="horizontal-section shadow">
+            <Row>
                 <Col className="col-lg-8 offset-lg-2">
                     <Container>
                         <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                        <h3 className="my-md-auto pzntrk">Services</h3>
-                        <p>We can help you <em>be more sustainable</em> in your digital activities. We can also help you <em>analyse</em>, <em>communicate</em>, and <em>manage</em> sustainability.</p>
+                            <h3 className="my-md-auto pzntrk">Services</h3>
+                            <p className="word-breakie">We can help improve your website – make it faster, prettier, and more sustainable. We can also help you <em>integrate</em>, <em>analyse</em>, and <em>communicate</em> your data and related analytics. Finally, we can help you measure and manage the footprint (and, by extension, costs) of your digital infrastructure. </p>
                         </span>
                         <Row className="text-center d-flex">
                             {
@@ -52,16 +52,22 @@ const ServicesComponent = () => {
                                         <Card variant="top" className="h-100">
                                             <article key={node.id}>
                                                 <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                                                    <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
+                                                    <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" data-sal="zoom-out" data-sal-delay="400" data-sal-easing="ease" />
                                                 </Link>
                                                 <Card.Body>
-                                                    <Card.Title>
+                                                    <Card.Title data-sal="zoom-out" data-sal-delay="400" data-sal-easing="ease">
                                                         <h4 className="small">
                                                             <Link to={`/services/${node.frontmatter.slug}`}>
                                                                 {node.frontmatter.title}
                                                             </Link></h4>
                                                     </Card.Title>
                                                     <Card.Text>
+                                                    <p>{node.frontmatter.intro}</p>
+                                                            <Link to={`/services/${node.frontmatter.slug}`}>
+                                                                <Button variant="light" className="more float-end mb-3 mx-3" >
+                                                                    Learn more
+                                                                </Button>
+                                                            </Link>
                                                     </Card.Text>
                                                 </Card.Body>
                                             </article>
@@ -70,9 +76,6 @@ const ServicesComponent = () => {
                                 ))
                             }
                         </Row>
-                        <Link to={`/services/`}>
-                            <Button variant="dark" className="big-p border float-end mt-2">Go to services</Button>
-                        </Link>
                     </Container>
                 </Col>
             </Row>

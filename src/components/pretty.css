@@ -8,7 +8,8 @@
     scroll-behavior: unset !important;
 }
 
-html {
+html,
+* {
     margin: 0;
     padding: 0;
 }
@@ -17,8 +18,17 @@ html {
 /******* KEY HTML ELEMENTS **********/
 /************************************/
 body {
-    background: white;
     font-family: monospace, sans-serif, arial;
+}
+
+.container-fluid {
+    padding: 0;
+    overflow: hidden;
+}
+
+header,
+footer {
+    font-family: tahoma;
 }
 
 h1,
@@ -29,18 +39,9 @@ h5 {
     font-family: unbounded, tahoma;
 }
 
-header,
-footer {
-    font-family: tahoma;
-}
-
 main {
     min-height: 70vh;
     padding-bottom: 3rem;
-}
-
-section {
-    clear: both;
 }
 
 a {
@@ -59,189 +60,277 @@ blockquote {
 }
 
 /**************************************/
-/***** HEADER & FOOTER NAVBARS *******/
+/******** KEY SITEWIDE EFFECTS *******/
 /************************************/
-header .navbar {
-    min-height: 10vh;
-}
-
-header #responsive-navbar-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 1;
-    padding-top: calc(100vh/5);
-    min-height: 100vh;
-    width: 100%;
-    text-align: center;
-}
-
-header #responsive-navbar-nav.show .nav-item,
-header #responsive-navbar-nav.show .dropdown-item {
-    margin: 5px auto;
-}
-
-header .navbar-toggler {
-    margin-right: 0.7em;
-    border: 1px dotted #111;
-    z-index: 2;
-}
-
-header .nav-item {
-    font-weight: 300;
-    font-size: 1.1rem;
-    font-variant: small-caps;
-}
-
-header .dropdown-menu {
-    margin-top: 0 !important;
-    padding-top: 0;
-    border: 0;
-    text-align: center;
-    font-size: small;
-}
-
-header .dropdown:hover .dropdown-menu {
-    display: block !important;
-}
-
-.green a {
-    color: rgb(17, 102, 62);
-}
-
-nav svg {
-    font-size: 2.5rem;
-}
-
-footer {
-    margin-top: 5em;
-    padding-top: 0.4em;
-    border-top: 1px dotted #fff;
-    background: #111;
-    color: #ddd;
-}
-
-footer a {
-    color: #38b87c;
-}
-
-footer a:hover {
-    color: #fff !important;
-}
-
-footer ul {
-    margin: 21px auto 0;
-    padding-left: 0
-}
-
-footer ul li,
-.linky ul li {
-    display: inline-block;
-    list-style-type: none;
-    margin-right: 7px;
-}
-
-.linky ul {
-    font-size: 2rem;
-}
-
-.lower-footer {
-    margin-top: 2em;
-    border-top: 1px dotted #fff;
-}
-
-.lower-footer ul li {
-    text-align: right;
-}
-
-.lower-footer a {
-    color: #fff;
-}
-
-footer p {
-    margin-right: 7px;
-}
-
-/**************************************/
-/********* SITE BRANDING *************/
-/************************************/
-.welcome {
-    overflow-wrap: break-word;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.branding {
-    border-top: 1px dotted #000;
-    border-bottom: 1px dotted #000;
-    min-height: 30vh;
-    letter-spacing: 0.3em;
-}
-
 .pzntrk {
     font-weight: 900;
     text-transform: uppercase;
 }
 
-.branding h1 {
-    font-size: 2rem;
+.clearer {
+    clear: both;
 }
 
-.branding p {
-    font-size: 0.9rem;
+.word-breakie {
+    word-wrap: break-word;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+}
+
+.big-p {
+    font-size: medium;
     font-weight: 600;
 }
 
-.carousel-indicators {
-    display: none;
+.pink {
+    color: rgb(201, 19, 98);
+}
+
+.special-bg {
+    background-color: rgb(219, 247, 241);
+}
+
+/**************************************/
+/*********** HEADER SECTION **********/
+/************************************/
+header .main-nav {
+    background: white;
+    border-bottom: 3px solid black;
+}
+
+header .navbar-nav {
+    background: black;
+    animation-name: left-right;
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+header .nav-item {
+    border-right: 1px dotted white;
+    padding: 1px 7px;
+    animation-name: left-right;
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+header .nav-item a {
+    color: white;
+}
+
+header *:focus,
+header *:active, 
+.categorical *:focus,
+.categorical *:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+header .custom-toggler, .categorical .custom-toggler {
+    background: black;
+    color: white;
+    border: 0;
+    z-index: 2;
+    border-radius: 0;
+}
+
+.categorical .navbar-nav {
+    flex-wrap: wrap;
+}
+
+.categorical .custom-toggler {
+    background: transparent;
+    margin-right: 1em;
+}
+
+.categorical a {
+    color: black;
+    padding: 0.5em 0.7em;
+    margin-right: 0.7em;
+    font-variant: small-caps;
+    border: 0;
+    border-bottom: 1px dotted black;
+    text-decoration: none;
+}
+
+.categorical .active {
+    border-right: 1px;
+    border-style: dotted;
+    background: pink;
+}
+
+header .navbar-collapse {
+    text-align: center;
+}
+
+.collapsing {
+    background: black;
+    animation-name: collapse-in-style;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes collapse-in-style {
+    from {
+        padding-top: 1rem;
+    }
+
+    50% {
+        padding-top: calc(100vh/10);
+    }
+
+    to {
+        min-height: 100vh;
+        padding-top: calc(100vh/5);
+        font-size: x-large;
+    }
+}
+
+header .navbar-collapse.collapse.show {
+    min-height: 100vh;
+    background: black;
+    padding-top: calc(100vh/5);
+    font-size: x-large;
+}
+
+header #responsive-navbar-nav.show .nav-item {
+    margin: 5px auto;
+    border: none;
+}
+
+header #responsive-navbar-nav.show .linky {
+    display: inline-block;
+}
+
+header #responsive-navbar-nav.show .linky .nav-item {
+    display: inline-block;
+    margin: auto 7px;
+    margin-top: 3rem;
+}
+
+.scene {
+    background: black;
+    background: linear-gradient(-45deg, #e73c7e, #8a6ae1, #8a6ae1, #23d5ab);
+    background-size: 300% 300%;
+    border-bottom: 3px solid black;
+    margin-bottom: 0;
+    animation: gradient 20s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.topper h1 {
+    margin-top: 0;
+    margin-right: 1rem;
+    padding: 1rem 3rem;
+    color: white;
+    background: #000;
+    border: 1px dotted black;
+    border-top: 1px dotted white;
 }
 
 /**************************************/
 /******** MAIN CONTENT AREA **********/
 /************************************/
-.top-sm {
+.horizontal-section {
+    background: lavenderblush;
+    background: ghostwhite;
+    margin: 3em auto 5em;
+    padding: 5em 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.card {
+    border: 0;
+    margin: 1em 2%;
+    padding: 0;
+    text-align: left;
+    background: transparent;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.gatsby-image-wrapper, .gatsby-image-wrapper-constrained {
+    background: white;
+    width: 90% !important;
+    margin-left: 11%;
+    border: 3px solid black;
+    border-radius: 50px 0 5px 0;
+    border-bottom: 0;
+    transition: 0.7s;
+}
+
+.gatsby-image-wrapper:hover, .gatsby-image-wrapper-constrained:hover {
+    border-top-left-radius: 0;
+    border-top-right-radius: 50px;
+    margin-left: 0;
+}
+
+.card-title {
     width: 100%;
-    text-align: center;
+    background: black;
+    border-top: 1px solid white;
+    border-top-right-radius: 5px;
+    border-left: 1px dotted white;
+    border-bottom: 1px dotted white;
+    margin: 0;
+    padding: 0.5em 0.4em;
+}
+
+.card-title, 
+.card-title a,
+.card-title h4 {
+    color: white;
+}
+
+.card-text {
+    background: white;
+    margin: 0;
+    padding: 1em 0.6em;
+    border-right: 1px dotted black;
+    border-bottom: 1px dotted black;
+}
+
+.more {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
+    font-variant: small-caps;
+    border: 1px dotted black;
+    background-size: 300% 300%;
+    animation: more-gradient 10s ease-in-out infinite;
+}
+
+@keyframes more-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .services .optional {
     display: none;
-}
-
-.home-blog-index {
-    margin: 4em auto;
-}
-
-.company-statement {
-    margin: 2em auto;
-    text-align: center;
-}
-
-.home-blog-index .card:hover,
-.home-bar .card:hover,
-.blog-index .card:hover,
-.services-index .card:hover {
-    background-color: #e2fbfa;
-}
-
-.home-bar {
-    margin: 10em auto 5em;
-    padding: 10em 0;
-}
-
-.blog h2.pzntrk,
-.services h2.pzntrk {
-    font-size: x-large;
-    text-align: center;
-}
-
-.blog figcaption,
-.services figcaption {
-    text-align: center;
-    font-size: smaller;
-    font-style: italic;
-    font-weight: 600;
 }
 
 .blog,
@@ -249,9 +338,10 @@ footer p {
     letter-spacing: -0.04em;
 }
 
-.blog .card,
-.services .card {
-    margin: 0.3em auto;
+.blog h2.pzntrk,
+.services h2.pzntrk {
+    font-size: x-large;
+    text-align: center;
 }
 
 .blog h3,
@@ -270,6 +360,14 @@ footer p {
 .blog h5,
 .services h5 {
     font-size: medium;
+    font-weight: 600;
+}
+
+.blog figcaption,
+.services figcaption {
+    text-align: center;
+    font-size: smaller;
+    font-style: italic;
     font-weight: 600;
 }
 
@@ -302,45 +400,61 @@ footer p {
     height: 100%;
 }
 
+.roadmap .ascii {
+    max-height: 600px;
+    overflow: auto;
+}
+
+/**************************************/
+/*********** FOOTER SECTION **********/
+/************************************/
+
+footer {
+    margin-top: 5em;
+    padding-top: 0.4em;
+    border-top: 1px dotted #fff;
+    background: black;
+    color: #ddd;
+}
+
+footer a {
+    color: white;
+}
+
+footer ul {
+    margin: 21px auto 0;
+    padding-left: 0
+}
+
+footer ul li {
+    display: block;
+    list-style-type: none;
+}
+
+.lower-footer {
+    margin-top: 2em;
+    border-top: 1px dotted #fff;
+}
+
+.lower-footer ul li {
+    text-align: right;
+}
+
+footer p {
+    margin-right: 7px;
+}
+
 /**************************************/
 /********* CHERRIES ON TOP ***********/
 /************************************/
 
-.checkers {
-    background: repeating-linear-gradient(75deg, rgba(191, 212, 203, 0.2), rgb(136, 240, 191, 0.7) 3px, rgb(15, 124, 60) 3px);
+.linky ul {
+    font-size: 2rem;
 }
 
-.clearer {
-    clear: both;
-}
-
-.bg-pink {
-    background-color: #FF7D9D;
-}
-
-.bg-yellow {
-    background-color: rgb(244, 181, 235);
-}
-
-.word-breakie {
-    font-weight: 600;
-    word-wrap: break-word;
-    -webkit-hyphens: manual;
-    -ms-hyphens: manual;
-    hyphens: manual;
-}
-
-.big-p {
-    font-size: medium;
-    font-weight: 600;
-}
-
-.pink {
-    color: rgb(201, 19, 98);
-}
-
-.special-bg {
-    background-color: rgb(219, 247, 241);
+.linky ul li {
+    display: inline-block;
+    margin-right: 7px;
 }
 
 .small svg {
@@ -354,6 +468,7 @@ footer p {
 
 .socialShare {
     margin-left: 0;
+    border: 0;
 }
 
 .socialShare button {
@@ -399,21 +514,21 @@ details summary {
     font-size: x-small;
 }
 
+.transparent {
+    background: transparent;
+    margin-top: -14px;
+}
+
 /**************************************/
 /************* ANIMATIONS ************/
 /************************************/
 
 header,
-main {
+main,
+.fadey {
     animation-name: fade-in;
-    animation-duration: 0.8s;
+    animation-duration: 0.7s;
     animation-timing-function: ease-in-out;
-}
-
-.slide-bg {
-    animation-name: branding-animation;
-    animation-duration: 0.5s;
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @keyframes fade-in {
@@ -426,18 +541,65 @@ main {
     }
 }
 
-@keyframes branding-animation {
+.from-left {
+    animation-name: left-right;
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes left-right {
     from {
-        opacity: 0;
-        background-color: #444;
         transform: translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotate(0deg);
+        background-color: #444;
+        opacity: 0;
     }
 
     50% {
-        background-color: rgb(179, 221, 201);
+        background-color: rgb(138, 138, 138);
     }
 
     to {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.from-top {
+    animation-name: top-down;
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes top-down {
+    from {
+        transform: translate3d(0, -100%, 0) scale3d(1, 1, 1) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {}
+
+    to {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.from-down {
+    animation-name: top-down;
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes down-top {
+    from {
+        transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {}
+
+    to {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotate(0deg);
         opacity: 1;
     }
 }
@@ -447,13 +609,8 @@ main {
 /************************************/
 
 @media screen and (min-width: 768px) {
-    .branding h1 {
+    .topper h1 {
         font-size: 3rem;
-    }
-
-    .branding p {
-        font-size: 1.1rem;
-        font-weight: 600;
     }
 
     .hidey {
@@ -476,11 +633,6 @@ main {
         width: 100%;
     }
 
-    .lower-footer ul li {
-        display: inline-block;
-        text-align: left;
-    }
-
     .blog h2.pzntrk,
     .services h2.pzntrk {
         font-size: xx-large;
@@ -489,20 +641,21 @@ main {
     .services h2.pzntrk {
         text-align: left;
     }
+
+    .lower-footer ul li {
+        display: inline-block;
+        text-align: left;
+    }
 }
 
 @media screen and (min-width: 992px) {
-    header #responsive-navbar-nav {
-        padding: 0;
-        border: 0;
-    }
-
     header .dropdown-menu {
         text-align: left;
     }
 
-    .branding h1 {
-        font-size: 6rem;
+
+    .categorical .navbar-collapse {
+        border-top: 0;
     }
 
     .hidey-lg {
@@ -525,10 +678,6 @@ main {
         text-align: right;
     }
 
-    .top-sm {
-        text-align: right;
-    }
-
     .blog .gatsby-resp-image-wrapper {
         max-width: 35% !important;
         transition: 1s;
@@ -536,11 +685,6 @@ main {
 
     .blog .gatsby-resp-image-wrapper:hover {
         max-width: 60% !important;
-    }
-
-    header #responsive-navbar-nav {
-        position: relative;
-        min-height: 0;
     }
 }
 

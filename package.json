@@ -52,6 +52,7 @@
     "react-transition-group": "^4.4.5",
     "remark-gfm": "^3.0.1",
     "styled-components": "^5.3.6",
+    "three": "^0.153.0",
     "usescript-hook": "^1.0.5"
   }
 }

@@ -19,8 +19,8 @@ const FooterComponent = () => {
 
     return (
         <div className="main-footer">
-            <Container fluid className="">
-                <Row>
+            <Container fluid>
+                <Row className="p-2">
                     <Col md={6} className="">
                         <Row>
                             <h1 className="pzntrk mb-0">{data.site.siteMetadata.title}</h1>
@@ -34,7 +34,6 @@ const FooterComponent = () => {
                             <li className=""><Link to="/services/web-development/">Sustainable website development</Link></li>
                             <li className=""><Link to="/services/sustainability-transcriptions-ai/">Sustainability transcriptions</Link></li>
                             <li className=""><Link to="/services/sustainability-content-ai/">Sustainability content (AI)</Link></li>
-                            <li className=""><Link to="/services/sustainability-content-ai/">Sustainability content generation </Link></li>
                         </ul>
                     </Col>
                     <Col className='mt-3 mt-md-0'>
@@ -45,10 +44,11 @@ const FooterComponent = () => {
                             <li className=""><Link to="/services/">Services</Link></li>
                             <li className=""><Link to="/roadmap/">Roadmap</Link></li>
                             <li className=""><Link to="/about/">About & Contact</Link></li>
+                            <li className=""><Link to="/gateway/">Payments gateway</Link></li>
                         </ul>
                     </Col>
                 </Row>
-                <Row className="lower-footer d-flex py-2 small">
+                <Row className="lower-footer d-flex p-2 small">
                     <Col className="text-end my-auto small">
                         <ul className="my-auto small">
                             <li><Link to="/terms-conditions/">Terms & Conditions | Privacy & Cookies | Disclaimer</Link></li>

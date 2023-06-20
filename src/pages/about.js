@@ -8,11 +8,12 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
+import MissionComponent from "../components/mission"
 
 const AboutPage = () => {
     return (
         <Layout pageTitle="About">
-            <Row className="text-center shadow my-5">
+            <Row className="horizontal-section shadow text-center">
                 <Container fluid className="my-auto">
                     <Row className="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                         <Col lg={5} className="d-flex py-5">
@@ -63,10 +64,10 @@ const AboutPage = () => {
                                         <p>I was an academic for a bit, focused on sustainability, private governance, and the future of policy. I am now amongst probably-few political economists who can talk shop with data and AI engineers.</p>
                                         <p>The transition was somewhat of an accident.</p>
                                         <p>I took a few months after my last academic position to learn to code a little. Soon after, the universe threw me a curve ball and forced me to simultaneously deal with my father’s loss and my son’s birth. It was a very confusing time. </p>
-                                        <p>I took refuge in spending time with Ando and coding. And I learned, and kept learning, and then learned more. I became real good at it.</p>
-                                        <p>The experience also changed me. My interest in society and sustainability is still there, but I am now a more practical person who wants to solve problems rather than just talk about them.</p>
+                                        <p>I took refuge in spending time with Ando and in coding. And I learned, and kept learning, and then learned more. I became real good at it.</p>
+                                        <p>The experience also changed me. My interest in society and the environment is still there. However, I am now a more practical person who wants to solve problems rather than just talk about them.</p>
                                         <p>That is how Polyzentrik was born.</p>
-                                        <p>Digital technologies have their own risks, but they can do a lot of good. I therefore want to help others access and use digital technologies, especially where it relates to sustainability.</p>
+                                        <p>Digital technologies have their own risks, but they can do a lot of good. I therefore want to help others access and use digital technologies so that we can, together, make the world a better place.</p>
                                     </Row>
                                     <Row className="linky d-flex">
                                         <span className="my-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
@@ -94,41 +95,15 @@ const AboutPage = () => {
                 </Container>
             </Row>
 
-            <Container fluid className="home-bar special-bg shadow" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                <Row>
-                    <Col className="col-lg-6 offset-lg-3">
-                        <Container>
-                            <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                                <h3 className="my-md-auto pzntrk">Polyzentrik's purpose</h3>
-                                <p>We guide ourselves by the following statements.</p>
-                            </span>
-                            <span className="my-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                                <h4>Mission</h4>
-                                <p>To help individuals and small to mid-sized organisations access and use digital technologies, especially where it relates to sustainability.To help individuals and small to mid-sized organisations access and use digital technologies, especially where it relates to sustainability.</p>
-                            </span>
-                            <span className="my-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                                <h4>Method</h4>
-                                <p>We are working towards a modular approach to digital sustainability. We are slowly but steadily developing services and resources that solve specific sustainability challenges by themselves and can combined into more complex solutions.</p>
-                            </span>
-                            <span className="my-3" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                                <h4>Mindset</h4>
-                                <p>We practice what we preach. This page is incredibly fast and highly sustainable.
-                                    Don't take our word for it, ask <a href="https://pagespeed.web.dev/analysis/https-www-polyzentrik-com/hef1ww54o2?form_factor=desktop" target="_blank" rel="noopener noreferrer">Google's PageSpeed Insights</a> and
-                                    the <a href="https://www.websitecarbon.com/website/polyzentrik-com/" target="_blank" rel="noopener noreferrer">Website Carbon Calculator</a>.</p>
-                            </span>
-                        </Container>
-                    </Col>
-                </Row>
-            </Container>
+            <MissionComponent />
 
-
-            <Container fluid className="home-bar special-bg shadow" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+            <Container fluid className="horizontal-section shadow" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                 <Row>
                     <Col className="col-lg-6 offset-lg-3">
                         <Container>
                             <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                                 <h3 className="my-md-auto pzntrk">Additional credits</h3>
-                                <p>All resources in this website are proprietary, available in the public domain, or under licenses which allow commercial use
+                                <p>Unless otherwise noted, resources on this website are proprietary, available in the public domain, or under licenses which allow commercial use
                                     without attribution. That said, we are grateful to the persons/organisations whose work facilitated ours.</p>
                             </span>
                             <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
@@ -140,7 +115,7 @@ const AboutPage = () => {
                             <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                                 <p className="mb-0"><strong>Photography</strong></p>
                                 <ul>
-                                    <li><a href="https://evacristina.com/" target="_blank" rel="noreferrer">Eva Cristina</a>. Home page photo kindly provided by Eva Cristina.</li>
+                                    <li><a href="https://evacristina.com/" target="_blank" rel="noreferrer">Eva Cristina</a>. Eva Cristina kindly provided the home page photo of our initial website.</li>
                                 </ul>
                             </span>
                             <span data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">

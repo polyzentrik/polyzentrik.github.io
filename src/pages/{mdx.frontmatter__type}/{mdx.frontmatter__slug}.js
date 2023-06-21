@@ -12,12 +12,12 @@ const Post = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
 
   return (
-    <Layout pageTitle={data.mdx.frontmatter.type + ": "}>
+    <Layout pageTitle="">
       <Container className={data.mdx.frontmatter.type}>
         <Row className="horizontal-section shadow">
           <Col lg={5} className="article-title">
-            <h2 className="pzntrk my-0 pb-1 px-4">{data.mdx.frontmatter.title}</h2>
-            <p className="small text-center my-0 px-4 pb-4 text-lg-end optional">By <a href={data.mdx.frontmatter.author_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.author}</a>.</p>
+            <h2 className="pzntrk my-0 pb-1">{data.mdx.frontmatter.title}</h2>
+            <p className="small text-center my-0 pb-4 text-lg-end optional">By <a href={data.mdx.frontmatter.author_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.author}</a>.</p>
             <span className="float-end border-top optional top-sm" ><ShareComponent /></span>
           </Col>
           <Col sm={12} lg={6} className="border-start border-bottom py-3 align-self-end post-title optional">

@@ -23,7 +23,7 @@ const Layout = ({ pageTitle, children }) => {
                 <main>
                     <section>
                         <Container fluid>
-                            <Row className="col-8 offset-2 accessibility-hide">
+                            <Row className="col-8 offset-2 titulazo">
                                 <h2 className="pzntrk">{pageTitle}</h2>
                             </Row>
                             <Row>

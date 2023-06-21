@@ -1,18 +1,21 @@
-import React, { useRef } from 'react';
-import Scene from "../components/scene"
+import React from 'react'
+// import BrandingScene from '../components/scene'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import "../components/pretty.css"
 
+const BrandingScene = React.lazy(() => import("../components/scene"))
 
 const BrandingComponent = () => {
-    const width = useRef(window.innerWidth)
-    if (width.current > 768) {
+    const width = React.useRef(window.innerWidth)
+    if (width.current >= 768) {
         return (
             <section>
                 <Container fluid className="text-center">
                     <Row className="scene">
-                        <Scene />
+                        <React.Suspense fallback={<></>}>
+                            <BrandingScene />
+                        </React.Suspense>
                     </Row>
                 </Container>
             </section>

@@ -18,7 +18,7 @@ html,
 /******* KEY HTML ELEMENTS **********/
 /************************************/
 body {
-    font-family: monospace, sans-serif, arial;
+    font-family: monospace, sans-serif, arial; 
 }
 
 .container-fluid {
@@ -88,9 +88,11 @@ blockquote {
 header .main-nav {
     background: white;
     border-bottom: 3px solid black;
+    height: 3rem;
 }
 
 header .navbar-nav {
+    min-height: 3rem;
     background: black;
     animation-name: left-right;
     animation-duration: 0.7s;
@@ -98,6 +100,7 @@ header .navbar-nav {
 }
 
 header .nav-item {
+    margin: auto 0;
     border-right: 1px dotted white;
     padding: 1px 7px;
     animation-name: left-right;
@@ -202,6 +205,7 @@ header #responsive-navbar-nav.show .linky .nav-item {
 }
 
 .scene {
+    min-height: 60vh;
     background: black;
     background: linear-gradient(-45deg, #e73c7e, #8a6ae1, #8a6ae1, #23d5ab);
     background-size: 300% 300%;
@@ -226,7 +230,7 @@ header #responsive-navbar-nav.show .linky .nav-item {
 
 .topper h1 {
     margin-right: 0;
-    padding: 3rem 3rem 1rem 3rem;
+    padding: 4rem 3rem 1rem 3rem;
     border: 3px solid black;
     border-top: 1px;
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
@@ -238,9 +242,9 @@ header #responsive-navbar-nav.show .linky .nav-item {
 /******** MAIN CONTENT AREA **********/
 /************************************/
 .titulazo {
-    margin: 5em auto 0;
-    display: none;
+    visibility: hidden;
 }
+
 .horizontal-section {
     background: lavenderblush;
     background: ghostwhite;
@@ -269,19 +273,12 @@ article h3 {
 .gatsby-image-wrapper,
 .gatsby-image-wrapper-constrained {
     background: white;
-    width: 90% !important;
-    margin-left: 10%;
+    width: 70% !important;
+    margin: auto;
     border: 3px solid black;
-    border-radius: 50px 0 5px 0;
-    border-bottom: 0;
+    border-radius: 0 50px 0 5px;
+    border-bottom: 1px solid black;
     transition: 0.7s;
-}
-
-.gatsby-image-wrapper:hover,
-.gatsby-image-wrapper-constrained:hover {
-    border-top-left-radius: 0;
-    border-top-right-radius: 50px;
-    margin-left: 0;
 }
 
 .card-title {
@@ -431,6 +428,7 @@ footer ul {
 footer ul li {
     display: block;
     list-style-type: none;
+    margin: 7px 0;
 }
 
 .lower-footer {
@@ -621,6 +619,24 @@ main,
         border-top: 1px dotted white;
     }
 
+    .titulazo {
+        visibility: visible;
+        margin-top: 1em;
+    }
+
+    .gatsby-image-wrapper,
+    .gatsby-image-wrapper-constrained {
+        width: 90% !important;
+    }
+
+    .gatsby-image-wrapper:hover,
+    .gatsby-image-wrapper-constrained:hover {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 5px;
+        margin-left: 10%;
+    }
+
     .hidey {
         display: block;
     }
@@ -639,6 +655,7 @@ main,
 
     .services .article-title {
         width: 100%;
+        margin-left: 0;
     }
 
     .blog h2.pzntrk,

@@ -1,5 +1,8 @@
 import React from "react"
-import * as THREE from "three"
+//import * as THREE from "three"
+import { Vector2, Raycaster, Scene, FogExp2, PerspectiveCamera, WebGLRenderer, Vector3, 
+    HemisphereLight, PointLight, IcosahedronGeometry, TextureLoader, BufferGeometry, Line, 
+    LineDashedMaterial, Mesh, MeshLambertMaterial, Float32BufferAttribute } from "three"
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import texture from '../images/graphics/pat-gray.png'
 
@@ -11,22 +14,21 @@ import texture from '../images/graphics/pat-gray.png'
 
 
 // GLOBAL STUFF I HAVE NO IDEA WHERE ELSE TO PUT
-var pointer = new THREE.Vector2()
-const raycaster = new THREE.Raycaster();
+var pointer = new Vector2()
+const raycaster = new Raycaster();
 
-class Scene extends React.Component {
+class BrandingScene extends React.Component {
     componentDidMount() {
 
         // SET THE SCENE, & CAMERA, & RENDERER
-        const scene = new THREE.Scene()
-        //scene.background = new THREE.Color(0xe7b0c1)
-        scene.fog = new THREE.FogExp2(0xffffff, 0.07)
+        const scene = new Scene()
+        scene.fog = new FogExp2(0xffffff, 0.07)
 
-        const camera = new THREE.PerspectiveCamera(75, this.mount.offsetWidth / this.mount.offsetHeight, 0.1, 1000)
+        const camera = new PerspectiveCamera(75, this.mount.offsetWidth / this.mount.offsetHeight, 0.1, 1000)
         this.camera = camera
         camera.position.z = 7
 
-        const renderer = new THREE.WebGLRenderer({ alpha: true })
+        const renderer = new WebGLRenderer({ alpha: true })
         this.renderer = renderer
         renderer.setSize(this.mount.offsetWidth, this.mount.offsetHeight)
         renderer.setPixelRatio(window.devicePixelRatio);
@@ -36,24 +38,24 @@ class Scene extends React.Component {
 
         // SET CONTROLS
         const controls = new OrbitControls(camera, renderer.domElement);
-        controls.target = new THREE.Vector3(0, 0, 0);
+        controls.target = new Vector3(0, 0, 0);
         controls.update();
 
         // ADD LIGHTING 
-        const ambient = new THREE.HemisphereLight(0xffffff, 0xbfd4d2, 0.9);
+        const ambient = new HemisphereLight(0xffffff, 0xbfd4d2, 0.9);
         scene.add(ambient);
 
-        const light1 = new THREE.PointLight(0xddffdd, 1.0);
+        const light1 = new PointLight(0xddffdd, 1.0);
         light1.position.z = 0;
         light1.position.y = 0;
         light1.position.x = 0;
 
-        const light2 = new THREE.PointLight(0xffdddd, 1.0);
+        const light2 = new PointLight(0xffdddd, 1.0);
         light2.position.z = 10;
         light2.position.x = - 7;
         light2.position.y = 0;
 
-        const light3 = new THREE.PointLight(0xddddff, 1.0);
+        const light3 = new PointLight(0xddddff, 1.0);
         light3.position.z = 7;
         light3.position.x = -7;
         light3.position.y = -5;
@@ -72,13 +74,13 @@ class Scene extends React.Component {
 
 
         // DEFINE THE BASIC GEOMETRIES AND MATERIALS
-        var nodeGeo = new THREE.IcosahedronGeometry(nodeSize, 5)
-        const wrapper = new THREE.TextureLoader().load(texture)
+        var nodeGeo = new IcosahedronGeometry(nodeSize, 5)
+        const wrapper = new TextureLoader().load(texture)
 
-        const lineGeo = new THREE.BufferGeometry();
-        const lineMaterial = new THREE.LineDashedMaterial({ dashSize: 0.1, gapSize: 0.09, vertexColors: true })
+        const lineGeo = new BufferGeometry();
+        const lineMaterial = new LineDashedMaterial({ dashSize: 0.1, gapSize: 0.09, vertexColors: true })
         
-        const auxLineGeo = new THREE.BufferGeometry(); // No need for material for this one as it will use same as primary line
+        const auxLineGeo = new BufferGeometry(); // No need for material for this one as it will use same as primary line
 
 
         // NOW POSITION STUFF ACROSS THE SCENE
@@ -112,8 +114,8 @@ class Scene extends React.Component {
             bool = false // Set boolean flag back to false to reset loop settings for next position
 
             // Place a node on the newly generated position, with a material of its own (to allow individual changes later on)
-            const nodeMaterial = new THREE.MeshLambertMaterial({ map: wrapper, wireframe: true, depthWrite: true, depthTest: true }) 
-            var object = new THREE.Mesh(nodeGeo, nodeMaterial)
+            const nodeMaterial = new MeshLambertMaterial({ map: wrapper, wireframe: true, depthWrite: true, depthTest: true }) 
+            var object = new Mesh(nodeGeo, nodeMaterial)
             object.position.set(x, y, z)
 
             object.castShadow = true;
@@ -141,15 +143,15 @@ class Scene extends React.Component {
         // CONNECT NODES USING THE ARRAYS FROM THE LOOP TO CREATE EDGES
 
         // Primary line connects nodes in the order created: 1 -> 2 -> ... -> n
-        lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
-        lineGeo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3))
-        let line = new THREE.Line(lineGeo, lineMaterial)
+        lineGeo.setAttribute('position', new Float32BufferAttribute(positions, 3))
+        lineGeo.setAttribute('color', new Float32BufferAttribute(colors, 3))
+        let line = new Line(lineGeo, lineMaterial)
         line.computeLineDistances()
        
         // Auxiliary line will add edges between every two nodes (or maybe three - it's been a while)
-        auxLineGeo.setAttribute('position', new THREE.Float32BufferAttribute(auxPositions, 3))
-        auxLineGeo.setAttribute('color', new THREE.Float32BufferAttribute(auxColors, 3))
-        let auxLine = new THREE.Line(auxLineGeo, lineMaterial)
+        auxLineGeo.setAttribute('position', new Float32BufferAttribute(auxPositions, 3))
+        auxLineGeo.setAttribute('color', new Float32BufferAttribute(auxColors, 3))
+        let auxLine = new Line(auxLineGeo, lineMaterial)
         auxLine.computeLineDistances()
 
         // Add both lines to the scene
@@ -271,4 +273,4 @@ class Scene extends React.Component {
     }
 }
 
-export default Scene
+export default BrandingScene

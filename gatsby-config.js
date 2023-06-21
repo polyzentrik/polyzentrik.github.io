@@ -19,6 +19,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-remove-fingerprints`,
+    
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -55,7 +56,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: { "name": "pages", "path": "./src/pages/" }, __key: "pages"
-    },    
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: { name: `services`, path: `${__dirname}/services`, }
@@ -98,17 +99,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-scroll-reveal-with-new-react`,
       options: {
-          threshold: 0.001, // Percentage of an element's area that needs to be visible to launch animation
-          once: true, // Defines if animation needs to be launched once
-          disable: false, // Flag for disabling animations
-  
-          // Advanced Options
-          selector: '[data-sal]', // Selector of the elements to be animated
-          animateClassName: 'sal-animate', // Class name which triggers animation
-          disabledClassName: 'sal-disabled', // Class name which defines the disabled state
-          rootMargin: '0% 50%', // Corresponds to root's bounding box margin
-          enterEventName: 'sal:in', // Enter event name
-          exitEventName: 'sal:out', // Exit event name
+        threshold: 0.001, // Percentage of an element's area that needs to be visible to launch animation
+        once: true, // Defines if animation needs to be launched once
+        disable: false, // Flag for disabling animations
+
+        // Advanced Options
+        selector: '[data-sal]', // Selector of the elements to be animated
+        animateClassName: 'sal-animate', // Class name which triggers animation
+        disabledClassName: 'sal-disabled', // Class name which defines the disabled state
+        rootMargin: '0% 50%', // Corresponds to root's bounding box margin
+        enterEventName: 'sal:in', // Enter event name
+        exitEventName: 'sal:out', // Exit event name
       }
     },
     {
@@ -116,7 +117,7 @@ module.exports = {
       options: {
         host: 'https://www.polyzentrik.com',
         sitemap: 'https://www.polyzentrik.com/sitemap-index.xml',
-        policy: [{userAgent: '*', allow: '/'}]
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     }
   ]

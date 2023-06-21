@@ -6,7 +6,7 @@ import ProductsComponent from "../components/products/products"
 
 const GatewayPage = () => {
     return (
-        <Layout pageTitle="Online payments gateway">
+        <Layout pageTitle="Payments gateway">
             <ProductsComponent />
         </Layout >
     )

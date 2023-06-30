@@ -17,14 +17,14 @@ const HomePage = ({ data }) => {
 
   return (
     <Layout pageTitle="Welcome">
-      <Container fluid className="horizontal-section shadow text-center">
+      <Container fluid className="horizontal-section shadow">
         <Row className="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2" >
           <Col lg={3} className="d-flex">
-            <Container data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">
-              <h3 className="pzntrk">Latest from our blog</h3>
-              <p className="word-breakie">We regularly publish fairly decent content about data, AI, and digital sustain&shy;ability.</p>
+            <Container>
+              <h3 className="pzntrk" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">Latest from our blog</h3>
+              <p className="word-breakie" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">We regularly publish fairly decent content about data, AI, and digital sustain&shy;ability.</p>
               <Link to={`/blog/`}>
-                <Button className="bg-black big-p border w-100 mb-3">Go to blog</Button>
+                <Button className="less" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">Go to blog</Button>
               </Link>
             </Container>
           </Col>
@@ -46,7 +46,7 @@ const HomePage = ({ data }) => {
                             <Card.Text data-sal="zoom-out" data-sal-delay="200" data-sal-easing="ease">
                               <p>{node.excerpt}</p>
                               <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                                <Button variant="light" className="more float-end mb-3 mx-3" data-sal="zoom-out" data-sal-delay="200" data-sal-easing="ease">Read full post</Button>
+                                <Button className="more float-end" data-sal="zoom-out" data-sal-delay="200" data-sal-easing="ease">Read full post</Button>
                               </Link>
                             </Card.Text>
                           </Card.Body>

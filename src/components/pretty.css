@@ -246,7 +246,6 @@ header #responsive-navbar-nav.show .linky .nav-item {
 }
 
 .horizontal-section {
-    background: lavenderblush;
     background: ghostwhite;
     margin: 3rem auto 5rem;
     padding: 5rem 0;
@@ -274,12 +273,18 @@ article h3 {
 .gatsby-image-wrapper-constrained {
     background: white;
     width: 70% !important;
-    margin: auto;
+    margin: 0;
     border: 3px solid black;
     border-radius: 0 50px 0 5px;
     border-bottom: 1px solid black;
     transition: 0.7s;
 }
+
+.gatsby-image-wrapper img,
+.gatsby-image-wrapper-constrained img {
+    width: 101%;
+}
+
 
 .card-title {
     width: 100%;
@@ -309,9 +314,18 @@ article h3 {
 .more {
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
     font-variant: small-caps;
+    color: black;
     border: 1px dotted black;
     background-size: 300% 300%;
     animation: more-gradient 10s ease-in-out infinite;
+}
+
+.less {
+    background: white;
+    font-size: larger;
+    font-variant: small-caps;
+    color: black;
+    border: 1px dotted black;
 }
 
 @keyframes more-gradient {
@@ -639,10 +653,6 @@ main,
 
     .hidey {
         display: block;
-    }
-
-    .big-p {
-        font-size: x-large;
     }
 
     .content h2 {

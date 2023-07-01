@@ -59,7 +59,7 @@ const ContentPage = ({ location, data }) => {
                             <Row>
                                 {
                                     posts.map(node => (
-                                        <Col className="col-12 col-lg-6" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
+                                        <Col className="col-12 col-md-6 col-lg-4" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
                                             <Card >
                                                 <article key={node.id}>
                                                     <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
@@ -72,7 +72,7 @@ const ContentPage = ({ location, data }) => {
                                                         <Card.Text>
                                                             <p>{node.frontmatter.intro}</p>
                                                             <Link to={`/services/${node.frontmatter.slug}`}>
-                                                                <Button variant="light" className="more float-end mb-3 mx-3" >
+                                                                <Button className="more float-end" >
                                                                     Check service
                                                                 </Button>
                                                             </Link>
@@ -114,7 +114,7 @@ const ContentPage = ({ location, data }) => {
                                                         <Card.Text>
                                                             <p>{node.excerpt}</p>
                                                             <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                                                                <Button variant="light" className="more float-end mb-3 mx-3" >
+                                                                <Button className="more float-end" >
                                                                     Read full post
                                                                 </Button>
                                                             </Link>

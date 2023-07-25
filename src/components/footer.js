@@ -30,10 +30,13 @@ const FooterComponent = () => {
                     <Col md={3} className='mt-3 mt-md-0'>
                         <h2>Services</h2>
                         <ul className="mt-0">
+                            <li className=""><Link to="/services/tailored/">Tailored software solutions</Link></li>
                             <li className=""><Link to="/services/sustainability-reporting/">Sustainability reporting</Link></li>
-                            <li className=""><Link to="/services/web-development/">Sustainable website development</Link></li>
-                            <li className=""><Link to="/services/sustainability-transcriptions-ai/">Sustainability transcriptions</Link></li>
-                            <li className=""><Link to="/services/sustainability-content-ai/">Sustainability content (AI)</Link></li>
+                            <li className=""><Link to="/services/web-development/">Website development</Link></li>
+                            <li className=""><Link to="/services/ai-content-strategy/">AI content strategy</Link></li>
+                            <li className=""><Link to="/services/ai-interviews-focus-groups/">AI interview & focus groups</Link></li>
+                            <li className=""><Link to="/services/ai-transcriptions/">AI transcriptions</Link></li>
+                            <li className=""><Link to="/services/sustainability-content-ai/">AI content for sustainability</Link></li>
                         </ul>
                     </Col>
                     <Col className='mt-3 mt-md-0'>
